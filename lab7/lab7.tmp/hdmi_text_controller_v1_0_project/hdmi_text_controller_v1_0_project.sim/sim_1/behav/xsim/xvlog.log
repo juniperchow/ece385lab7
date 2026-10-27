@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0/src/clk_wiz_0/clk_wiz_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
