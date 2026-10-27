@@ -228,6 +228,26 @@ module hdmi_text_controller_tb();
     //Note the read handshake process is simpler than the write
     task axi_read (input logic [31:0] addr, output logic [31:0] data);
         begin
+            #3 read_addr <= addr;	//Put write address on bus
+            //write_data <= data;	//put write data on bus
+            read_addr_valid <= 1'b1;	//indicate address is valid
+            read_data_ready <= 1'b1;
+            //read_data_valid <= 1'b1;	//indicate data is valid
+            //write_resp_ready <= 1'b1;	//indicate ready for a response
+            //write_strb <= 4'hF;		//writing all 4 bytes
+            
+            //wait for one slave ready signal or the other
+            wait(read_addr_ready);
+                
+            @(posedge aclk); //one or both signals and a positive edge
+            read_addr_valid<=0;
+            read_data_valid<=0;
+            wait(read_data_ready);
+            data <= read_data; 
+            @ (posedge aclk);// complete the second handshake
+            read_data_ready<=0; //make sure both valid signals are deasserted
+            read_data_valid<=0;        
+            //end of read transaction
         end
     endtask;
   
