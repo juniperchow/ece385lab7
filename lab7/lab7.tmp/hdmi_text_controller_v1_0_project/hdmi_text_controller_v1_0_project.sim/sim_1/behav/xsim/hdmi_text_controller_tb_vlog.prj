@@ -9,6 +9,7 @@ verilog xil_defaultlib  --include "../../../../../../../ip_repo/hdmi_text_contro
 
 sv xil_defaultlib  --include "../../../../../../../ip_repo/hdmi_text_controller_1_0/src/clk_wiz_0" \
 "../../../../../../../lab7_1_provided_sp26/VGA_controller.sv" \
+"../../../../../../../lab7_1_provided_sp26/font_rom.sv" \
 "../../../../../../../ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv" \
 "../../../../../../../ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_AXI.sv" \
 "../../../../../../../ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv" \

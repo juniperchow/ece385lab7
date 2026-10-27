@@ -34,11 +34,13 @@ module hdmi_text_controller_v1_0_AXI #
     // Width of S_AXI data bus
     parameter integer C_S_AXI_DATA_WIDTH	= 32,
     // Width of S_AXI address bus
-    parameter integer C_S_AXI_ADDR_WIDTH	= 9
+    parameter integer C_S_AXI_ADDR_WIDTH	= 16 // change from 4 to 16
 )
 (
     // Users to add ports here
-
+    input logic [9:0] drawX,
+    input logic [9:0] drawY,
+    output logic [3:0] red, green, blue,
     // User ports ends
 
     // Global Clock Signal
@@ -121,7 +123,7 @@ logic  	axi_rvalid;
 // ADDR_LSB = 2 for 32 bits (n downto 2)
 // ADDR_LSB = 3 for 64 bits (n downto 3)
 localparam integer ADDR_LSB = (C_S_AXI_DATA_WIDTH/32) + 1;
-localparam integer OPT_MEM_ADDR_BITS = 1;
+localparam integer OPT_MEM_ADDR_BITS = 11;// change from 1 to 10
 //----------------------------------------------
 //-- Signals for user logic register space example
 //------------------------------------------------
@@ -389,6 +391,76 @@ begin
 end    
 
 // Add user logic here
+    logic [3:0] char_r, char_g, char_b;
+	logic [3:0] bkg_r, bkg_g, bkg_b; 
+	logic [7:0] char_data; 
+	logic iv0; // invert character bit 
+	
+	logic [31:0] ctrl_reg; 
+	assign ctrl_reg = slv_regs[600]; 
+	
+	logic [8:0] slv_reg_addr;
+	logic [31:0] slv_reg_data;
+	
+	logic [6:0] glyph_code; //7 bit character 
+	
+	logic [8:0] char_idx, word_idx, byte_idx; 
+	assign char_idx = (drawY/16) * 80 + (drawX/8);
+	assign word_idx = char_idx/4; 
+	assign byte_idx = char_idx%4; 
+	assign slv_reg_addr = slv_regs[word_idx];
+	
+	always_comb begin
+	   //glyph_code = slv_reg_data[6+8*byte_idx:8*byte_idx]
+	   case(byte_idx)
+	       2'b00: begin
+               glyph_code = slv_reg_data[6:0];
+               iv0 = slv_reg_data[7];
+           end
+	       2'b01: begin
+	           glyph_code = slv_reg_data[14:8];
+               iv0 = slv_reg_data[15];
+           end
+	       2'b10: begin
+	           glyph_code = slv_reg_data[22:16];
+               iv0 = slv_reg_data[23];
+           end
+	       2'b11: begin
+	           glyph_code = slv_reg_data[30:24];
+               iv0 = slv_reg_data[31];
+           end
+	   endcase
+	end
+	
+	assign font_addr = (glyph_code * 16) + (drawY%16);
+	
+	assign char_r = ctrl_reg[24:21];
+	assign char_g = ctrl_reg[20:17];
+	assign char_b = ctrl_reg[16:13];
+	assign bkg_r = ctrl_reg[12:9];
+	assign bkg_g = ctrl_reg[8:5];
+	assign bkg_b = ctrl_reg[4:1];
+	
+	logic[10:0] font_addr;
+	logic[7:0] font_data;
+    font_rom characterrom(
+	.addr(font_addr),
+	.data(font_data)
+	);
+	
+	always_comb begin
+        if((font_data[7 - (drawX % 8)] == 1 && iv0 == 1) || (font_data[7 - (drawX % 8)] == 0 && iv0 == 0)) begin
+            red = bkg_r; 
+            green = bkg_g;
+            blue = bkg_b;
+        end
+        else begin
+            red = char_r; 
+            green = char_g;
+            blue = char_b;
+        end
+	end
+	
 
 // User logic ends
 

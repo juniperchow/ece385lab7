@@ -6,15 +6,18 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'axi_awaddr' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv:74]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'axi_araddr' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv:88]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'TMDS_DATA_P' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:117]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'TMDS_DATA_N' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:118]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'TMDS_DATA_P' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:122]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'TMDS_DATA_N' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:123]
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab7_1_provided_sp26/font_rom.sv" Line 1. Module font_rom doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab7_1_provided_sp26/VGA_controller.sv" Line 26. Module vga_controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab7_1_provided_sp26/font_rom.sv" Line 1. Module font_rom doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab7_1_provided_sp26/VGA_controller.sv" Line 26. Module vga_controller doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.hdmi_text_controller_v1_0_AXI(C_...
+Compiling module xil_defaultlib.font_rom
+Compiling module xil_defaultlib.hdmi_text_controller_v1_0_AXI_de...
 Compiling module unisims_ver.SRL16E_default
 Compiling module xil_defaultlib.srldelay(WIDTH=40,TAPS=4'b1010)
 Compiling module xil_defaultlib.encode_default

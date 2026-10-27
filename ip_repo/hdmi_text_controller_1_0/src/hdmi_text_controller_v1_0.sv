@@ -63,6 +63,11 @@ hdmi_text_controller_v1_0_AXI # (
     .C_S_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
     .C_S_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH)
 ) hdmi_text_controller_v1_0_AXI_inst (
+    .drawX(drawX),
+    .drawY(drawY),
+    .red(red),
+    .green(green),
+    .blue(blue),
     .S_AXI_ACLK(axi_aclk),
     .S_AXI_ARESETN(axi_aresetn),
     .S_AXI_AWADDR(axi_awaddr),

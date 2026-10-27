@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Tue Oct 27 14:39:13 2026
+//Date        : Tue Oct 27 17:55:27 2026
 //Host        : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -14,6 +14,7 @@ module design_1_wrapper
     HDMI_0_tmds_clk_p,
     HDMI_0_tmds_data_n,
     HDMI_0_tmds_data_p,
+    clk_100MHz,
     diff_clock_rtl_0_clk_n,
     diff_clock_rtl_0_clk_p,
     reset_rtl_0,
@@ -23,6 +24,7 @@ module design_1_wrapper
   output HDMI_0_tmds_clk_p;
   output [2:0]HDMI_0_tmds_data_n;
   output [2:0]HDMI_0_tmds_data_p;
+  input clk_100MHz;
   input diff_clock_rtl_0_clk_n;
   input diff_clock_rtl_0_clk_p;
   input reset_rtl_0;
@@ -33,6 +35,7 @@ module design_1_wrapper
   wire HDMI_0_tmds_clk_p;
   wire [2:0]HDMI_0_tmds_data_n;
   wire [2:0]HDMI_0_tmds_data_p;
+  wire clk_100MHz;
   wire diff_clock_rtl_0_clk_n;
   wire diff_clock_rtl_0_clk_p;
   wire reset_rtl_0;
@@ -44,6 +47,7 @@ module design_1_wrapper
         .HDMI_0_tmds_clk_p(HDMI_0_tmds_clk_p),
         .HDMI_0_tmds_data_n(HDMI_0_tmds_data_n),
         .HDMI_0_tmds_data_p(HDMI_0_tmds_data_p),
+        .clk_100MHz(clk_100MHz),
         .diff_clock_rtl_0_clk_n(diff_clock_rtl_0_clk_n),
         .diff_clock_rtl_0_clk_p(diff_clock_rtl_0_clk_p),
         .reset_rtl_0(reset_rtl_0),

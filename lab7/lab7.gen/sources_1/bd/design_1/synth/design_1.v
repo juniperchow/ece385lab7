@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Tue Oct 27 14:39:13 2026
+//Date        : Tue Oct 27 17:55:27 2026
 //Host        : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,12 +9,13 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=21,numReposBlks=15,numNonXlnxBlks=2,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=4,da_clkrst_cnt=2,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=20,numReposBlks=14,numNonXlnxBlks=1,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=6,da_clkrst_cnt=2,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (HDMI_0_tmds_clk_n,
     HDMI_0_tmds_clk_p,
     HDMI_0_tmds_data_n,
     HDMI_0_tmds_data_p,
+    clk_100MHz,
     diff_clock_rtl_0_clk_n,
     diff_clock_rtl_0_clk_p,
     reset_rtl_0,
@@ -24,6 +25,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_CLK_P" *) output HDMI_0_tmds_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_DATA_N" *) output [2:0]HDMI_0_tmds_data_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_DATA_P" *) output [2:0]HDMI_0_tmds_data_p;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN design_1_clk_100MHz, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_100MHz;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 diff_clock_rtl_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_clock_rtl_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input diff_clock_rtl_0_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 diff_clock_rtl_0 CLK_P" *) input diff_clock_rtl_0_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset_rtl_0;
@@ -32,6 +34,8 @@ module design_1
 
   wire axi_uartlite_0_UART_RxD;
   wire axi_uartlite_0_UART_TxD;
+  wire axi_uartlite_0_interrupt;
+  wire clk_100MHz_1;
   wire clk_wiz_1_locked;
   wire diff_clock_rtl_0_1_CLK_N;
   wire diff_clock_rtl_0_1_CLK_P;
@@ -144,7 +148,6 @@ module design_1
   wire [0:1]microblaze_0_interrupt_ACK;
   wire [31:0]microblaze_0_interrupt_ADDRESS;
   wire microblaze_0_interrupt_INTERRUPT;
-  wire [1:0]microblaze_0_intr;
   wire reset_rtl_0_1;
   wire [0:0]rst_clk_wiz_1_100M_bus_struct_reset;
   wire rst_clk_wiz_1_100M_mb_reset;
@@ -155,12 +158,14 @@ module design_1
   assign HDMI_0_tmds_data_n[2:0] = hdmi_text_controller_0_HDMI_TMDS_DATA_N;
   assign HDMI_0_tmds_data_p[2:0] = hdmi_text_controller_0_HDMI_TMDS_DATA_P;
   assign axi_uartlite_0_UART_RxD = uart_rtl_0_rxd;
+  assign clk_100MHz_1 = clk_100MHz;
   assign diff_clock_rtl_0_1_CLK_N = diff_clock_rtl_0_clk_n;
   assign diff_clock_rtl_0_1_CLK_P = diff_clock_rtl_0_clk_p;
   assign reset_rtl_0_1 = reset_rtl_0;
   assign uart_rtl_0_txd = axi_uartlite_0_UART_TxD;
   design_1_axi_uartlite_0_0 axi_uartlite_0
-       (.rx(axi_uartlite_0_UART_RxD),
+       (.interrupt(axi_uartlite_0_interrupt),
+        .rx(axi_uartlite_0_UART_RxD),
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M01_AXI_ARADDR[3:0]),
         .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
@@ -181,6 +186,9 @@ module design_1
         .s_axi_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .s_axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
         .tx(axi_uartlite_0_UART_TxD));
+  design_1_clk_wiz_0_0 clk_wiz_0
+       (.clk_in1(clk_100MHz_1),
+        .reset(mdm_1_debug_sys_rst));
   design_1_clk_wiz_1_0 clk_wiz_1
        (.clk_in1_n(diff_clock_rtl_0_1_CLK_N),
         .clk_in1_p(diff_clock_rtl_0_1_CLK_P),
@@ -213,21 +221,6 @@ module design_1
         .hdmi_clk_p(hdmi_text_controller_0_HDMI_TMDS_CLK_P),
         .hdmi_tx_n(hdmi_text_controller_0_HDMI_TMDS_DATA_N),
         .hdmi_tx_p(hdmi_text_controller_0_HDMI_TMDS_DATA_P));
-  design_1_hdmi_tx_0_0 hdmi_tx_0
-       (.ade(1'b0),
-        .aux0_din({1'b0,1'b0,1'b0,1'b0}),
-        .aux1_din({1'b0,1'b0,1'b0,1'b0}),
-        .aux2_din({1'b0,1'b0,1'b0,1'b0}),
-        .blue({1'b0,1'b0,1'b0,1'b0}),
-        .green({1'b0,1'b0,1'b0,1'b0}),
-        .hsync(1'b0),
-        .pix_clk(microblaze_0_Clk),
-        .pix_clk_locked(1'b0),
-        .pix_clkx5(microblaze_0_Clk),
-        .red({1'b0,1'b0,1'b0,1'b0}),
-        .rst(1'b0),
-        .vde(1'b0),
-        .vsync(1'b0));
   design_1_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
@@ -296,7 +289,7 @@ module design_1
         .Write_Strobe(microblaze_0_dlmb_1_WRITESTROBE));
   design_1_microblaze_0_axi_intc_0 microblaze_0_axi_intc
        (.interrupt_address(microblaze_0_interrupt_ADDRESS),
-        .intr(microblaze_0_intr),
+        .intr(axi_uartlite_0_interrupt),
         .irq(microblaze_0_interrupt_INTERRUPT),
         .processor_ack({microblaze_0_interrupt_ACK[0],microblaze_0_interrupt_ACK[1]}),
         .processor_clk(microblaze_0_Clk),
@@ -425,10 +418,6 @@ module design_1
         .ILMB_wait(microblaze_0_ilmb_1_WAIT),
         .LMB_Clk(microblaze_0_Clk),
         .SYS_Rst(rst_clk_wiz_1_100M_bus_struct_reset));
-  design_1_microblaze_0_xlconcat_0 microblaze_0_xlconcat
-       (.In0(1'b0),
-        .In1(1'b0),
-        .dout(microblaze_0_intr));
   design_1_rst_clk_wiz_1_100M_0 rst_clk_wiz_1_100M
        (.aux_reset_in(1'b1),
         .bus_struct_reset(rst_clk_wiz_1_100M_bus_struct_reset),
