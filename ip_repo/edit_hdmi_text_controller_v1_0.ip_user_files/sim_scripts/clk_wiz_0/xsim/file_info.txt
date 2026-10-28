@@ -1,0 +1,2 @@
+clk_wiz_0_sim_netlist.v,verilog,xil_defaultlib,../../../../hdmi_text_controller_1_0/src/clk_wiz_0/clk_wiz_0_sim_netlist.v,incdir="../../../../hdmi_text_controller_1_0/src/clk_wiz_0"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,65 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Oct 28 00:58:27 2026
+# Process ID: 804365
+# Current directory: /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.runs/mb_block_hdmi_text_controller_0_0_synth_1
+# Command line: vivado -log mb_block_hdmi_text_controller_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_block_hdmi_text_controller_0_0.tcl
+# Log file: /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.runs/mb_block_hdmi_text_controller_0_0_synth_1/mb_block_hdmi_text_controller_0_0.vds
+# Journal file: /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.runs/mb_block_hdmi_text_controller_0_0_synth_1/vivado.jou
+# Running On: juniper-ThinkPad-T14-Gen-5, OS: Linux, CPU Frequency: 3842.288 MHz, CPU Physical cores: 16, Host memory: 23271 MB
+#-----------------------------------------------------------
+source mb_block_hdmi_text_controller_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mb_block_hdmi_text_controller_0_0
+Command: synth_design -top mb_block_hdmi_text_controller_0_0 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 804508
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'hdmi_tmds_clk_p', assumed default net type 'wire' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:114]
+INFO: [Synth 8-11241] undeclared symbol 'hdmi_tmds_clk_n', assumed default net type 'wire' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:115]
+INFO: [Synth 8-11241] undeclared symbol 'hdmi_tmds_data_p', assumed default net type 'wire' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:116]
+INFO: [Synth 8-11241] undeclared symbol 'hdmi_tmds_data_n', assumed default net type 'wire' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:117]
+INFO: [Synth 8-11241] undeclared symbol 'Clk', assumed default net type 'wire' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:135]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1929.469 ; gain = 369.801 ; free physical = 4974 ; free virtual = 7261
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1248.653; parent = 1078.495; children = 170.158
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2907.668; parent = 1933.441; children = 974.227
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mb_block_hdmi_text_controller_0_0' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/synth/mb_block_hdmi_text_controller_0_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0_AXI' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0_AXI.sv:28]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0_AXI.sv:415]
+INFO: [Synth 8-6157] synthesizing module 'font_rom' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/font_rom.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'font_rom' (0#1) [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/font_rom.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_text_controller_v1_0_AXI' (0#1) [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0_AXI.sv:28]
+WARNING: [Synth 8-7071] port 'drawX' of module 'hdmi_text_controller_v1_0_AXI' is unconnected for instance 'hdmi_text_controller_v1_0_AXI_inst' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:65]
+WARNING: [Synth 8-7071] port 'drawY' of module 'hdmi_text_controller_v1_0_AXI' is unconnected for instance 'hdmi_text_controller_v1_0_AXI_inst' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:65]
+WARNING: [Synth 8-7071] port 'red' of module 'hdmi_text_controller_v1_0_AXI' is unconnected for instance 'hdmi_text_controller_v1_0_AXI_inst' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:65]
+WARNING: [Synth 8-7071] port 'green' of module 'hdmi_text_controller_v1_0_AXI' is unconnected for instance 'hdmi_text_controller_v1_0_AXI_inst' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:65]
+WARNING: [Synth 8-7071] port 'blue' of module 'hdmi_text_controller_v1_0_AXI' is unconnected for instance 'hdmi_text_controller_v1_0_AXI_inst' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:65]
+WARNING: [Synth 8-7023] instance 'hdmi_text_controller_v1_0_AXI_inst' of module 'hdmi_text_controller_v1_0_AXI' has 26 connections declared, but only 21 given [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:65]
+ERROR: [Synth 8-439] module 'hdmi_tx_0' not found [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:93]
+ERROR: [Synth 8-6156] failed synthesizing module 'hdmi_text_controller_v1_0' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/11bc/src/hdmi_text_controller_v1_0.sv:10]
+ERROR: [Synth 8-6156] failed synthesizing module 'mb_block_hdmi_text_controller_0_0' [/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/synth/mb_block_hdmi_text_controller_0_0.sv:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2015.406 ; gain = 455.738 ; free physical = 4773 ; free virtual = 7070
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1347.366; parent = 1177.212; children = 170.158
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2989.637; parent = 2015.410; children = 974.227
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 7 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 00:58:42 2026...

@@ -57,17 +57,11 @@ module hdmi_text_controller_v1_0 #
     logic [9:0] drawX, drawY;
     logic hsync, vsync, vde;
     logic [3:0] red, green, blue;
-    logic reset_ah;
 // Instantiation of Axi Bus Interface AXI
 hdmi_text_controller_v1_0_AXI # ( 
     .C_S_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
     .C_S_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH)
 ) hdmi_text_controller_v1_0_AXI_inst (
-    .drawX(drawX),
-    .drawY(drawY),
-    .red(red),
-    .green(green),
-    .blue(blue),
     .S_AXI_ACLK(axi_aclk),
     .S_AXI_ARESETN(axi_aresetn),
     .S_AXI_AWADDR(axi_awaddr),
@@ -88,20 +82,24 @@ hdmi_text_controller_v1_0_AXI # (
     .S_AXI_RDATA(axi_rdata),
     .S_AXI_RRESP(axi_rresp),
     .S_AXI_RVALID(axi_rvalid),
-    .S_AXI_RREADY(axi_rready)
+    .S_AXI_RREADY(axi_rready),
+    .drawX(drawX),
+    .drawY(drawY),
+    .red(red),
+    .green(green),
+    .blue(blue)
 );
 
 
 //Instiante clocking wizard, VGA sync generator modules, and VGA-HDMI IP here. For a hint, refer to the provided
 //top-level from the previous lab. You should get the IP to generate a valid HDMI signal (e.g. blue screen or gradient)
 //prior to working on the text drawing.
-//Real Digital VGA to HDMI converter
     hdmi_tx_0 vga_to_hdmi (
         //Clocking and Reset
         .pix_clk(clk_25MHz),
         .pix_clkx5(clk_125MHz),
         .pix_clk_locked(locked),
-        .rst(reset_ah),
+        .rst(~axi_aresetn),
         //Color and Sync Signals
         .red(red),
         .green(green),
@@ -125,7 +123,7 @@ hdmi_text_controller_v1_0_AXI # (
     //VGA Sync signal generator
     vga_controller vga (
         .pixel_clk(clk_25MHz),
-        .reset(reset_ah),
+        .reset(~axi_aresetn),
         .hs(hsync),
         .vs(vsync),
         .active_nblank(vde),
@@ -136,9 +134,9 @@ hdmi_text_controller_v1_0_AXI # (
     clk_wiz_0 clk_wiz (
         .clk_out1(clk_25MHz),
         .clk_out2(clk_125MHz),
-        .reset(reset_ah),
+        .reset(~axi_aresetn),
         .locked(locked),
-        .clk_in1(Clk)
+        .clk_in1(axi_aclk)
     );
 // User logic ends
 

@@ -1,3 +1,4 @@
+
 #ifndef HDMI_TEXT_CONTROLLER_H
 #define HDMI_TEXT_CONTROLLER_H
 
@@ -5,21 +6,12 @@
 /****************** Include Files ********************/
 #include "xil_types.h"
 #include "xstatus.h"
-#include "xparameters.h"
 
-#define COLUMNS 80
-#define ROWS 30
+#define HDMI_TEXT_CONTROLLER_AXI_SLV_REG0_OFFSET 0
+#define HDMI_TEXT_CONTROLLER_AXI_SLV_REG1_OFFSET 4
+#define HDMI_TEXT_CONTROLLER_AXI_SLV_REG2_OFFSET 8
+#define HDMI_TEXT_CONTROLLER_AXI_SLV_REG3_OFFSET 12
 
-//define some colors
-#define WHITE 		0xFFF
-#define BRIGHT_RED 	0xF00
-#define DIM_RED    	0x700
-#define BRIGHT_GRN	0x0F0
-#define DIM_GRN		0x070
-#define BRIGHT_BLU  0x00F
-#define DIM_BLU		0x007
-#define GRAY		0x777
-#define BLACK		0x000
 
 /**************************** Type Definitions *****************************/
 /**
@@ -82,20 +74,6 @@
  * @note    Self test may fail if data memory and device are not on the same bus.
  *
  */
- 
-struct HDMI_TEXT_STRUCT {
-	uint8_t  VRAM [ROWS*COLUMNS];
-	uint32_t COLOR;
-	uint32_t FRAME_COUNT;
-	uint32_t DRAWX;
-	uint32_t DRAWY;
-};
-
-//you may have to change this line depending on the memory map of your block design
-static volatile struct HDMI_TEXT_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
-
-void hdmiSetColor(int background, int foreground);
-void hdmiClr();
-void hdmiTestWeek1();
+XStatus HDMI_TEXT_CONTROLLER_Reg_SelfTest(void * baseaddr_p);
 
 #endif // HDMI_TEXT_CONTROLLER_H

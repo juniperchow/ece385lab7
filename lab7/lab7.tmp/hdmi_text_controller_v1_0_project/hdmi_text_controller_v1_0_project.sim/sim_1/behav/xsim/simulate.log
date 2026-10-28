@@ -1,4 +1,0 @@
-Time resolution is 1 ps
-Info: Read back of control register: 036b0e94
-Time: 192360 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_902  Scope: hdmi_text_controller_tb.TEST_VECTORS  File: /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 283
-$finish called at time : 192360 ns : File "/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv" Line 292

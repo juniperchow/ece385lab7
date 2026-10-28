@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Tue Oct 27 15:10:23 2026
+-- Date        : Wed Oct 28 00:40:14 2026
 -- Host        : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0/src/hdmi_tx_0/hdmi_tx_0_stub.vhdl
@@ -24,6 +24,10 @@ entity hdmi_tx_0 is
     hsync : in STD_LOGIC;
     vsync : in STD_LOGIC;
     vde : in STD_LOGIC;
+    aux0_din : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    aux1_din : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    aux2_din : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    ade : in STD_LOGIC;
     TMDS_CLK_P : out STD_LOGIC;
     TMDS_CLK_N : out STD_LOGIC;
     TMDS_DATA_P : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -36,7 +40,7 @@ architecture stub of hdmi_tx_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "pix_clk,pix_clkx5,pix_clk_locked,rst,red[3:0],green[3:0],blue[3:0],hsync,vsync,vde,TMDS_CLK_P,TMDS_CLK_N,TMDS_DATA_P[2:0],TMDS_DATA_N[2:0]";
+attribute black_box_pad_pin of stub : architecture is "pix_clk,pix_clkx5,pix_clk_locked,rst,red[3:0],green[3:0],blue[3:0],hsync,vsync,vde,aux0_din[3:0],aux1_din[3:0],aux2_din[3:0],ade,TMDS_CLK_P,TMDS_CLK_N,TMDS_DATA_P[2:0],TMDS_DATA_N[2:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "hdmi_tx_v1_0,Vivado 2022.2";
 begin
