@@ -43,17 +43,13 @@ module mb_hdmi_top(
 
     mb_block mb_block_i (
         .clk_100MHz(Clk),
-        .gpio_usb_int_tri_i(gpio_usb_int_tri_i),
-        .gpio_usb_keycode_0_tri_o(keycode0_gpio),
-        .gpio_usb_keycode_1_tri_o(keycode1_gpio),
-        .gpio_usb_rst_tri_o(gpio_usb_rst_tri_o),
         .reset_rtl_0(~reset_ah), //Block designs expect active low reset, all other modules are active high
         .uart_rtl_0_rxd(uart_rtl_0_rxd),
         .uart_rtl_0_txd(uart_rtl_0_txd),
-        .usb_spi_miso(usb_spi_miso),
-        .usb_spi_mosi(usb_spi_mosi),
-        .usb_spi_sclk(usb_spi_sclk),
-        .usb_spi_ss(usb_spi_ss)
+        .HDMI_0_tmds_clk_n(hdmi_tmds_clk_n),
+        .HDMI_0_tmds_clk_p(hdmi_tmds_clk_p),
+        .HDMI_0_tmds_data_n(hdmi_tmds_data_n),
+        .HDMI_0_tmds_data_p(hdmi_tmds_data_p)
     );
         
 //    //clock wizard configured with a 1x and 5x clock for HDMI

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Wed Oct 28 00:57:16 2026
+//Date        : Wed Oct 28 18:07:23 2026
 //Host        : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 //Command     : generate_target mb_block_wrapper.bd
 //Design      : mb_block_wrapper
@@ -14,8 +14,7 @@ module mb_block_wrapper
     HDMI_0_tmds_clk_p,
     HDMI_0_tmds_data_n,
     HDMI_0_tmds_data_p,
-    diff_clock_rtl_0_clk_n,
-    diff_clock_rtl_0_clk_p,
+    clk_100MHz,
     reset_rtl_0,
     uart_rtl_0_rxd,
     uart_rtl_0_txd);
@@ -23,8 +22,7 @@ module mb_block_wrapper
   output HDMI_0_tmds_clk_p;
   output [2:0]HDMI_0_tmds_data_n;
   output [2:0]HDMI_0_tmds_data_p;
-  input diff_clock_rtl_0_clk_n;
-  input diff_clock_rtl_0_clk_p;
+  input clk_100MHz;
   input reset_rtl_0;
   input uart_rtl_0_rxd;
   output uart_rtl_0_txd;
@@ -33,8 +31,7 @@ module mb_block_wrapper
   wire HDMI_0_tmds_clk_p;
   wire [2:0]HDMI_0_tmds_data_n;
   wire [2:0]HDMI_0_tmds_data_p;
-  wire diff_clock_rtl_0_clk_n;
-  wire diff_clock_rtl_0_clk_p;
+  wire clk_100MHz;
   wire reset_rtl_0;
   wire uart_rtl_0_rxd;
   wire uart_rtl_0_txd;
@@ -44,8 +41,7 @@ module mb_block_wrapper
         .HDMI_0_tmds_clk_p(HDMI_0_tmds_clk_p),
         .HDMI_0_tmds_data_n(HDMI_0_tmds_data_n),
         .HDMI_0_tmds_data_p(HDMI_0_tmds_data_p),
-        .diff_clock_rtl_0_clk_n(diff_clock_rtl_0_clk_n),
-        .diff_clock_rtl_0_clk_p(diff_clock_rtl_0_clk_p),
+        .clk_100MHz(clk_100MHz),
         .reset_rtl_0(reset_rtl_0),
         .uart_rtl_0_rxd(uart_rtl_0_rxd),
         .uart_rtl_0_txd(uart_rtl_0_txd));

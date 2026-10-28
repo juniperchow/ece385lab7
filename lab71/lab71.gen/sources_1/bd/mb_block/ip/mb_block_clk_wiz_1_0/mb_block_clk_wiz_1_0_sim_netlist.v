@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Wed Oct 28 00:58:15 2026
+// Date        : Wed Oct 28 16:08:15 2026
 // Host        : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 // Command     : write_verilog -force -mode funcsim
-//               /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_sim_netlist.v
+//               /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_sim_netlist.v
 // Design      : mb_block_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,23 +17,19 @@ module mb_block_clk_wiz_1_0
    (clk_out1,
     reset,
     locked,
-    clk_in1_p,
-    clk_in1_n);
+    clk_in1);
   output clk_out1;
   input reset;
   output locked;
-  input clk_in1_p;
-  input clk_in1_n;
+  input clk_in1;
 
-  (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) wire clk_in1_n;
-  (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) wire clk_in1_p;
+  (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out1;
   wire locked;
   wire reset;
 
   mb_block_clk_wiz_1_0_clk_wiz inst
-       (.clk_in1_n(clk_in1_n),
-        .clk_in1_p(clk_in1_p),
+       (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .locked(locked),
         .reset(reset));
@@ -43,17 +39,14 @@ module mb_block_clk_wiz_1_0_clk_wiz
    (clk_out1,
     reset,
     locked,
-    clk_in1_p,
-    clk_in1_n);
+    clk_in1);
   output clk_out1;
   input reset;
   output locked;
-  input clk_in1_p;
-  input clk_in1_n;
+  input clk_in1;
 
+  wire clk_in1;
   wire clk_in1_mb_block_clk_wiz_1_0;
-  wire clk_in1_n;
-  wire clk_in1_p;
   wire clk_out1;
   wire clk_out1_mb_block_clk_wiz_1_0;
   wire clkfbout_buf_mb_block_clk_wiz_1_0;
@@ -85,13 +78,11 @@ module mb_block_clk_wiz_1_0_clk_wiz
   (* CAPACITANCE = "DONT_CARE" *) 
   (* IBUF_DELAY_VALUE = "0" *) 
   (* IFD_DELAY_VALUE = "AUTO" *) 
-  IBUFDS #(
-    .CCIO_EN_M("TRUE"),
-    .CCIO_EN_S("TRUE"),
+  IBUF #(
+    .CCIO_EN("TRUE"),
     .IOSTANDARD("DEFAULT")) 
-    clkin1_ibufgds
-       (.I(clk_in1_p),
-        .IB(clk_in1_n),
+    clkin1_ibufg
+       (.I(clk_in1),
         .O(clk_in1_mb_block_clk_wiz_1_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf

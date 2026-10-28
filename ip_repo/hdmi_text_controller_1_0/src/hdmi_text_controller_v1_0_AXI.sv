@@ -107,10 +107,12 @@ module hdmi_text_controller_v1_0_AXI #
 
 // AXI4LITE signals
 logic  [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
+//logic  [15 : 0] 	axi_awaddr;
 logic  axi_awready;
 logic  axi_wready;
 logic  [1 : 0] 	axi_bresp;
 logic  axi_bvalid;
+//logic  [15 : 0] 	axi_araddr;
 logic  [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
 logic  axi_arready;
 logic  [C_S_AXI_DATA_WIDTH-1 : 0] 	axi_rdata;
@@ -123,7 +125,9 @@ logic  	axi_rvalid;
 // ADDR_LSB = 2 for 32 bits (n downto 2)
 // ADDR_LSB = 3 for 64 bits (n downto 3)
 localparam integer ADDR_LSB = (C_S_AXI_DATA_WIDTH/32) + 1;
-localparam integer OPT_MEM_ADDR_BITS = 9;// change from 1 to 10
+localparam integer OPT_MEM_ADDR_BITS = 9;// change from 1 to 9
+//9	[11:2]	10bit 604 registers
+//11 [13:2] 
 //----------------------------------------------
 //-- Signals for user logic register space example
 //------------------------------------------------

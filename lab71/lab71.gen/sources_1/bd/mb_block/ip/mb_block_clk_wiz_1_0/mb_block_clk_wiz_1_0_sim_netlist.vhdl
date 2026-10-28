@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Wed Oct 28 00:58:15 2026
+-- Date        : Wed Oct 28 16:08:15 2026
 -- Host        : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 -- Command     : write_vhdl -force -mode funcsim
---               /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_sim_netlist.vhdl
+--               /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_sim_netlist.vhdl
 -- Design      : mb_block_clk_wiz_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,7 @@ entity mb_block_clk_wiz_1_0_clk_wiz is
     clk_out1 : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
-    clk_in1_p : in STD_LOGIC;
-    clk_in1_n : in STD_LOGIC
+    clk_in1 : in STD_LOGIC
   );
 end mb_block_clk_wiz_1_0_clk_wiz;
 
@@ -47,13 +46,13 @@ architecture STRUCTURE of mb_block_clk_wiz_1_0_clk_wiz is
   signal NLW_mmcm_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of clkf_buf : label is "PRIMITIVE";
-  attribute BOX_TYPE of clkin1_ibufgds : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkin1_ibufg : label is "PRIMITIVE";
   attribute CAPACITANCE : string;
-  attribute CAPACITANCE of clkin1_ibufgds : label is "DONT_CARE";
+  attribute CAPACITANCE of clkin1_ibufg : label is "DONT_CARE";
   attribute IBUF_DELAY_VALUE : string;
-  attribute IBUF_DELAY_VALUE of clkin1_ibufgds : label is "0";
+  attribute IBUF_DELAY_VALUE of clkin1_ibufg : label is "0";
   attribute IFD_DELAY_VALUE : string;
-  attribute IFD_DELAY_VALUE of clkin1_ibufgds : label is "AUTO";
+  attribute IFD_DELAY_VALUE of clkin1_ibufg : label is "AUTO";
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
@@ -62,15 +61,13 @@ clkf_buf: unisim.vcomponents.BUFG
       I => clkfbout_mb_block_clk_wiz_1_0,
       O => clkfbout_buf_mb_block_clk_wiz_1_0
     );
-clkin1_ibufgds: unisim.vcomponents.IBUFDS
+clkin1_ibufg: unisim.vcomponents.IBUF
     generic map(
-      CCIO_EN_M => "TRUE",
-      CCIO_EN_S => "TRUE",
+      CCIO_EN => "TRUE",
       IOSTANDARD => "DEFAULT"
     )
         port map (
-      I => clk_in1_p,
-      IB => clk_in1_n,
+      I => clk_in1,
       O => clk_in1_mb_block_clk_wiz_1_0
     );
 clkout1_buf: unisim.vcomponents.BUFG
@@ -174,8 +171,7 @@ entity mb_block_clk_wiz_1_0 is
     clk_out1 : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
-    clk_in1_p : in STD_LOGIC;
-    clk_in1_n : in STD_LOGIC
+    clk_in1 : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of mb_block_clk_wiz_1_0 : entity is true;
@@ -185,8 +181,7 @@ architecture STRUCTURE of mb_block_clk_wiz_1_0 is
 begin
 inst: entity work.mb_block_clk_wiz_1_0_clk_wiz
      port map (
-      clk_in1_n => clk_in1_n,
-      clk_in1_p => clk_in1_p,
+      clk_in1 => clk_in1,
       clk_out1 => clk_out1,
       locked => locked,
       reset => reset

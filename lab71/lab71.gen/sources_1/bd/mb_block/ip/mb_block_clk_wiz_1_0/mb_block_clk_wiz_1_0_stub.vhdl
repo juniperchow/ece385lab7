@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Wed Oct 28 00:58:15 2026
+-- Date        : Wed Oct 28 16:08:15 2026
 -- Host        : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_stub.vhdl
+--               /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_stub.vhdl
 -- Design      : mb_block_clk_wiz_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s50csga324-1
@@ -17,8 +17,7 @@ entity mb_block_clk_wiz_1_0 is
     clk_out1 : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
-    clk_in1_p : in STD_LOGIC;
-    clk_in1_n : in STD_LOGIC
+    clk_in1 : in STD_LOGIC
   );
 
 end mb_block_clk_wiz_1_0;
@@ -27,6 +26,6 @@ architecture stub of mb_block_clk_wiz_1_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk_out1,reset,locked,clk_in1_p,clk_in1_n";
+attribute black_box_pad_pin of stub : architecture is "clk_out1,reset,locked,clk_in1";
 begin
 end;

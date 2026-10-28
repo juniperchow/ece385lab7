@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.runs/impl_1/mb_hdmi_top.tcl"
+  variable script "/home/juniper/Documents/lab7-juniper/lab71/lab71.runs/impl_1/mb_hdmi_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -131,22 +131,22 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.cache/wt [current_project]
-  set_property parent.project_path /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.xpr [current_project]
+  set_property webtalk.parent_dir /home/juniper/Documents/lab7-juniper/lab71/lab71.cache/wt [current_project]
+  set_property parent.project_path /home/juniper/Documents/lab7-juniper/lab71/lab71.xpr [current_project]
   set_property ip_repo_paths {
-  /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0
-  /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/ip_repo/hdmi_text_controller_1_0
+  /home/juniper/Documents/lab7-juniper/ip_repo/hdmi_text_controller_1_0
+  /home/juniper/Documents/lab7-juniper/ip_repo/hdmi_text_controller_1_0
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.cache/ip [current_project]
+  set_property ip_output_repo /home/juniper/Documents/lab7-juniper/lab71/lab71.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.runs/synth_1/mb_hdmi_top.dcp
+  add_files -quiet /home/juniper/Documents/lab7-juniper/lab71/lab71.runs/synth_1/mb_hdmi_top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.srcs/sources_1/bd/mb_block/mb_block.bd
+  add_files /home/juniper/Documents/lab7-juniper/lab71/lab71.srcs/sources_1/bd/mb_block/mb_block.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc /home/juniper/Nextcloud/uofi_fa26/ece385/lab6/lab6_2_provided/pin_assignment/mb_usb_hdmi_top.xdc

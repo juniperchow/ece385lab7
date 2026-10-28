@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/juniper/Nextcloud/uofi_fa26/ece385/lab7/lab71/lab71.runs/impl_1'
+HD_PWD='/home/juniper/Documents/lab7-juniper/lab71/lab71.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

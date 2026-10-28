@@ -17,11 +17,10 @@ module hdmi_text_controller_v1_0 #
 )
 (
     // Users to add ports here
-
-    output logic hdmi_clk_n,
     output logic hdmi_clk_p,
-    output logic [2:0] hdmi_tx_n,
+    output logic hdmi_clk_n,
     output logic [2:0] hdmi_tx_p,
+    output logic [2:0] hdmi_tx_n,
 
     // User ports ends
     // Do not modify the ports beyond this line
@@ -58,10 +57,10 @@ module hdmi_text_controller_v1_0 #
     logic hsync, vsync, vde;
     logic [3:0] red, green, blue;
 // Instantiation of Axi Bus Interface AXI
-hdmi_text_controller_v1_0_AXI # ( 
-    .C_S_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
-    .C_S_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH)
-) hdmi_text_controller_v1_0_AXI_inst (
+hdmi_text_controller_v1_0_AXI //# ( 
+//    .C_S_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
+//    .C_S_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH))
+hdmi_text_controller_v1_0_AXI_inst (
     .S_AXI_ACLK(axi_aclk),
     .S_AXI_ARESETN(axi_aresetn),
     .S_AXI_AWADDR(axi_awaddr),
