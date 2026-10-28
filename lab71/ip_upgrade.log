@@ -1,6 +1,133 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed Oct 28 18:36:27 2026
+| Host         : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_text_controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_hdmi_text_controller_0_0 (user.org:user:hdmi_text_controller:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed Oct 28 18:31:09 2026
+| Host         : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_text_controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of mb_block_hdmi_text_controller_0_0 (user.org:user:hdmi_text_controller:1.0 (Rev. 13)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed Oct 28 18:29:42 2026
+| Host         : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_text_controller_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_block_hdmi_text_controller_0_0 (user.org:user:hdmi_text_controller:1.0) from (Rev. 12) to (Rev. 13)
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'mb_block_hdmi_text_controller_0_0'.
+
+
+-Upgrade has added interface 'HDMI' (xilinx.com:interface:hdmi:2.0)
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed Oct 28 18:24:48 2026
+| Host         : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_text_controller_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_block_hdmi_text_controller_0_0 (user.org:user:hdmi_text_controller:1.0) from (Rev. 11) to (Rev. 12)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'mb_block_hdmi_text_controller_0_0'.
+
+
+-Upgrade has removed interface 'HDMI'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mb_block_hdmi_text_controller_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'hdmi_clk_n'
+
+-Upgrade has removed port 'hdmi_clk_p'
+
+-Upgrade has removed port 'hdmi_tx_n'
+
+-Upgrade has removed port 'hdmi_tx_p'
+
+-Upgrade has added port 'hdmi_tmds_clk_n'
+
+-Upgrade has added port 'hdmi_tmds_clk_p'
+
+-Upgrade has added port 'hdmi_tmds_data_n'
+
+-Upgrade has added port 'hdmi_tmds_data_p'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 | Date         : Wed Oct 28 18:07:18 2026
 | Host         : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 | Command      : upgrade_ip

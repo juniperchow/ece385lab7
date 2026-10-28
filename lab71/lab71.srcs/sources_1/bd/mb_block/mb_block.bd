@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1E7B06161D73E184",
+      "boundary_crc": "0x1E7B0616DBB59AC4",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../lab71.gen/sources_1/bd/mb_block",
       "name": "mb_block",
@@ -62,15 +62,15 @@
             "left": "2",
             "right": "0"
           },
-          "TMDS_CLK_P": {
-            "physical_name": "HDMI_0_tmds_clk_p",
-            "direction": "O"
-          },
           "TMDS_DATA_P": {
             "physical_name": "HDMI_0_tmds_data_p",
             "direction": "O",
             "left": "2",
             "right": "0"
+          },
+          "TMDS_CLK_P": {
+            "physical_name": "HDMI_0_tmds_clk_p",
+            "direction": "O"
           }
         }
       }

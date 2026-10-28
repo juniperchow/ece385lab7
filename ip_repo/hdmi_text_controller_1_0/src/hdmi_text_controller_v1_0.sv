@@ -17,10 +17,10 @@ module hdmi_text_controller_v1_0 #
 )
 (
     // Users to add ports here
-    output logic hdmi_clk_p,
-    output logic hdmi_clk_n,
-    output logic [2:0] hdmi_tx_p,
-    output logic [2:0] hdmi_tx_n,
+    output logic hdmi_tmds_clk_p,
+    output logic hdmi_tmds_clk_n,
+    output logic [2:0] hdmi_tmds_data_p,
+    output logic [2:0] hdmi_tmds_data_n,
 
     // User ports ends
     // Do not modify the ports beyond this line

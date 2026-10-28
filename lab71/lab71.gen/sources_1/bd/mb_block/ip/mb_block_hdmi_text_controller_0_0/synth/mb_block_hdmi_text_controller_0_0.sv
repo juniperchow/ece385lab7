@@ -48,16 +48,16 @@
 
 
 // IP VLNV: user.org:user:hdmi_text_controller:1.0
-// IP Revision: 11
+// IP Revision: 14
 
 (* X_CORE_INFO = "hdmi_text_controller_v1_0,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "mb_block_hdmi_text_controller_0_0,hdmi_text_controller_v1_0,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module mb_block_hdmi_text_controller_0_0 (
-  hdmi_clk_p,
-  hdmi_clk_n,
-  hdmi_tx_p,
-  hdmi_tx_n,
+  hdmi_tmds_clk_p,
+  hdmi_tmds_clk_n,
+  hdmi_tmds_data_p,
+  hdmi_tmds_data_n,
   axi_aclk,
   axi_aresetn,
   axi_awaddr,
@@ -81,16 +81,16 @@ module mb_block_hdmi_text_controller_0_0 (
   axi_rready
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME hdmi_clk_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 hdmi_clk_p CLK, xilinx.com:interface:hdmi:2.0 HDMI TMDS_CLK_P" *)
-output wire hdmi_clk_p;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME hdmi_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 hdmi_clk_n CLK, xilinx.com:interface:hdmi:2.0 HDMI TMDS_CLK_N" *)
-output wire hdmi_clk_n;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME hdmi_tmds_clk_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 hdmi_tmds_clk_p CLK, xilinx.com:interface:hdmi:2.0 HDMI TMDS_CLK_P" *)
+output wire hdmi_tmds_clk_p;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME hdmi_tmds_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 hdmi_tmds_clk_n CLK, xilinx.com:interface:hdmi:2.0 HDMI TMDS_CLK_N" *)
+output wire hdmi_tmds_clk_n;
 (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI TMDS_DATA_P" *)
-output wire [2 : 0] hdmi_tx_p;
+output wire [2 : 0] hdmi_tmds_data_p;
 (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI TMDS_DATA_N" *)
-output wire [2 : 0] hdmi_tx_n;
+output wire [2 : 0] hdmi_tmds_data_n;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aclk, ASSOCIATED_RESET axi_aresetn, ASSOCIATED_BUSIF AXI, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_aclk CLK" *)
 input wire axi_aclk;
@@ -142,10 +142,10 @@ input wire axi_rready;
     .C_AXI_DATA_WIDTH(32),
     .C_AXI_ADDR_WIDTH(4)
   ) inst (
-    .hdmi_clk_p(hdmi_clk_p),
-    .hdmi_clk_n(hdmi_clk_n),
-    .hdmi_tx_p(hdmi_tx_p),
-    .hdmi_tx_n(hdmi_tx_n),
+    .hdmi_tmds_clk_p(hdmi_tmds_clk_p),
+    .hdmi_tmds_clk_n(hdmi_tmds_clk_n),
+    .hdmi_tmds_data_p(hdmi_tmds_data_p),
+    .hdmi_tmds_data_n(hdmi_tmds_data_n),
     .axi_aclk(axi_aclk),
     .axi_aresetn(axi_aresetn),
     .axi_awaddr(axi_awaddr),

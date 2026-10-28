@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Wed Oct 28 18:12:12 2026
+| Date         : Wed Oct 28 18:39:46 2026
 | Host         : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 | Command      : report_methodology -file mb_hdmi_top_methodology_drc_routed.rpt -pb mb_hdmi_top_methodology_drc_routed.pb -rpx mb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_hdmi_top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 5
+             Violations found: 6
 +-----------+----------+--------------------------------------------------------+------------+
 | Rule      | Severity | Description                                            | Violations |
 +-----------+----------+--------------------------------------------------------+------------+
-| LUTAR-1   | Warning  | LUT drives async reset alert                           | 1          |
+| LUTAR-1   | Warning  | LUT drives async reset alert                           | 2          |
 | TIMING-9  | Warning  | Unknown CDC Logic                                      | 1          |
 | TIMING-18 | Warning  | Missing input or output delay                          | 2          |
 | XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
@@ -36,6 +36,26 @@ Table of Contents
 2. REPORT DETAILS
 -----------------
 LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/oserdes_m_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encg/dout_reg[9]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/cnt_reg[1]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/cnt_reg[2]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/cnt_reg[3]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/cnt_reg[4]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[0]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[1]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[2]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[3]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[4]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[5]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[6]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[7]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[8]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[9]/CLR
+ (the first 15 of 42 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
 LUT drives async reset alert  
 LUT cell mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>

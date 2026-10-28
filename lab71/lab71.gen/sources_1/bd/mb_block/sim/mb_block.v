@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Wed Oct 28 18:07:22 2026
+//Date        : Wed Oct 28 18:36:32 2026
 //Host        : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 //Command     : generate_target mb_block.bd
 //Design      : mb_block
@@ -461,10 +461,10 @@ module mb_block
         .axi_wready(microblaze_0_axi_periph_M01_AXI_WREADY),
         .axi_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
-        .hdmi_clk_n(hdmi_text_controller_0_HDMI_TMDS_CLK_N),
-        .hdmi_clk_p(hdmi_text_controller_0_HDMI_TMDS_CLK_P),
-        .hdmi_tx_n(hdmi_text_controller_0_HDMI_TMDS_DATA_N),
-        .hdmi_tx_p(hdmi_text_controller_0_HDMI_TMDS_DATA_P));
+        .hdmi_tmds_clk_n(hdmi_text_controller_0_HDMI_TMDS_CLK_N),
+        .hdmi_tmds_clk_p(hdmi_text_controller_0_HDMI_TMDS_CLK_P),
+        .hdmi_tmds_data_n(hdmi_text_controller_0_HDMI_TMDS_DATA_N),
+        .hdmi_tmds_data_p(hdmi_text_controller_0_HDMI_TMDS_DATA_P));
   mb_block_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
