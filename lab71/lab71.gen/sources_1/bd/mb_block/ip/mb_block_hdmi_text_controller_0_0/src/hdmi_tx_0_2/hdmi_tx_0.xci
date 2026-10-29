@@ -2,6 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "hdmi_tx_0",
+    "cell_name": "vga_to_hdmi",
     "component_reference": "realdigital.org:realdigital:hdmi_tx:1.0",
     "ip_revision": "2",
     "gen_directory": ".",
@@ -27,7 +28,7 @@
         "PACKAGE": [ { "value": "csga324" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
-        "SIMULATOR_LANGUAGE": [ { "value": "VERILOG" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-1" } ],
         "STATIC_POWER": [ { "value": "" } ],
         "TEMPERATURE_GRADE": [ { "value": "" } ],

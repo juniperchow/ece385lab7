@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+Info: Read back of control register: 036b0e94
+Time: 192360 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial251_906  Scope: hdmi_text_controller_tb.TEST_VECTORS  File: /home/juniper/Documents/lab7-juniper/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Saving bitmap 'lab7_1_sim.bmp'.
+$finish called at time : 15648350 ns : File "/home/juniper/Documents/lab7-juniper/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv" Line 287
+INFO: xsimkernel Simulation Memory Usage: 159468 KB (Peak: 178468 KB), Simulation CPU Usage: 255380 ms

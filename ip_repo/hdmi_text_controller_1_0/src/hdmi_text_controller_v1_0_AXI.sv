@@ -22,9 +22,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-`timescale 1 ns / 1 ps
-
 module hdmi_text_controller_v1_0_AXI #
 (
 
@@ -395,7 +392,7 @@ begin
 end    
 
 // Add user logic here
-    logic [3:0] char_r, char_g, char_b;
+  logic [3:0] char_r, char_g, char_b;
 	logic [3:0] bkg_r, bkg_g, bkg_b; 
 	logic iv0; // invert character bit 
 	

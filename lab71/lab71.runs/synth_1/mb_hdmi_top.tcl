@@ -119,6 +119,9 @@ set_property used_in_implementation false [get_files -all /home/juniper/Document
 set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0_late.xdc]
 set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_axi_intc_0_0/mb_block_axi_intc_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_axi_intc_0_0/mb_block_axi_intc_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_axi_intc_0_0/mb_block_axi_intc_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/mb_block_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/data/mb_bootloop_le.elf]
 
