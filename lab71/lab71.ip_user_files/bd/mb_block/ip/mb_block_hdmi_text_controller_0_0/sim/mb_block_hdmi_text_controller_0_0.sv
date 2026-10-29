@@ -48,16 +48,16 @@
 
 
 // IP VLNV: user.org:user:hdmi_text_controller:1.0
-// IP Revision: 14
+// IP Revision: 18
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module mb_block_hdmi_text_controller_0_0 (
-  hdmi_tmds_clk_p,
-  hdmi_tmds_clk_n,
-  hdmi_tmds_data_p,
-  hdmi_tmds_data_n,
+  hdmi_clk_n,
+  hdmi_clk_p,
+  hdmi_tx_n,
+  hdmi_tx_p,
   axi_aclk,
   axi_aresetn,
   axi_awaddr,
@@ -81,16 +81,14 @@ module mb_block_hdmi_text_controller_0_0 (
   axi_rready
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME hdmi_tmds_clk_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 hdmi_tmds_clk_p CLK, xilinx.com:interface:hdmi:2.0 HDMI TMDS_CLK_P" *)
-output wire hdmi_tmds_clk_p;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME hdmi_tmds_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 hdmi_tmds_clk_n CLK, xilinx.com:interface:hdmi:2.0 HDMI TMDS_CLK_N" *)
-output wire hdmi_tmds_clk_n;
-(* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI TMDS_DATA_P" *)
-output wire [2 : 0] hdmi_tmds_data_p;
-(* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI TMDS_DATA_N" *)
-output wire [2 : 0] hdmi_tmds_data_n;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME hdmi_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN mb_block_hdmi_text_controller_0_0_hdmi_clk_n, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 hdmi_clk_n CLK" *)
+output wire hdmi_clk_n;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME hdmi_clk_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN mb_block_hdmi_text_controller_0_0_hdmi_clk_p, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 hdmi_clk_p CLK" *)
+output wire hdmi_clk_p;
+output wire [2 : 0] hdmi_tx_n;
+output wire [2 : 0] hdmi_tx_p;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aclk, ASSOCIATED_RESET axi_aresetn, ASSOCIATED_BUSIF AXI, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_aclk CLK" *)
 input wire axi_aclk;
@@ -98,7 +96,7 @@ input wire axi_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axi_aresetn RST" *)
 input wire axi_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI AWADDR" *)
-input wire [3 : 0] axi_awaddr;
+input wire [15 : 0] axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI AWPROT" *)
 input wire [2 : 0] axi_awprot;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI AWVALID" *)
@@ -120,7 +118,7 @@ output wire axi_bvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI BREADY" *)
 input wire axi_bready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI ARADDR" *)
-input wire [3 : 0] axi_araddr;
+input wire [15 : 0] axi_araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI ARPROT" *)
 input wire [2 : 0] axi_arprot;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI ARVALID" *)
@@ -133,19 +131,19 @@ output wire [31 : 0] axi_rdata;
 output wire [1 : 0] axi_rresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI RVALID" *)
 output wire axi_rvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, R\
-USER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, \
+RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI RREADY" *)
 input wire axi_rready;
 
   hdmi_text_controller_v1_0 #(
     .C_AXI_DATA_WIDTH(32),
-    .C_AXI_ADDR_WIDTH(4)
+    .C_AXI_ADDR_WIDTH(16)
   ) inst (
-    .hdmi_tmds_clk_p(hdmi_tmds_clk_p),
-    .hdmi_tmds_clk_n(hdmi_tmds_clk_n),
-    .hdmi_tmds_data_p(hdmi_tmds_data_p),
-    .hdmi_tmds_data_n(hdmi_tmds_data_n),
+    .hdmi_clk_n(hdmi_clk_n),
+    .hdmi_clk_p(hdmi_clk_p),
+    .hdmi_tx_n(hdmi_tx_n),
+    .hdmi_tx_p(hdmi_tx_p),
     .axi_aclk(axi_aclk),
     .axi_aresetn(axi_aresetn),
     .axi_awaddr(axi_awaddr),

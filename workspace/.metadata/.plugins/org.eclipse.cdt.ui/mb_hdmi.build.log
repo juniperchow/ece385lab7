@@ -1,4 +1,4 @@
-19:48:05 **** Incremental Build of configuration Debug for project mb_hdmi ****
+02:47:52 **** Incremental Build of configuration Debug for project mb_hdmi ****
 make all 
 Building file: ../src/hdmi_text_controller.c
 Invoking: MicroBlaze gcc compiler
@@ -24,31 +24,85 @@ In file included from ../src/hdmi_text_controller.h:8,
       |                                                                      |                              |
       |                                                                      unsigned int                   uint32_t {aka long unsigned int}
       |                                                                     %lx
-../src/hdmi_text_controller.c:118:48: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-  118 |                 sprintf ( (&hdmi_ctrl->VRAM[0] + 80*29), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+../src/hdmi_text_controller.c:58:30: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   58 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                             ~^                              ~~~~~~~~~~~~~~~~~~~~~~
+      |                              |                                       |
+      |                              unsigned int                            uint32_t {aka long unsigned int}
+      |                             %lx
+../src/hdmi_text_controller.c:58:42: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   58 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                                         ~^                                          ~~~~~~~~~~~~~~~~
+      |                                          |                                                   |
+      |                                          unsigned int                                        uint32_t {aka long unsigned int}
+      |                                         %lx
+../src/hdmi_text_controller.c:58:54: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   58 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                                                     ~^                                                ~~~~~~~~~~~~~~~~
+      |                                                      |                                                         |
+      |                                                      unsigned int                                              uint32_t {aka long unsigned int}
+      |                                                     %lx
+../src/hdmi_text_controller.c:106:30: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  106 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                             ~^                              ~~~~~~~~~~~~~~~~~~~~~~
+      |                              |                                       |
+      |                              unsigned int                            uint32_t {aka long unsigned int}
+      |                             %lx
+../src/hdmi_text_controller.c:106:42: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  106 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                                         ~^                                          ~~~~~~~~~~~~~~~~
+      |                                          |                                                   |
+      |                                          unsigned int                                        uint32_t {aka long unsigned int}
+      |                                         %lx
+../src/hdmi_text_controller.c:106:54: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  106 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                                                     ~^                                                ~~~~~~~~~~~~~~~~
+      |                                                      |                                                         |
+      |                                                      unsigned int                                              uint32_t {aka long unsigned int}
+      |                                                     %lx
+../src/hdmi_text_controller.c:121:48: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  121 |                 sprintf ( (&hdmi_ctrl->VRAM[0] + 80*29), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
       |                           ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
 In file included from ../src/hdmi_text_controller.c:5:
 /run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/microblazeeb-xilinx-elf/usr/include/stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
   244 | int     sprintf (char *__restrict, const char *__restrict, ...)
       |                  ^
-../src/hdmi_text_controller.c:118:75: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  118 |                 sprintf ( (&hdmi_ctrl->VRAM[0] + 80*29), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+../src/hdmi_text_controller.c:121:75: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  121 |                 sprintf ( (&hdmi_ctrl->VRAM[0] + 80*29), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
       |                                                                          ~^                                     ~~~~~~~~~~~~~~~~~~~~~~
       |                                                                           |                                              |
       |                                                                           int                                            uint32_t {aka long unsigned int}
       |                                                                          %ld
-../src/hdmi_text_controller.c:118:92: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  118 |                 sprintf ( (&hdmi_ctrl->VRAM[0] + 80*29), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+../src/hdmi_text_controller.c:121:92: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  121 |                 sprintf ( (&hdmi_ctrl->VRAM[0] + 80*29), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
       |                                                                                           ~^                                            ~~~~~~~~~~~~~~~~
       |                                                                                            |                                                     |
       |                                                                                            int                                                   uint32_t {aka long unsigned int}
       |                                                                                           %ld
-../src/hdmi_text_controller.c:118:109: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  118 |                 sprintf ( (&hdmi_ctrl->VRAM[0] + 80*29), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+../src/hdmi_text_controller.c:121:109: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  121 |                 sprintf ( (&hdmi_ctrl->VRAM[0] + 80*29), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
       |                                                                                                            ~^                                             ~~~~~~~~~~~~~~~~
       |                                                                                                             |                                                      |
       |                                                                                                             int                                                    uint32_t {aka long unsigned int}
       |                                                                                                            %ld
+../src/hdmi_text_controller.c:122:41: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  122 |                 printf("Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                                        ~^                                       ~~~~~~~~~~~~~~~~~~~~~~
+      |                                         |                                                |
+      |                                         int                                              uint32_t {aka long unsigned int}
+      |                                        %ld
+../src/hdmi_text_controller.c:122:58: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  122 |                 printf("Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                                                         ~^                                              ~~~~~~~~~~~~~~~~
+      |                                                          |                                                       |
+      |                                                          int                                                     uint32_t {aka long unsigned int}
+      |                                                         %ld
+../src/hdmi_text_controller.c:122:75: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  122 |                 printf("Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                                                                          ~^                                               ~~~~~~~~~~~~~~~~
+      |                                                                           |                                                        |
+      |                                                                           int                                                      uint32_t {aka long unsigned int}
+      |                                                                          %ld
 Finished building: ../src/hdmi_text_controller.c
  
 Building target: mb_hdmi.elf
@@ -59,9 +113,9 @@ Finished building target: mb_hdmi.elf
 Invoking: MicroBlaze Print Size
 mb-size mb_hdmi.elf  |tee "mb_hdmi.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 105168	   1680	   3168	 110016	  1adc0	mb_hdmi.elf
+  86452	   1728	   3172	  91352	  164d8	mb_hdmi.elf
 Finished building: mb_hdmi.elf.size
  
 
-19:48:05 Build Finished (took 580ms)
+02:47:53 Build Finished (took 581ms)
 

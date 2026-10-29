@@ -21,3 +21,58 @@ platform generate
 platform generate
 platform active {mb_hdmi_top}
 platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab71/mb_hdmi_top.xsa}
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab71/mb_hdmi_top.xsa}
+platform generate -domains 
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab71/mb_hdmi_top.xsa}
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab71/mb_hdmi_top.xsa}
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab71/mb_hdmi_top.xsa}
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/UIUC_ECE385_SP25/lab7_1/mb_lab7_1_wrapper.xsa}
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/UIUC_ECE385_SP25/lab7_1/mb_lab7_1_wrapper.xsa}
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_block_wrapper.xsa}
+platform config -updatehw {/home/juniper/FPGA-Hardware-Projects/ECE385/lab71/mb_usb_hdmi_top_tt_real.xsa}
+platform config -updatehw {/home/juniper/FPGA-Hardware-Projects/ECE385/lab71/mb_usb_hdmi_top.xsa}
+platform generate
+platform config -updatehw {/home/juniper/FPGA-Hardware-Projects/ECE385/lab71/mb_usb_hdmi_top_tt_real.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/UIUC_ECE385_SP25/lab7_1/mb_lab7_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_block_wrapper.xsa}
+platform generate -domains 
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_block_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/FPGA-Hardware-Projects/ECE385/lab71/mb_usb_hdmi_top_tt_real.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/UIUC_ECE385_SP25/lab7_1/mb_lab7_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_block_wrapper_juniper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_block_wrapper.xsa}
+platform generate -domains 
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/UIUC_ECE385_SP25/lab7_1/mb_lab7_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_block_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/UIUC_ECE385_SP25/lab7_1/mb_lab7_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_hdmi_top_juniper.xsa}
+platform generate -domains 
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_hdmi_top_juniper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_hdmi_top_juniper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_hdmi_top_juniper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/temp/lab7_1/mb_usb_hdmi_top_fivehuned.xsa}
+platform generate -domains 
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains standalone_microblaze_0 

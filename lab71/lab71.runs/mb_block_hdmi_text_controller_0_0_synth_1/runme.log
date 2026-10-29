@@ -22,125 +22,136 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 412575
+INFO: [Synth 8-7075] Helper process launched with PID 729057
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN0' becomes localparam in 'encode' with formal parameter declaration list [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_0_2/hdl/encode.v:145]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN1' becomes localparam in 'encode' with formal parameter declaration list [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_0_2/hdl/encode.v:146]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN2' becomes localparam in 'encode' with formal parameter declaration list [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_0_2/hdl/encode.v:147]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN3' becomes localparam in 'encode' with formal parameter declaration list [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_0_2/hdl/encode.v:148]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1930.566 ; gain = 371.770 ; free physical = 2250 ; free virtual = 8696
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1456.170; parent = 1221.256; children = 234.914
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 2908.766; parent = 1934.539; children = 974.227
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1932.316 ; gain = 371.738 ; free physical = 2310 ; free virtual = 10343
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1359.536; parent = 1154.131; children = 205.405
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2909.512; parent = 1935.289; children = 974.223
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'mb_block_hdmi_text_controller_0_0' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/synth/mb_block_hdmi_text_controller_0_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0.sv:10]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0_AXI' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:28]
-WARNING: [Synth 8-324] index 604 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 605 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 606 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 607 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 608 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 609 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 610 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 611 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 612 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 613 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 614 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 615 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 616 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 617 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 618 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 619 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 620 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 621 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 622 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 623 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 624 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 625 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 626 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 627 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 628 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 629 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 630 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 631 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 632 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 633 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 634 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 635 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 636 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 637 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 638 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 639 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 640 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 641 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 642 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 643 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 644 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 645 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 646 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 647 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 648 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 649 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 650 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 651 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 652 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 653 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 654 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 655 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 656 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 657 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 658 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 659 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 660 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 661 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 662 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 663 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 664 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 665 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 666 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 667 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 668 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 669 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 670 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 671 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 672 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 673 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 674 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 675 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 676 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 677 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 678 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 679 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 680 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 681 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 682 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 683 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 684 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 685 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 686 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 687 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 688 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 689 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 690 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 691 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 692 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 693 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 694 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 695 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 696 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 697 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 698 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 699 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 700 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 701 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 702 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
-WARNING: [Synth 8-324] index 703 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:258]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0_AXI' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:27]
+WARNING: [Synth 8-324] index 601 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 602 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 603 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 604 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 605 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 606 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 607 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 608 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 609 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 610 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 611 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 612 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 613 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 614 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 615 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 616 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 617 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 618 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 619 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 620 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 621 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 622 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 623 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 624 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 625 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 626 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 627 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 628 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 629 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 630 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 631 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 632 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 633 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 634 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 635 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 636 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 637 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 638 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 639 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 640 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 641 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 642 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 643 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 644 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 645 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 646 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 647 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 648 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 649 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 650 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 651 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 652 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 653 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 654 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 655 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 656 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 657 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 658 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 659 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 660 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 661 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 662 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 663 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 664 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 665 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 666 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 667 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 668 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 669 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 670 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 671 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 672 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 673 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 674 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 675 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 676 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 677 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 678 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 679 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 680 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 681 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 682 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 683 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 684 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 685 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 686 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 687 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 688 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 689 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 690 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 691 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 692 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 693 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 694 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 695 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 696 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 697 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 698 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 699 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
+WARNING: [Synth 8-324] index 700 out of range [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:261]
 INFO: [Common 17-14] Message 'Synth 8-324' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-155] case statement is not full and has no default [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:425]
 INFO: [Synth 8-6157] synthesizing module 'font_rom' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/lab7_1_provided_sp26/font_rom.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'font_rom' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/lab7_1_provided_sp26/font_rom.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_text_controller_v1_0_AXI' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_text_controller_v1_0_AXI' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:27]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0.v:69]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0.v:69]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/VGA_controller.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/VGA_controller.sv:26]
+WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0.sv:113]
+WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0.sv:113]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_0_2/synth/hdmi_tx_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_0_2/hdl/hdmi_tx_v1_0.v:70]
 INFO: [Synth 8-6157] synthesizing module 'srldelay' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_0_2/hdl/srldelay.v:70]
@@ -163,22 +174,9 @@ INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/run/media/juniper/4aa61f5c-6
 INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:90676]
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_v1_0' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_0_2/hdl/hdmi_tx_v1_0.v:70]
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_0_2/synth/hdmi_tx_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/VGA_controller.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/VGA_controller.sv:26]
-WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0.sv:123]
-WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0.sv:123]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0.v:69]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0_clk_wiz.v:69]
-INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
-INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0_clk_wiz.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_text_controller_v1_0' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_text_controller_v1_0' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_hdmi_text_controller_0_0' (0#1) [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/synth/mb_block_hdmi_text_controller_0_0.sv:53]
-WARNING: [Synth 8-87] always_comb on 'glyph_code_reg' did not result in combinational logic [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:427]
-WARNING: [Synth 8-87] always_comb on 'iv0_reg' did not result in combinational logic [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:428]
+WARNING: [Synth 8-3936] Found unconnected internal register 'offset_x_1_reg' and it is trimmed from '10' to '3' bits. [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/107d/src/hdmi_text_controller_v1_0_AXI.sv:429]
 WARNING: [Synth 8-6014] Unused sequential element hdmi_ctl1_reg was removed.  [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_0_2/hdl/hdmi_tx_v1_0.v:148]
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module hdmi_text_controller_v1_0_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module hdmi_text_controller_v1_0_AXI is either unconnected or has no load
@@ -187,24 +185,24 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module hdmi_text_controller_v1_0
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module hdmi_text_controller_v1_0_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module hdmi_text_controller_v1_0_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2480.504 ; gain = 921.707 ; free physical = 2822 ; free virtual = 8826
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1604.287; parent = 1369.426; children = 234.914
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3454.734; parent = 2480.508; children = 974.227
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2478.254 ; gain = 917.676 ; free physical = 2412 ; free virtual = 10407
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1640.341; parent = 1434.936; children = 205.405
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3452.480; parent = 2478.258; children = 974.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2480.504 ; gain = 921.707 ; free physical = 2819 ; free virtual = 8824
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1604.287; parent = 1369.426; children = 234.914
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3454.734; parent = 2480.508; children = 974.227
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2478.254 ; gain = 917.676 ; free physical = 2439 ; free virtual = 10433
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1640.341; parent = 1434.936; children = 205.405
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3452.480; parent = 2478.258; children = 974.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2480.504 ; gain = 921.707 ; free physical = 2819 ; free virtual = 8824
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1604.287; parent = 1369.426; children = 234.914
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3454.734; parent = 2480.508; children = 974.227
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2478.254 ; gain = 917.676 ; free physical = 2439 ; free virtual = 10433
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1640.341; parent = 1434.936; children = 205.405
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3452.480; parent = 2478.258; children = 974.223
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.34 . Memory (MB): peak = 2480.504 ; gain = 0.000 ; free physical = 2822 ; free virtual = 8839
+Netlist sorting complete. Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2478.254 ; gain = 0.000 ; free physical = 2429 ; free virtual = 10423
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -221,44 +219,42 @@ Parsing XDC File [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1
 Finished Parsing XDC File [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_0_1/clk_wiz_0_late.xdc] for cell 'inst/clk_wiz/inst'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2552.168 ; gain = 0.000 ; free physical = 2680 ; free virtual = 8719
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2542.285 ; gain = 0.000 ; free physical = 2406 ; free virtual = 10400
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2552.168 ; gain = 0.000 ; free physical = 2673 ; free virtual = 8718
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2542.285 ; gain = 0.000 ; free physical = 2408 ; free virtual = 10403
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 2722 ; free virtual = 8772
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1604.287; parent = 1369.426; children = 234.914
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3494.383; parent = 2520.156; children = 974.227
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2542.285 ; gain = 981.707 ; free physical = 2598 ; free virtual = 10592
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1640.341; parent = 1434.936; children = 205.405
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3484.496; parent = 2510.273; children = 974.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 2722 ; free virtual = 8772
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1604.287; parent = 1369.426; children = 234.914
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3494.383; parent = 2520.156; children = 974.227
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2542.285 ; gain = 981.707 ; free physical = 2598 ; free virtual = 10592
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1640.341; parent = 1434.936; children = 205.405
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3484.496; parent = 2510.273; children = 974.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst/clk_wiz/inst. (constraint file  /home/juniper/Documents/lab7-juniper/lab71/lab71.runs/mb_block_hdmi_text_controller_0_0_synth_1/dont_touch.xdc, line 14).
-Applied set_property KEEP_HIERARCHY = SOFT for inst/vga_to_hdmi. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/vga_to_hdmi. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 2721 ; free virtual = 8772
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1604.287; parent = 1369.426; children = 234.914
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3494.383; parent = 2520.156; children = 974.227
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2542.285 ; gain = 981.707 ; free physical = 2597 ; free virtual = 10592
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1640.341; parent = 1434.936; children = 205.405
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3484.496; parent = 2510.273; children = 974.223
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'iv0_reg' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:428]
-WARNING: [Synth 8-327] inferring latch for variable 'glyph_code_reg' [/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ipshared/773c/src/hdmi_text_controller_v1_0_AXI.sv:427]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 2698 ; free virtual = 8778
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1604.287; parent = 1369.426; children = 234.914
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3494.383; parent = 2520.156; children = 974.227
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 2542.285 ; gain = 981.707 ; free physical = 2561 ; free virtual = 10559
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1640.341; parent = 1434.936; children = 205.405
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3484.496; parent = 2510.273; children = 974.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -274,7 +270,7 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 42    
 +---Registers : 
-	               32 Bit    Registers := 605   
+	               32 Bit    Registers := 602   
 	               16 Bit    Registers := 2     
 	               10 Bit    Registers := 5     
 	                9 Bit    Registers := 3     
@@ -284,16 +280,15 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 41    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 604   
+	   2 Input   32 Bit        Muxes := 601   
+	 601 Input   32 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 6     
 	  22 Input   10 Bit        Muxes := 1     
 	   4 Input   10 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 2429  
-	   4 Input    7 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2420  
 	   2 Input    5 Bit        Muxes := 12    
-	   2 Input    4 Bit        Muxes := 7     
+	   2 Input    4 Bit        Muxes := 13    
 	   2 Input    1 Bit        Muxes := 26    
-	   4 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -320,9 +315,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_rres
 INFO: [Synth 8-3886] merging instance 'axi_bresp_reg[0]' (FDRE) to 'axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_bresp_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:16 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 559 ; free virtual = 4588
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5527.115; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:03 . Memory (MB): peak = 2542.285 ; gain = 981.707 ; free physical = 653 ; free virtual = 7089
+Synthesis current peak Physical Memory [PSS] (MB): peak = 5648.145; parent = 1434.936; children = 4525.983
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 11619.613; parent = 2534.301; children = 9085.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -342,26 +337,25 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:20 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 502 ; free virtual = 4562
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5577.282; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 2542.285 ; gain = 981.707 ; free physical = 525 ; free virtual = 6996
+Synthesis current peak Physical Memory [PSS] (MB): peak = 5732.364; parent = 1434.936; children = 4525.983
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 11619.613; parent = 2534.301; children = 9085.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:01:23 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 507 ; free virtual = 4571
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5584.688; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:07 . Memory (MB): peak = 2542.285 ; gain = 981.707 ; free physical = 527 ; free virtual = 6998
+Synthesis current peak Physical Memory [PSS] (MB): peak = 5743.505; parent = 1434.936; children = 4525.983
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 11619.613; parent = 2534.301; children = 9085.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:01:23 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 530 ; free virtual = 4604
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5584.688; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:15 . Memory (MB): peak = 2546.219 ; gain = 985.641 ; free physical = 292 ; free virtual = 6458
+Synthesis current peak Physical Memory [PSS] (MB): peak = 6328.437; parent = 1434.936; children = 5058.727
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 12154.391; parent = 2542.305; children = 9612.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -379,49 +373,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:01:26 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 531 ; free virtual = 4611
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5584.688; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:01:19 . Memory (MB): peak = 2546.219 ; gain = 985.641 ; free physical = 300 ; free virtual = 6469
+Synthesis current peak Physical Memory [PSS] (MB): peak = 6328.437; parent = 1434.936; children = 5058.727
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 12154.391; parent = 2542.305; children = 9612.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:01:26 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 533 ; free virtual = 4613
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5584.688; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:01:19 . Memory (MB): peak = 2546.219 ; gain = 985.641 ; free physical = 300 ; free virtual = 6469
+Synthesis current peak Physical Memory [PSS] (MB): peak = 6328.437; parent = 1434.936; children = 5058.727
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 12154.391; parent = 2542.305; children = 9612.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:26 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 534 ; free virtual = 4615
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5584.688; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:20 . Memory (MB): peak = 2546.219 ; gain = 985.641 ; free physical = 301 ; free virtual = 6470
+Synthesis current peak Physical Memory [PSS] (MB): peak = 6328.437; parent = 1434.936; children = 5058.727
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 12154.391; parent = 2542.305; children = 9612.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:27 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 508 ; free virtual = 4589
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5584.688; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:01:21 . Memory (MB): peak = 2546.219 ; gain = 985.641 ; free physical = 302 ; free virtual = 6471
+Synthesis current peak Physical Memory [PSS] (MB): peak = 6328.437; parent = 1434.936; children = 5058.727
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 12154.391; parent = 2542.305; children = 9612.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:27 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 510 ; free virtual = 4591
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5584.688; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:01:21 . Memory (MB): peak = 2546.219 ; gain = 985.641 ; free physical = 301 ; free virtual = 6470
+Synthesis current peak Physical Memory [PSS] (MB): peak = 6328.437; parent = 1434.936; children = 5058.727
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 12154.391; parent = 2542.305; children = 9612.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:01:27 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 510 ; free virtual = 4591
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5584.688; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:01:21 . Memory (MB): peak = 2546.219 ; gain = 985.641 ; free physical = 302 ; free virtual = 6472
+Synthesis current peak Physical Memory [PSS] (MB): peak = 6328.437; parent = 1434.936; children = 5058.727
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 12154.391; parent = 2542.305; children = 9612.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -452,46 +446,50 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     3|
-|2     |LUT1       |     2|
-|3     |LUT2       |     9|
-|4     |LUT3       |    42|
-|5     |LUT4       |    53|
-|6     |LUT5       |    97|
-|7     |LUT6       |   159|
-|8     |MMCME2_ADV |     1|
-|9     |OSERDESE2  |     8|
-|11    |SRL16E     |    39|
-|12    |FDCE       |    64|
-|13    |FDRE       |   281|
-|14    |FDSE       |     1|
-|15    |OBUFDS     |     4|
+|2     |CARRY4     |     4|
+|3     |LUT1       |     2|
+|4     |LUT2       |   168|
+|5     |LUT3       |   137|
+|6     |LUT4       |    64|
+|7     |LUT5       |   371|
+|8     |LUT6       | 13287|
+|9     |MMCME2_ADV |     1|
+|10    |MUXF7      |  5081|
+|11    |MUXF8      |  2497|
+|12    |OSERDESE2  |     8|
+|14    |SRL16E     |    39|
+|15    |FDCE       |   208|
+|16    |FDRE       | 19635|
+|17    |FDSE       |     1|
+|18    |OBUFDS     |     4|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:01:27 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 510 ; free virtual = 4591
-Synthesis current peak Physical Memory [PSS] (MB): peak = 5584.688; parent = 1369.426; children = 4568.868
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 11698.160; parent = 2544.184; children = 9153.980
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:01:21 . Memory (MB): peak = 2546.219 ; gain = 985.641 ; free physical = 302 ; free virtual = 6471
+Synthesis current peak Physical Memory [PSS] (MB): peak = 6328.437; parent = 1434.936; children = 5058.727
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 12154.391; parent = 2542.305; children = 9612.090
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:28 . Memory (MB): peak = 2552.168 ; gain = 921.707 ; free physical = 4601 ; free virtual = 8729
-Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:32 . Memory (MB): peak = 2552.168 ; gain = 993.371 ; free physical = 4608 ; free virtual = 8723
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:20 . Memory (MB): peak = 2546.219 ; gain = 921.609 ; free physical = 5040 ; free virtual = 11212
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:23 . Memory (MB): peak = 2546.219 ; gain = 985.641 ; free physical = 5051 ; free virtual = 11209
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2552.168 ; gain = 0.000 ; free physical = 4608 ; free virtual = 8723
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2546.219 ; gain = 0.000 ; free physical = 5045 ; free virtual = 11203
+INFO: [Netlist 29-17] Analyzing 7587 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'mb_block_hdmi_text_controller_0_0' is not ideal for floorplanning, since the cellview 'hdmi_text_controller_v1_0_AXI' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2584.195 ; gain = 0.000 ; free physical = 4566 ; free virtual = 8677
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2582.316 ; gain = 0.000 ; free physical = 5021 ; free virtual = 11180
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 1bb552d3
+Synth Design complete, checksum: 9b387847
 INFO: [Common 17-83] Releasing license: Synthesis
-71 Infos, 125 Warnings, 0 Critical Warnings and 0 Errors encountered.
+70 Infos, 122 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:35 . Memory (MB): peak = 2584.195 ; gain = 1313.523 ; free physical = 4746 ; free virtual = 8857
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:27 . Memory (MB): peak = 2582.316 ; gain = 1317.832 ; free physical = 5246 ; free virtual = 11405
 INFO: [Common 17-1381] The checkpoint '/home/juniper/Documents/lab7-juniper/lab71/lab71.runs/mb_block_hdmi_text_controller_0_0_synth_1/mb_block_hdmi_text_controller_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_block_hdmi_text_controller_0_0, cache-ID = ea7f7f70ba3e279d
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_block_hdmi_text_controller_0_0, cache-ID = 070c7a9b897f42be
 INFO: [Coretcl 2-1174] Renamed 15 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/juniper/Documents/lab7-juniper/lab71/lab71.runs/mb_block_hdmi_text_controller_0_0_synth_1/mb_block_hdmi_text_controller_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_block_hdmi_text_controller_0_0_utilization_synth.rpt -pb mb_block_hdmi_text_controller_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 20:01:59 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 21:39:18 2026...

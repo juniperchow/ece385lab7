@@ -16,29 +16,33 @@
 // Dependencies: 
 // 
 // Revision:
-// Revision 0.02 - File modified to be more consistent with generated template
-// Revision 11/18 - Made comments less confusing
+// Revision 0.01 - File Created
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+
+`timescale 1 ns / 1 ps
+
 module hdmi_text_controller_v1_0_AXI #
 (
+    // Users to add parameters here
 
-    // Parameters of Axi Slave Bus Interface S_AXI
-    // Modify parameters as necessary for access of full VRAM range
+    // User parameters ends
+    // Do not modify the parameters beyond this line
 
     // Width of S_AXI data bus
     parameter integer C_S_AXI_DATA_WIDTH	= 32,
     // Width of S_AXI address bus
-    parameter integer C_S_AXI_ADDR_WIDTH	= 16 // change from 4 to 16
+    parameter integer C_S_AXI_ADDR_WIDTH	= 12
+    
+    
 )
 (
     // Users to add ports here
-    input logic [9:0] drawX,
-    input logic [9:0] drawY,
-    output logic [3:0] red, green, blue,
+
     // User ports ends
+    // Do not modify the ports beyond this line
 
     // Global Clock Signal
     input logic  S_AXI_ACLK,
@@ -61,7 +65,7 @@ module hdmi_text_controller_v1_0_AXI #
     // Write strobes. This signal indicates which byte lanes hold
         // valid data. There is one write strobe bit for each eight
         // bits of the write data bus.    
-    input logic [(C_S_AXI_DATA_WIDTH/8)-1 : 0] S_AXI_WSTRB,
+    input logic [(C_S_AXI_DATA_WIDTH/8)-1 : 0] S_AXI_WSTRB,//write strobe descrption
     // Write valid. This signal indicates that valid write
         // data and strobes are available.
     input logic  S_AXI_WVALID,
@@ -99,32 +103,34 @@ module hdmi_text_controller_v1_0_AXI #
     output logic  S_AXI_RVALID,
     // Read ready. This signal indicates that the master can
         // accept the read data and response information.
-    input logic  S_AXI_RREADY
+    input logic  S_AXI_RREADY,
+    input logic[9:0]Drawx,
+    input logic[9:0] Drawy,
+    output logic[3:0] RED,
+    output logic[3:0] BLUE,
+    output logic[3:0] GREEN
 );
 
 // AXI4LITE signals
 logic  [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
-//logic  [15 : 0] 	axi_awaddr;
 logic  axi_awready;
 logic  axi_wready;
 logic  [1 : 0] 	axi_bresp;
 logic  axi_bvalid;
-//logic  [15 : 0] 	axi_araddr;
 logic  [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
 logic  axi_arready;
 logic  [C_S_AXI_DATA_WIDTH-1 : 0] 	axi_rdata;
 logic  [1 : 0] 	axi_rresp;
 logic  	axi_rvalid;
 
+//logic canvas[480:0][640:0];
 // Example-specific design signals
 // local parameter for addressing 32 bit / 64 bit C_S_AXI_DATA_WIDTH
 // ADDR_LSB is used for addressing 32/64 bit registers/memories
 // ADDR_LSB = 2 for 32 bits (n downto 2)
 // ADDR_LSB = 3 for 64 bits (n downto 3)
 localparam integer ADDR_LSB = (C_S_AXI_DATA_WIDTH/32) + 1;
-localparam integer OPT_MEM_ADDR_BITS = 9;// change from 1 to 9
-//9	[11:2]	10bit 604 registers
-//11 [13:2] 
+localparam integer OPT_MEM_ADDR_BITS = 9;
 //----------------------------------------------
 //-- Signals for user logic register space example
 //------------------------------------------------
@@ -137,7 +143,7 @@ localparam integer OPT_MEM_ADDR_BITS = 9;// change from 1 to 9
 //Note: the provided Verilog template had the registered declared as above, but in order to give 
 //students a hint we have replaced the 4 individual registers with an unpacked array of packed logic. 
 //Note that you as the student will still need to extend this to the full register set needed for the lab.
-logic [C_S_AXI_DATA_WIDTH-1:0] slv_regs[604];
+logic [C_S_AXI_DATA_WIDTH-1:0] slv_regs[601];  //slv_regs[601]
 logic	 slv_reg_rden;
 logic	 slv_reg_wren;
 logic [C_S_AXI_DATA_WIDTH-1:0]	 reg_data_out;
@@ -150,7 +156,7 @@ assign S_AXI_AWREADY	= axi_awready;
 assign S_AXI_WREADY	= axi_wready;
 assign S_AXI_BRESP	= axi_bresp;
 assign S_AXI_BVALID	= axi_bvalid;
-assign S_AXI_ARREADY = axi_arready;
+assign S_AXI_ARREADY	= axi_arready;
 assign S_AXI_RDATA	= axi_rdata;
 assign S_AXI_RRESP	= axi_rresp;
 assign S_AXI_RVALID	= axi_rvalid;
@@ -163,12 +169,12 @@ always_ff @( posedge S_AXI_ACLK )
 begin
   if ( S_AXI_ARESETN == 1'b0 )
     begin
-      axi_awready <= 1'b0;
-      aw_en <= 1'b1;
+      axi_awready <= 1'b0;  //write not ready
+      aw_en <= 1'b1;        //
     end 
   else
     begin    
-      if (~axi_awready && S_AXI_AWVALID && S_AXI_WVALID && aw_en)
+      if (~axi_awready && S_AXI_AWVALID && S_AXI_WVALID && aw_en)  //aw and w valid
         begin
           // slave is ready to accept write address when 
           // there is a valid write address and write data
@@ -180,7 +186,7 @@ begin
         else if (S_AXI_BREADY && axi_bvalid)
             begin
               aw_en <= 1'b1;
-              axi_awready <= 1'b0;
+              axi_awready <= 1'b0;  //not ready write
             end
       else           
         begin
@@ -204,7 +210,7 @@ begin
       if (~axi_awready && S_AXI_AWVALID && S_AXI_WVALID && aw_en)
         begin
           // Write Address latching 
-          axi_awaddr <= S_AXI_AWADDR;
+          axi_awaddr <= S_AXI_AWADDR;       //store address
         end
     end 
 end       
@@ -261,8 +267,8 @@ begin
         for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
           if ( S_AXI_WSTRB[byte_index] == 1 ) begin
             // Respective byte enables are asserted as per write strobes, note the use of the index part select operator
-            // '+:', you will need to understand how this operator works.
-            slv_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+			// '+:', you will need to understand how this operator works.
+            slv_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];  //????????????????????
           end  
       end
   end
@@ -293,7 +299,7 @@ begin
         begin
           if (S_AXI_BREADY && axi_bvalid) 
             //check if bready is asserted while bvalid is high) 
-            //(there is a possibility that bready is always asserted high)   
+            //(there is a possibility that bready is always asserted high)   //???????????
             begin
               axi_bvalid <= 1'b0; 
             end  
@@ -369,7 +375,7 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 always_comb
 begin
       // Address decoding for reading registers
-     reg_data_out = slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
+     reg_data_out <= slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
 end
 
 // Output register or memory read data
@@ -392,73 +398,86 @@ begin
 end    
 
 // Add user logic here
-  logic [3:0] char_r, char_g, char_b;
-	logic [3:0] bkg_r, bkg_g, bkg_b; 
-	logic iv0; // invert character bit 
-	
-	logic [31:0] ctrl_reg; 
-	assign ctrl_reg = slv_regs[600]; 
 
-  assign char_r = ctrl_reg[24:21];
-	assign char_g = ctrl_reg[20:17];
-	assign char_b = ctrl_reg[16:13];
-	assign bkg_r = ctrl_reg[12:9];
-	assign bkg_g = ctrl_reg[8:5];
-	assign bkg_b = ctrl_reg[4:1];
-	
-	logic [8:0] slv_reg_addr;
-	logic [31:0] slv_reg_data;
-	
-	logic [6:0] glyph_code; //7 bit character 
-	
-	logic [8:0] char_idx, word_idx, byte_idx; 
-	assign char_idx = (drawY/16) * 80 + (drawX/8);
-	assign word_idx = char_idx/4; 
-	assign byte_idx = char_idx%4; 
-	assign slv_reg_data = slv_regs[word_idx];
-	
-	always_comb begin
-	   //glyph_code = slv_reg_data[6+8*byte_idx:8*byte_idx]
-	   case(byte_idx)
-	       2'b00: begin
-               glyph_code = slv_reg_data[6:0];
-               iv0 = slv_reg_data[7];
-           end
-	       2'b01: begin
-	           glyph_code = slv_reg_data[14:8];
-               iv0 = slv_reg_data[15];
-           end
-	       2'b10: begin
-	           glyph_code = slv_reg_data[22:16];
-               iv0 = slv_reg_data[23];
-           end
-	       2'b11: begin
-	           glyph_code = slv_reg_data[30:24];
-               iv0 = slv_reg_data[31];
-           end
-	   endcase
-	end
-	
-	logic[10:0] font_addr;
-	logic[7:0] font_data;
-	assign font_addr = (glyph_code * 16) + (drawY%16);
-	font_rom characterrom(
-        .addr(font_addr),
-        .data(font_data)
-	);
-	
-	always_comb begin
-        if((font_data[7 - (drawX % 8)] == 1 && iv0 == 1) || (font_data[7 - (drawX % 8)] == 0 && iv0 == 0)) begin
-            red = bkg_r; 
-            green = bkg_g;
-            blue = bkg_b;
+//local logic
+logic [31:0]cur_data;
+logic [9:0]row;
+logic [9:0]column;
+logic [11:0] address;
+logic [7:0] char;
+logic [9:0] offset_x;
+logic [9:0] offset_y;
+logic [10:0] fon_address;
+logic [7:0] print_data;
+logic [9:0] offset_x_1;
+logic [7:0] offset_r;
+logic IVN;
+logic [10:0]char_e;
+//integer char_index;
+// to get address we have x,y
+assign column = Drawx / 32;                         // locate the row  -- get the num of word
+assign offset_x= Drawx % 32;                        // get the offset of word
+assign row = Drawy / 16;                            // locate column
+assign offset_y= Drawy % 16;                        // get the offset word
+assign address[9:0] = row * 20 + column ;           //convert to address
+assign cur_data = slv_regs[address];
+
+    always_comb
+    begin
+         if( offset_x<=7 && offset_x >= 0) begin
+            char = cur_data[7:0];
+            offset_x_1=offset_x;
+         end
+         else if( offset_x <= 15 && offset_x >= 8)
+         begin 
+            char = cur_data[15:8]; 
+            offset_x_1=offset_x-8;
+         end
+         else if( offset_x <= 23 && offset_x >= 16) begin
+            char = cur_data[23:16];
+            offset_x_1=offset_x-16;
+         end
+         else begin
+            char = cur_data[31:24];
+            offset_x_1=offset_x-24;
+         end 
+         IVN = char[7];                  //get inverse bit
+         char_e= {{char[6:0]},{4'b0000}};
+         fon_address=char_e+ offset_y; // convert to fon address   
+    end
+
+// get the print data
+    font_rom my_font( .addr(fon_address), .data(print_data));                  
+// draw x draw y
+    always_comb
+    begin
+        offset_r=7-offset_x_1;
+        if(print_data[offset_r]==1)begin
+            // call control bit
+            if(IVN==0)begin
+                RED=slv_regs[600][24:21];
+                GREEN=slv_regs[600][20:17];
+                BLUE=slv_regs[600][16:13];
+            end
+            else begin
+                RED=slv_regs[600][12:9];
+                GREEN=slv_regs[600][8:5];
+                BLUE=slv_regs[600][4:1];
+            end
         end
         else begin
-            red = char_r; 
-            green = char_g;
-            blue = char_b;
-        end
-	end
+            if(IVN==0)
+            begin
+                RED=slv_regs[600][12:9];
+                GREEN=slv_regs[600][8:5];
+                BLUE=slv_regs[600][4:1];
+            end
+            else begin
+                RED=slv_regs[600][24:21];
+                GREEN=slv_regs[600][20:17];
+                BLUE=slv_regs[600][16:13];
+            end
+         end
+    end
 // User logic ends
-
 endmodule

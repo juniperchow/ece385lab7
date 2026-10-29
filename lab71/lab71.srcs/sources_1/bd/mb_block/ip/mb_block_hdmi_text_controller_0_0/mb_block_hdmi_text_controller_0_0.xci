@@ -4,7 +4,7 @@
     "xci_name": "mb_block_hdmi_text_controller_0_0",
     "cell_name": "hdmi_text_controller_0",
     "component_reference": "user.org:user:hdmi_text_controller:1.0",
-    "ip_revision": "14",
+    "ip_revision": "19",
     "gen_directory": "../../../../../../lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0",
     "parameters": {
       "component_parameters": {
@@ -12,11 +12,11 @@
         "C_AXI_HIGHADDR": [ { "value": "0x00000000", "resolve_type": "user", "format": "bitString", "enabled": false, "usage": "all" } ],
         "Component_Name": [ { "value": "mb_block_hdmi_text_controller_0_0", "resolve_type": "user", "usage": "all" } ],
         "C_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_AXI_ADDR_WIDTH": [ { "value": "4", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ]
+        "C_AXI_ADDR_WIDTH": [ { "value": "16", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ]
       },
       "model_parameters": {
         "C_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_AXI_ADDR_WIDTH": [ { "value": "4", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "C_AXI_ADDR_WIDTH": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "spartan7" } ],
@@ -35,7 +35,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "14" } ],
+        "IPREVISION": [ { "value": "19" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -46,13 +46,13 @@
     },
     "boundary": {
       "ports": {
-        "hdmi_tmds_clk_p": [ { "direction": "out" } ],
-        "hdmi_tmds_clk_n": [ { "direction": "out" } ],
-        "hdmi_tmds_data_p": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
-        "hdmi_tmds_data_n": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "hdmi_clk_n": [ { "direction": "out" } ],
+        "hdmi_clk_p": [ { "direction": "out" } ],
+        "hdmi_tx_n": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "hdmi_tx_p": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
         "axi_aclk": [ { "direction": "in" } ],
         "axi_aresetn": [ { "direction": "in" } ],
-        "axi_awaddr": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
+        "axi_awaddr": [ { "direction": "in", "size_left": "15", "size_right": "0", "driver_value": "0" } ],
         "axi_awprot": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
         "axi_awvalid": [ { "direction": "in", "driver_value": "0" } ],
         "axi_awready": [ { "direction": "out" } ],
@@ -63,7 +63,7 @@
         "axi_bresp": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
         "axi_bvalid": [ { "direction": "out" } ],
         "axi_bready": [ { "direction": "in", "driver_value": "0" } ],
-        "axi_araddr": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
+        "axi_araddr": [ { "direction": "in", "size_left": "15", "size_right": "0", "driver_value": "0" } ],
         "axi_arprot": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
         "axi_arvalid": [ { "direction": "in", "driver_value": "0" } ],
         "axi_arready": [ { "direction": "out" } ],
@@ -113,7 +113,7 @@
             "PROTOCOL": [ { "value": "AXI4LITE", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "FREQ_HZ": [ { "value": "100000000", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "ID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "ADDR_WIDTH": [ { "value": "4", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ADDR_WIDTH": [ { "value": "16", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "AWUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "ARUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "WUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
@@ -163,7 +163,7 @@
             "RREADY": [ { "physical_name": "axi_rready" } ]
           }
         },
-        "hdmi_tmds_clk_n": {
+        "hdmi_clk_n": {
           "vlnv": "xilinx.com:signal:clock:1.0",
           "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
           "mode": "master",
@@ -178,10 +178,10 @@
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
-            "CLK": [ { "physical_name": "hdmi_tmds_clk_n" } ]
+            "CLK": [ { "physical_name": "hdmi_clk_n" } ]
           }
         },
-        "hdmi_tmds_clk_p": {
+        "hdmi_clk_p": {
           "vlnv": "xilinx.com:signal:clock:1.0",
           "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
           "mode": "master",
@@ -196,7 +196,7 @@
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
-            "CLK": [ { "physical_name": "hdmi_tmds_clk_p" } ]
+            "CLK": [ { "physical_name": "hdmi_clk_p" } ]
           }
         },
         "HDMI": {
@@ -204,10 +204,10 @@
           "abstraction_type": "xilinx.com:interface:hdmi_rtl:2.0",
           "mode": "master",
           "port_maps": {
-            "TMDS_CLK_N": [ { "physical_name": "hdmi_tmds_clk_n" } ],
-            "TMDS_DATA_N": [ { "physical_name": "hdmi_tmds_data_n" } ],
-            "TMDS_DATA_P": [ { "physical_name": "hdmi_tmds_data_p" } ],
-            "TMDS_CLK_P": [ { "physical_name": "hdmi_tmds_clk_p" } ]
+            "TMDS_CLK_N": [ { "physical_name": "hdmi_clk_n" } ],
+            "TMDS_DATA_N": [ { "physical_name": "hdmi_tx_n" } ],
+            "TMDS_DATA_P": [ { "physical_name": "hdmi_tx_p" } ],
+            "TMDS_CLK_P": [ { "physical_name": "hdmi_clk_p" } ]
           }
         }
       },

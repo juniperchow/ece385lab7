@@ -21,8 +21,9 @@
   "../../../bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_sim_netlist.v" \
   "../../../bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_sim_netlist.v" \
   "../../../bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_sim_netlist.v" \
-  "/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_sim_netlist.v" \
   "../../../bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0_sim_netlist.v" \
+  "../../../bd/mb_block/ip/mb_block_axi_intc_0_0/mb_block_axi_intc_0_0_sim_netlist.v" \
+  "/home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_sim_netlist.v" \
   "../../../bd/mb_block/sim/mb_block.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

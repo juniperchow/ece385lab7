@@ -36,16 +36,16 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_rs
 # IP: bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_axi_uartlite_0_0 || ORIG_REF_NAME==mb_block_axi_uartlite_0_0} -quiet] -quiet
 
-# IP: bd/mb_block/ip/mb_block_microblaze_0_axi_periph_0/mb_block_microblaze_0_axi_periph_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_microblaze_0_axi_periph_0 || ORIG_REF_NAME==mb_block_microblaze_0_axi_periph_0} -quiet] -quiet
-
-# IP: bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_hdmi_text_controller_0_0 || ORIG_REF_NAME==mb_block_hdmi_text_controller_0_0} -quiet] -quiet
-
 # IP: bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_xbar_0 || ORIG_REF_NAME==mb_block_xbar_0} -quiet] -quiet
 
+# IP: bd/mb_block/ip/mb_block_microblaze_0_axi_periph_0/mb_block_microblaze_0_axi_periph_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_microblaze_0_axi_periph_0 || ORIG_REF_NAME==mb_block_microblaze_0_axi_periph_0} -quiet] -quiet
+
 # IP: bd/mb_block/ip/mb_block_axi_intc_0_0/mb_block_axi_intc_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_axi_intc_0_0 || ORIG_REF_NAME==mb_block_axi_intc_0_0} -quiet] -quiet
+
+# IP: bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_hdmi_text_controller_0_0 || ORIG_REF_NAME==mb_block_hdmi_text_controller_0_0} -quiet] -quiet
 
 # XDC: /home/juniper/Documents/lab7-juniper/lab71/lab71.gen/sources_1/bd/mb_block/mb_block_ooc.xdc

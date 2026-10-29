@@ -7,7 +7,7 @@
 #include "sleep.h"
 
 /************************** Function Definitions ***************************/
-
+#define WAIT_SECONDS 1
 void hdmiSetColor(int background, int foreground)
 {
 	hdmi_ctrl->COLOR = foreground << 16 | background;
@@ -45,7 +45,7 @@ void hdmiTestWeek1()
 		for (int i = 0; i < COLUMNS; i++)
 		{
 			readsum[j] += hdmi_ctrl->VRAM[j*COLUMNS + i];
-			printf ("%x \t %x \r", hdmi_ctrl->VRAM[j*COLUMNS + i],i+j);
+			//printf ("%x \t %x \r", hdmi_ctrl->VRAM[j*COLUMNS + i],i+j);
 		}
 		printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
 		if (checksum[j] != readsum[j])
@@ -54,8 +54,10 @@ void hdmiTestWeek1()
 			//while (1){};
 		}
 	}
+
+	printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
 	printf ("starting color test \n\r");
-	sleep_MB (5);
+	sleep_MB (WAIT_SECONDS);
 	hdmiSetColor(DIM_GRN, BRIGHT_GRN);
 	hdmiClr();
 	char greentest[] = "This text should draw in green";
@@ -65,7 +67,7 @@ void hdmiTestWeek1()
 			memcpy((void*)&hdmi_ctrl->VRAM[j*COLUMNS]+j,greentest, sizeof(greentest));
 		}
 	}
-	sleep_MB (5);
+	sleep_MB (WAIT_SECONDS);
 	hdmiSetColor(DIM_RED, BRIGHT_RED);
 	hdmiClr();
 	char redtest[] = "This text should draw in red";
@@ -75,7 +77,7 @@ void hdmiTestWeek1()
 			memcpy((void*)&hdmi_ctrl->VRAM[j*COLUMNS]+(ROWS-j),redtest, sizeof(redtest));
 		}
 	}
-	sleep_MB (5);
+	sleep_MB (WAIT_SECONDS);
 	hdmiSetColor(DIM_BLU, BRIGHT_BLU);
 	hdmiClr();
 	char blutest[] = "This text should draw in blue";
@@ -85,7 +87,7 @@ void hdmiTestWeek1()
 			memcpy((void*)&hdmi_ctrl->VRAM[j*COLUMNS],blutest, sizeof(blutest));
 		}
 	}
-	sleep_MB (5);
+	sleep_MB (WAIT_SECONDS);
 	hdmiClr();
 	char inverted[] = "This text should draw inverted";
 	for (int i = 0; i < sizeof(inverted); i++)
@@ -101,8 +103,9 @@ void hdmiTestWeek1()
 				memcpy((void*)&hdmi_ctrl->VRAM[j*COLUMNS]+j,inverted, sizeof(inverted));
 		}
 	}
-	sleep_MB (5);
+	printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
 
+	sleep_MB (WAIT_SECONDS);
 	hdmiSetColor(BLACK, WHITE);
 	hdmiClr();
 
@@ -116,5 +119,6 @@ void hdmiTestWeek1()
 		uint32_t old_frame_counter = hdmi_ctrl->FRAME_COUNT;
 		while (old_frame_counter == hdmi_ctrl->FRAME_COUNT); //wait for new frame
 		sprintf ( (&hdmi_ctrl->VRAM[0] + 80*29), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+		printf("Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
 	}
 }

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Wed Oct 28 20:04:09 2026
+//Date        : Wed Oct 28 21:37:36 2026
 //Host        : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 //Command     : generate_target mb_block.bd
 //Design      : mb_block
@@ -421,18 +421,18 @@ endmodule
 
 (* CORE_GENERATION_INFO = "mb_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mb_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=13,numNonXlnxBlks=1,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=5,da_clkrst_cnt=1,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "mb_block.hwdef" *) 
 module mb_block
-   (HDMI_0_tmds_clk_n,
-    HDMI_0_tmds_clk_p,
-    HDMI_0_tmds_data_n,
-    HDMI_0_tmds_data_p,
+   (HDMI_1_tmds_clk_n,
+    HDMI_1_tmds_clk_p,
+    HDMI_1_tmds_data_n,
+    HDMI_1_tmds_data_p,
     clk_100MHz,
     reset_rtl_0,
     uart_rtl_0_rxd,
     uart_rtl_0_txd);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_CLK_N" *) output HDMI_0_tmds_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_CLK_P" *) output HDMI_0_tmds_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_DATA_N" *) output [2:0]HDMI_0_tmds_data_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_DATA_P" *) output [2:0]HDMI_0_tmds_data_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_1 TMDS_CLK_N" *) output HDMI_1_tmds_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_1 TMDS_CLK_P" *) output HDMI_1_tmds_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_1 TMDS_DATA_N" *) output [2:0]HDMI_1_tmds_data_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_1 TMDS_DATA_P" *) output [2:0]HDMI_1_tmds_data_p;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN mb_block_clk_100MHz, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_100MHz;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset_rtl_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl_0 RxD" *) input uart_rtl_0_rxd;
@@ -443,10 +443,10 @@ module mb_block
   wire axi_uartlite_0_interrupt;
   wire clk_100MHz_1;
   wire clk_wiz_1_locked;
-  wire hdmi_text_controller_0_HDMI_TMDS_CLK_N;
-  wire hdmi_text_controller_0_HDMI_TMDS_CLK_P;
-  wire [2:0]hdmi_text_controller_0_HDMI_TMDS_DATA_N;
-  wire [2:0]hdmi_text_controller_0_HDMI_TMDS_DATA_P;
+  wire hdmi_text_controller_0_HDMI1_TMDS_CLK_N;
+  wire hdmi_text_controller_0_HDMI1_TMDS_CLK_P;
+  wire [2:0]hdmi_text_controller_0_HDMI1_TMDS_DATA_N;
+  wire [2:0]hdmi_text_controller_0_HDMI1_TMDS_DATA_P;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M_AXI_DP_ARADDR;
@@ -554,10 +554,10 @@ module mb_block
   wire rst_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn;
 
-  assign HDMI_0_tmds_clk_n = hdmi_text_controller_0_HDMI_TMDS_CLK_N;
-  assign HDMI_0_tmds_clk_p = hdmi_text_controller_0_HDMI_TMDS_CLK_P;
-  assign HDMI_0_tmds_data_n[2:0] = hdmi_text_controller_0_HDMI_TMDS_DATA_N;
-  assign HDMI_0_tmds_data_p[2:0] = hdmi_text_controller_0_HDMI_TMDS_DATA_P;
+  assign HDMI_1_tmds_clk_n = hdmi_text_controller_0_HDMI1_TMDS_CLK_N;
+  assign HDMI_1_tmds_clk_p = hdmi_text_controller_0_HDMI1_TMDS_CLK_P;
+  assign HDMI_1_tmds_data_n[2:0] = hdmi_text_controller_0_HDMI1_TMDS_DATA_N;
+  assign HDMI_1_tmds_data_p[2:0] = hdmi_text_controller_0_HDMI1_TMDS_DATA_P;
   assign axi_uartlite_0_UART_RxD = uart_rtl_0_rxd;
   assign clk_100MHz_1 = clk_100MHz;
   assign reset_rtl_0_1 = reset_rtl_0;
@@ -613,12 +613,12 @@ module mb_block
         .reset(mdm_1_debug_sys_rst));
   mb_block_hdmi_text_controller_0_0 hdmi_text_controller_0
        (.axi_aclk(microblaze_0_Clk),
-        .axi_araddr(microblaze_0_axi_periph_M02_AXI_ARADDR[3:0]),
+        .axi_araddr(microblaze_0_axi_periph_M02_AXI_ARADDR[15:0]),
         .axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
         .axi_arprot(microblaze_0_axi_periph_M02_AXI_ARPROT),
         .axi_arready(microblaze_0_axi_periph_M02_AXI_ARREADY),
         .axi_arvalid(microblaze_0_axi_periph_M02_AXI_ARVALID),
-        .axi_awaddr(microblaze_0_axi_periph_M02_AXI_AWADDR[3:0]),
+        .axi_awaddr(microblaze_0_axi_periph_M02_AXI_AWADDR[15:0]),
         .axi_awprot(microblaze_0_axi_periph_M02_AXI_AWPROT),
         .axi_awready(microblaze_0_axi_periph_M02_AXI_AWREADY),
         .axi_awvalid(microblaze_0_axi_periph_M02_AXI_AWVALID),
@@ -633,10 +633,10 @@ module mb_block
         .axi_wready(microblaze_0_axi_periph_M02_AXI_WREADY),
         .axi_wstrb(microblaze_0_axi_periph_M02_AXI_WSTRB),
         .axi_wvalid(microblaze_0_axi_periph_M02_AXI_WVALID),
-        .hdmi_tmds_clk_n(hdmi_text_controller_0_HDMI_TMDS_CLK_N),
-        .hdmi_tmds_clk_p(hdmi_text_controller_0_HDMI_TMDS_CLK_P),
-        .hdmi_tmds_data_n(hdmi_text_controller_0_HDMI_TMDS_DATA_N),
-        .hdmi_tmds_data_p(hdmi_text_controller_0_HDMI_TMDS_DATA_P));
+        .hdmi_clk_n(hdmi_text_controller_0_HDMI1_TMDS_CLK_N),
+        .hdmi_clk_p(hdmi_text_controller_0_HDMI1_TMDS_CLK_P),
+        .hdmi_tx_n(hdmi_text_controller_0_HDMI1_TMDS_DATA_N),
+        .hdmi_tx_p(hdmi_text_controller_0_HDMI1_TMDS_DATA_P));
   mb_block_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),

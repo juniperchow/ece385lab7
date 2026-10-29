@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1E7B06161D73E184",
+      "boundary_crc": "0xDBA3E1E570C531A8",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../lab71.gen/sources_1/bd/mb_block",
       "name": "mb_block",
@@ -30,8 +30,8 @@
         "m01_couplers": {},
         "m02_couplers": {}
       },
-      "hdmi_text_controller_0": "",
-      "axi_intc_0": ""
+      "axi_intc_0": "",
+      "hdmi_text_controller_0": ""
     },
     "interface_ports": {
       "uart_rtl_0": {
@@ -52,26 +52,31 @@
       "HDMI_0": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:hdmi:2.0",
+        "vlnv": "xilinx.com:interface:hdmi_rtl:2.0"
+      },
+      "HDMI_1": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:hdmi:2.0",
         "vlnv": "xilinx.com:interface:hdmi_rtl:2.0",
         "port_maps": {
           "TMDS_CLK_N": {
-            "physical_name": "HDMI_0_tmds_clk_n",
+            "physical_name": "HDMI_1_tmds_clk_n",
             "direction": "O"
           },
           "TMDS_DATA_N": {
-            "physical_name": "HDMI_0_tmds_data_n",
+            "physical_name": "HDMI_1_tmds_data_n",
             "direction": "O",
             "left": "2",
             "right": "0"
           },
           "TMDS_DATA_P": {
-            "physical_name": "HDMI_0_tmds_data_p",
+            "physical_name": "HDMI_1_tmds_data_p",
             "direction": "O",
             "left": "2",
             "right": "0"
           },
           "TMDS_CLK_P": {
-            "physical_name": "HDMI_0_tmds_clk_p",
+            "physical_name": "HDMI_1_tmds_clk_p",
             "direction": "O"
           }
         }
@@ -832,6 +837,12 @@
           }
         }
       },
+      "axi_intc_0": {
+        "vlnv": "xilinx.com:ip:axi_intc:4.1",
+        "xci_name": "mb_block_axi_intc_0_0",
+        "xci_path": "ip/mb_block_axi_intc_0_0/mb_block_axi_intc_0_0.xci",
+        "inst_hier_path": "axi_intc_0"
+      },
       "hdmi_text_controller_0": {
         "vlnv": "user.org:user:hdmi_text_controller:1.0",
         "xci_name": "mb_block_hdmi_text_controller_0_0",
@@ -839,15 +850,9 @@
         "inst_hier_path": "hdmi_text_controller_0",
         "parameters": {
           "C_AXI_ADDR_WIDTH": {
-            "value": "4"
+            "value": "16"
           }
         }
-      },
-      "axi_intc_0": {
-        "vlnv": "xilinx.com:ip:axi_intc:4.1",
-        "xci_name": "mb_block_axi_intc_0_0",
-        "xci_path": "ip/mb_block_axi_intc_0_0/mb_block_axi_intc_0_0.xci",
-        "inst_hier_path": "axi_intc_0"
       }
     },
     "interface_nets": {
@@ -857,9 +862,9 @@
           "axi_uartlite_0/UART"
         ]
       },
-      "hdmi_text_controller_0_HDMI": {
+      "hdmi_text_controller_0_HDMI1": {
         "interface_ports": [
-          "HDMI_0",
+          "HDMI_1",
           "hdmi_text_controller_0/HDMI"
         ]
       },
@@ -943,9 +948,9 @@
           "microblaze_0_axi_periph/M00_ACLK",
           "microblaze_0_axi_periph/ACLK",
           "microblaze_0_axi_periph/M01_ACLK",
-          "hdmi_text_controller_0/axi_aclk",
           "axi_intc_0/s_axi_aclk",
-          "microblaze_0_axi_periph/M02_ACLK"
+          "microblaze_0_axi_periph/M02_ACLK",
+          "hdmi_text_controller_0/axi_aclk"
         ]
       },
       "reset_rtl_0_1": {
@@ -974,9 +979,9 @@
           "microblaze_0_axi_periph/M00_ARESETN",
           "microblaze_0_axi_periph/ARESETN",
           "microblaze_0_axi_periph/M01_ARESETN",
-          "hdmi_text_controller_0/axi_aresetn",
           "axi_intc_0/s_axi_aresetn",
-          "microblaze_0_axi_periph/M02_ARESETN"
+          "microblaze_0_axi_periph/M02_ARESETN",
+          "hdmi_text_controller_0/axi_aresetn"
         ]
       }
     },

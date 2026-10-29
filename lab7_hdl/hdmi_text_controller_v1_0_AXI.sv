@@ -22,9 +22,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-`timescale 1 ns / 1 ps
-
 module hdmi_text_controller_v1_0_AXI #
 (
 
@@ -40,6 +37,7 @@ module hdmi_text_controller_v1_0_AXI #
     // Users to add ports here
     input logic [9:0] drawX,
     input logic [9:0] drawY,
+    input logic vsync,
     output logic [3:0] red, green, blue,
     // User ports ends
 
@@ -107,10 +105,12 @@ module hdmi_text_controller_v1_0_AXI #
 
 // AXI4LITE signals
 logic  [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
+//logic  [15 : 0] 	axi_awaddr;
 logic  axi_awready;
 logic  axi_wready;
 logic  [1 : 0] 	axi_bresp;
 logic  axi_bvalid;
+//logic  [15 : 0] 	axi_araddr;
 logic  [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
 logic  axi_arready;
 logic  [C_S_AXI_DATA_WIDTH-1 : 0] 	axi_rdata;
@@ -123,7 +123,9 @@ logic  	axi_rvalid;
 // ADDR_LSB = 2 for 32 bits (n downto 2)
 // ADDR_LSB = 3 for 64 bits (n downto 3)
 localparam integer ADDR_LSB = (C_S_AXI_DATA_WIDTH/32) + 1;
-localparam integer OPT_MEM_ADDR_BITS = 11;// change from 1 to 10
+localparam integer OPT_MEM_ADDR_BITS = 9;// change from 1 to 9
+//9	[11:2]	10bit 604 registers
+//11 [13:2] 
 //----------------------------------------------
 //-- Signals for user logic register space example
 //------------------------------------------------
@@ -137,6 +139,10 @@ localparam integer OPT_MEM_ADDR_BITS = 11;// change from 1 to 10
 //students a hint we have replaced the 4 individual registers with an unpacked array of packed logic. 
 //Note that you as the student will still need to extend this to the full register set needed for the lab.
 logic [C_S_AXI_DATA_WIDTH-1:0] slv_regs[604];
+localparam integer REG_CTRL          = 600;
+localparam integer REG_FRAME_COUNTER = 601;
+localparam integer REG_DRAW_X        = 602;
+localparam integer REG_DRAW_Y        = 603;
 logic	 slv_reg_rden;
 logic	 slv_reg_wren;
 logic [C_S_AXI_DATA_WIDTH-1:0]	 reg_data_out;
@@ -249,13 +255,14 @@ always_ff @( posedge S_AXI_ACLK )
 begin
   if ( S_AXI_ARESETN == 1'b0 )
     begin
-        for (integer i = 0; i < 2**C_S_AXI_ADDR_WIDTH; i++)
+        //for (integer i = 0; i < 2**C_S_AXI_ADDR_WIDTH; i++)
+        for (integer i = 0; i <= REG_CTRL; i++)
         begin
            slv_regs[i] <= 0;
         end
     end
   else begin
-    if (slv_reg_wren)
+    if (slv_reg_wren && axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] <= REG_CTRL)
       begin
         for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
           if ( S_AXI_WSTRB[byte_index] == 1 ) begin
@@ -368,7 +375,13 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 always_comb
 begin
       // Address decoding for reading registers
-     reg_data_out = slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
+     //reg_data_out = slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
+    case (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB])
+      REG_FRAME_COUNTER: reg_data_out = frame_counter;
+      REG_DRAW_X:        reg_data_out = drawX;
+      REG_DRAW_Y:        reg_data_out = drawY;
+      default: reg_data_out = slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
+    endcase
 end
 
 // Output register or memory read data
@@ -391,13 +404,19 @@ begin
 end    
 
 // Add user logic here
-    logic [3:0] char_r, char_g, char_b;
+  logic [3:0] char_r, char_g, char_b;
 	logic [3:0] bkg_r, bkg_g, bkg_b; 
-	logic [7:0] char_data; 
 	logic iv0; // invert character bit 
 	
 	logic [31:0] ctrl_reg; 
-	assign ctrl_reg = slv_regs[600]; 
+	assign ctrl_reg = slv_regs[REG_CTRL]; 
+
+  assign char_r = ctrl_reg[24:21];
+	assign char_g = ctrl_reg[20:17];
+	assign char_b = ctrl_reg[16:13];
+	assign bkg_r = ctrl_reg[12:9];
+	assign bkg_g = ctrl_reg[8:5];
+	assign bkg_b = ctrl_reg[4:1];
 	
 	logic [8:0] slv_reg_addr;
 	logic [31:0] slv_reg_data;
@@ -407,8 +426,8 @@ end
 	logic [8:0] char_idx, word_idx, byte_idx; 
 	assign char_idx = (drawY/16) * 80 + (drawX/8);
 	assign word_idx = char_idx/4; 
-	assign byte_idx = char_idx%4; 
-	assign slv_reg_addr = slv_regs[word_idx];
+	assign byte_idx = char_idx[1:0]; 
+	assign slv_reg_data = slv_regs[word_idx];
 	
 	always_comb begin
 	   //glyph_code = slv_reg_data[6+8*byte_idx:8*byte_idx]
@@ -432,24 +451,16 @@ end
 	   endcase
 	end
 	
-	assign font_addr = (glyph_code * 16) + (drawY%16);
-	
-	assign char_r = ctrl_reg[24:21];
-	assign char_g = ctrl_reg[20:17];
-	assign char_b = ctrl_reg[16:13];
-	assign bkg_r = ctrl_reg[12:9];
-	assign bkg_g = ctrl_reg[8:5];
-	assign bkg_b = ctrl_reg[4:1];
-	
 	logic[10:0] font_addr;
 	logic[7:0] font_data;
-    font_rom characterrom(
-	.addr(font_addr),
-	.data(font_data)
+	assign font_addr = (glyph_code * 16) + (drawY[3:0]);
+	font_rom characterrom(
+        .addr(font_addr),
+        .data(font_data)
 	);
 	
 	always_comb begin
-        if((font_data[7 - (drawX % 8)] == 1 && iv0 == 1) || (font_data[7 - (drawX % 8)] == 0 && iv0 == 0)) begin
+        if((font_data[7 - (drawX[2:0])] == 1 && iv0 == 1) || (font_data[7 - (drawX[2:0])] == 0 && iv0 == 0)) begin
             red = bkg_r; 
             green = bkg_g;
             blue = bkg_b;
@@ -460,8 +471,19 @@ end
             blue = char_b;
         end
 	end
-	
-
+//32bit width framecounter
+  logic [C_S_AXI_DATA_WIDTH-1:0] frame_counter;  
+  always_ff @(posedge vsync) begin
+      if (S_AXI_ARESETN == 1'b0) begin
+          frame_counter <= 32'b0;
+      end 
+      else begin
+          frame_counter <= frame_counter + 1;
+      end
+    end
+//   assign slv_regs[REG_FRAME_COUNTER] = frame_counter;
+//   assign slv_regs[REG_DRAW_X] = drawX;
+//   assign slv_regs[REG_DRAW_Y] = drawY;
 // User logic ends
 
 endmodule
