@@ -176,3 +176,10 @@ timestamp=[2026-10-29 02:45:46], mode=BUILD, duration=0:00:00.534, duration_ms=5
 timestamp=[2026-10-29 02:45:46], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=mb_hdmi_system, configuration=Debug, clean_build=false}
 timestamp=[2026-10-29 02:47:53], mode=BUILD, duration=0:00:00.588, duration_ms=588, data={name=mb_hdmi, configuration=Debug, clean_build=false}
 timestamp=[2026-10-29 02:47:54], mode=BUILD, duration=0:00:00.284, duration_ms=284, data={name=mb_hdmi_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-29 02:51:48], mode=BUILD, duration=0:00:00.679, duration_ms=679, data={name=mb_hdmi, configuration=Debug, clean_build=false}
+timestamp=[2026-10-29 02:51:49], mode=BUILD, duration=0:00:00.300, duration_ms=300, data={name=mb_hdmi_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-29 02:52:32], mode=BUILD, duration=0:00:00.557, duration_ms=557, data={name=mb_hdmi, configuration=Debug, clean_build=false}
+timestamp=[2026-10-29 02:52:33], mode=BUILD, duration=0:00:00.358, duration_ms=358, data={name=mb_hdmi_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-30 10:50:25], mode=WORKBENCH_START, duration=0:00:05.386, duration_ms=5386, data={}
+timestamp=[2026-10-30 10:50:26], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.019, duration_ms=19, data={}
+timestamp=[2026-10-30 10:50:26], mode=WORKBENCH_UI_INIT, duration=0:00:00.630, duration_ms=630, data={editors_count=5, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_hdmi,mb_hdmi_system,mb_hdmi_top}

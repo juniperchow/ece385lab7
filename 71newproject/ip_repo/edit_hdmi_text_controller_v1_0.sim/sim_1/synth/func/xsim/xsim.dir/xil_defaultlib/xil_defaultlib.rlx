@@ -1,0 +1,6 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/realk/Desktop/ece385/ECE385/ip_repo/edit_hdmi_text_controller_v1_0.sim/sim_1/synth/func/xsim/hdmi_text_controller_tb_func_synth.v,1731029390,verilog,,,,blk_mem_gen_0;blk_mem_gen_0_blk_mem_gen_generic_cstr;blk_mem_gen_0_blk_mem_gen_prim_width;blk_mem_gen_0_blk_mem_gen_prim_width__parameterized0;blk_mem_gen_0_blk_mem_gen_prim_wrapper;blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized0;blk_mem_gen_0_blk_mem_gen_top;blk_mem_gen_0_blk_mem_gen_v8_4_5;blk_mem_gen_0_blk_mem_gen_v8_4_5_synth;clk_wiz_0;clk_wiz_0_clk_wiz;encode;encode__parameterized0;encode__parameterized1;glbl;hdmi_text_controller_v1_0;hdmi_text_controller_v1_0_AXI;hdmi_tx_0;hdmi_tx_v1_0;serdes_10_to_1;serdes_10_to_1_0;serdes_10_to_1_1;serdes_10_to_1_2;srldelay;vga_controller,,uvm,../../../../../../lab7_2/lab7_2.tmp/hdmi_text_controller_v1_0_project/hdmi_text_controller_v1_0_project.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv,1731029383,systemVerilog,,,,hdmi_text_controller_tb,,uvm,../../../../../../lab7_2/lab7_2.tmp/hdmi_text_controller_v1_0_project/hdmi_text_controller_v1_0_project.gen/sources_1/ip/clk_wiz_0,,,,,
