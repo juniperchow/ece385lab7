@@ -11650,3 +11650,301 @@ TRACE::2026-10-29.02:43:48::SCWMssOS::Checking the sw design at  /home/juniper/D
 TRACE::2026-10-29.02:43:48::SCWMssOS::DEBUG:  swdes dump  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
 
 TRACE::2026-10-29.02:43:48::SCWMssOS::Sw design exists and opened at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to open the hw design at /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA given /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA absoulate path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA directory /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Platform Path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-10-30.12:48:19::SCWPlatform::Do not have an existing db opened. 
+TRACE::2026-10-30.12:48:19::SCWPlatform::Opened new HwDB with name mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWReader::Active system found as  mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWReader::Handling sysconfig mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWDomain::checking for install qemu data   : 
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to open the hw design at /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA given /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA absoulate path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA directory /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Platform Path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to set the existing hwdb with name mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Opened existing hwdb mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to open the hw design at /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA given /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA absoulate path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA directory /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Platform Path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to set the existing hwdb with name mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Opened existing hwdb mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to open the hw design at /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA given /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA absoulate path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA directory /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Platform Path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to set the existing hwdb with name mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Opened existing hwdb mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to open the hw design at /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA given /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA absoulate path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA directory /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Platform Path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to set the existing hwdb with name mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Opened existing hwdb mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-10-30.12:48:19::SCWMssOS::Checking the sw design at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2026-10-30.12:48:19::SCWMssOS::No sw design opened at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWMssOS::mss exists loading the mss file  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWMssOS::Opened the sw design from mss  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWMssOS::Adding the swdes entry /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2026-10-30.12:48:19::SCWMssOS::updating the scw layer about changes
+TRACE::2026-10-30.12:48:19::SCWMssOS::Opened the sw design.  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWMssOS::Saving the mss changes /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-10-30.12:48:19::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-10-30.12:48:19::SCWMssOS::Commit changes completed.
+TRACE::2026-10-30.12:48:19::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-10-30.12:48:19::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to open the hw design at /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA given /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA absoulate path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA directory /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Platform Path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to set the existing hwdb with name mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Opened existing hwdb mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-10-30.12:48:19::SCWMssOS::Checking the sw design at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWMssOS::DEBUG:  swdes dump  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Sw design exists and opened at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWReader::No isolation master present  
+LOG::2026-10-30.12:48:19::SCWPlatform::Started generating the artifacts platform mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Sanity checking of platform is completed
+LOG::2026-10-30.12:48:19::SCWPlatform::Started generating the artifacts for system configuration mb_hdmi_top
+LOG::2026-10-30.12:48:19::SCWSystem::Checking the domain standalone_microblaze_0
+LOG::2026-10-30.12:48:19::SCWSystem::Not a boot domain 
+LOG::2026-10-30.12:48:19::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2026-10-30.12:48:19::SCWDomain::Generating domain artifcats
+TRACE::2026-10-30.12:48:19::SCWMssOS::Generating standalone artifcats
+TRACE::2026-10-30.12:48:19::SCWMssOS:: Copying the user libraries. 
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to open the hw design at /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA given /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA absoulate path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform::DSA directory /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Platform Path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:19::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-10-30.12:48:19::SCWPlatform::Trying to set the existing hwdb with name mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Opened existing hwdb mb_hdmi_top
+TRACE::2026-10-30.12:48:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-10-30.12:48:19::SCWMssOS::Checking the sw design at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWMssOS::DEBUG:  swdes dump  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Sw design exists and opened at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWMssOS::Completed writing the mss file at /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2026-10-30.12:48:19::SCWMssOS::Mss edits present, copying mssfile into export location /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:19::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2026-10-30.12:48:19::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2026-10-30.12:48:19::SCWDomain::Building the domain as part of full build :  standalone_microblaze_0
+TRACE::2026-10-30.12:48:19::SCWMssOS::doing bsp build ... 
+TRACE::2026-10-30.12:48:19::SCWMssOS::System Command Ran  cd  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp ; bash -c "make  " 
+TRACE::2026-10-30.12:48:19::SCWMssOS::make --no-print-directory seq_libs
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Finished building libraries sequentially.
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -j 14 --no-print-directory par_libs
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Running Make include in microblaze_0/libsrc/bram_v4_8/src
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Running Make include in microblaze_0/libsrc/cpu_v2_16/src
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+TRACE::2026-10-30.12:48:19::SCWMssOS::PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTR
+TRACE::2026-10-30.12:48:19::SCWMssOS::A_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+TRACE::2026-10-30.12:48:19::SCWMssOS::PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTR
+TRACE::2026-10-30.12:48:19::SCWMssOS::A_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Running Make include in microblaze_0/libsrc/intc_v3_15/src
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+TRACE::2026-10-30.12:48:19::SCWMssOS::MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXT
+TRACE::2026-10-30.12:48:19::SCWMssOS::RA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Running Make include in microblaze_0/libsrc/standalone_v8_0/src
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar
+TRACE::2026-10-30.12:48:19::SCWMssOS::" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare"
+TRACE::2026-10-30.12:48:19::SCWMssOS:: "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Running Make include in microblaze_0/libsrc/uartlite_v3_7/src
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" 
+TRACE::2026-10-30.12:48:19::SCWMssOS::"COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "
+TRACE::2026-10-30.12:48:19::SCWMssOS::EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Running Make libs in microblaze_0/libsrc/bram_v4_8/src
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Running Make libs in microblaze_0/libsrc/cpu_v2_16/src
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2026-10-30.12:48:19::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
+TRACE::2026-10-30.12:48:19::SCWMssOS::OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2026-10-30.12:48:19::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
+TRACE::2026-10-30.12:48:19::SCWMssOS::OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Running Make libs in microblaze_0/libsrc/intc_v3_15/src
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Running Make libs in microblaze_0/libsrc/standalone_v8_0/src
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+TRACE::2026-10-30.12:48:19::SCWMssOS::LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_
+TRACE::2026-10-30.12:48:19::SCWMssOS::COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "
+TRACE::2026-10-30.12:48:19::SCWMssOS::COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "E
+TRACE::2026-10-30.12:48:19::SCWMssOS::XTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Running Make libs in microblaze_0/libsrc/uartlite_v3_7/src
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+TRACE::2026-10-30.12:48:19::SCWMssOS::MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXT
+TRACE::2026-10-30.12:48:19::SCWMssOS::RA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::Finished building libraries parallelly.
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::make --no-print-directory archive
+
+TRACE::2026-10-30.12:48:19::SCWMssOS::mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/_exit.o microblaze_0/lib/errno.o microblaze_0/lib/fcntl.o microblaze_0/lib
+TRACE::2026-10-30.12:48:19::SCWMssOS::/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
+TRACE::2026-10-30.12:48:19::SCWMssOS::ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
+TRACE::2026-10-30.12:48:19::SCWMssOS::/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
+TRACE::2026-10-30.12:48:19::SCWMssOS::aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
+TRACE::2026-10-30.12:48:19::SCWMssOS::e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
+TRACE::2026-10-30.12:48:19::SCWMssOS::aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
+TRACE::2026-10-30.12:48:19::SCWMssOS::laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
+TRACE::2026-10-30.12:48:19::SCWMssOS::he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
+TRACE::2026-10-30.12:48:19::SCWMssOS::lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
+TRACE::2026-10-30.12:48:19::SCWMssOS::_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
+TRACE::2026-10-30.12:48:19::SCWMssOS::microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
+TRACE::2026-10-30.12:48:19::SCWMssOS::/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xbram.o microblaze_0/lib/xbram_g.o microblaze_0/lib/xbram_intr.o microblaz
+TRACE::2026-10-30.12:48:19::SCWMssOS::e_0/lib/xbram_selftest.o microblaze_0/lib/xbram_sinit.o microblaze_0/lib/xil_assert.o microblaze_0/lib/xil_cache.o microblaze_0
+TRACE::2026-10-30.12:48:19::SCWMssOS::/lib/xil_clocking.o microblaze_0/lib/xil_exception.o microblaze_0/lib/xil_mem.o microblaze_0/lib/xil_misc_psreset_api.o microbl
+TRACE::2026-10-30.12:48:19::SCWMssOS::aze_0/lib/xil_printf.o microblaze_0/lib/xil_sleepcommon.o microblaze_0/lib/xil_testcache.o microblaze_0/lib/xil_testio.o microb
+TRACE::2026-10-30.12:48:19::SCWMssOS::laze_0/lib/xil_testmem.o microblaze_0/lib/xil_util.o microblaze_0/lib/xintc.o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc
+TRACE::2026-10-30.12:48:19::SCWMssOS::_intr.o microblaze_0/lib/xintc_l.o microblaze_0/lib/xintc_options.o microblaze_0/lib/xintc_selftest.o microblaze_0/lib/xinterru
+TRACE::2026-10-30.12:48:19::SCWMssOS::pt_wrap.o microblaze_0/lib/xio.o microblaze_0/lib/xplatform_info.o microblaze_0/lib/xuartlite.o microblaze_0/lib/xuartlite_g.o 
+TRACE::2026-10-30.12:48:19::SCWMssOS::microblaze_0/lib/xuartlite_intr.o microblaze_0/lib/xuartlite_l.o microblaze_0/lib/xuartlite_selftest.o microblaze_0/lib/xuartli
+TRACE::2026-10-30.12:48:19::SCWMssOS::te_sinit.o microblaze_0/lib/xuartlite_stats.o
+
+TRACE::2026-10-30.12:48:20::SCWMssOS::Finished building libraries
+
+TRACE::2026-10-30.12:48:20::SCWMssOS::Copying to export directory.
+TRACE::2026-10-30.12:48:20::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2026-10-30.12:48:20::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2026-10-30.12:48:20::SCWSystem::Completed Processing the domain standalone_microblaze_0
+LOG::2026-10-30.12:48:20::SCWSystem::Completed Processing the sysconfig mb_hdmi_top
+LOG::2026-10-30.12:48:20::SCWPlatform::Completed generating the artifacts for system configuration mb_hdmi_top
+TRACE::2026-10-30.12:48:20::SCWPlatform::Started preparing the platform 
+TRACE::2026-10-30.12:48:20::SCWSystem::Writing the bif file for system config mb_hdmi_top
+TRACE::2026-10-30.12:48:20::SCWSystem::dir created 
+TRACE::2026-10-30.12:48:20::SCWSystem::Writing the bif 
+TRACE::2026-10-30.12:48:20::SCWPlatform::Started writing the spfm file 
+TRACE::2026-10-30.12:48:20::SCWPlatform::Started writing the xpfm file 
+TRACE::2026-10-30.12:48:20::SCWPlatform::Completed generating the platform
+TRACE::2026-10-30.12:48:20::SCWMssOS::Saving the mss changes /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:20::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-10-30.12:48:20::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-10-30.12:48:20::SCWMssOS::Commit changes completed.
+TRACE::2026-10-30.12:48:20::SCWPlatform::Trying to open the hw design at /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:20::SCWPlatform::DSA given /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:20::SCWPlatform::DSA absoulate path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:20::SCWPlatform::DSA directory /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw
+TRACE::2026-10-30.12:48:20::SCWPlatform:: Platform Path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:20::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-10-30.12:48:20::SCWPlatform::Trying to set the existing hwdb with name mb_hdmi_top
+TRACE::2026-10-30.12:48:20::SCWPlatform::Opened existing hwdb mb_hdmi_top
+TRACE::2026-10-30.12:48:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-10-30.12:48:20::SCWMssOS::Checking the sw design at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:20::SCWMssOS::DEBUG:  swdes dump  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2026-10-30.12:48:20::SCWMssOS::Sw design exists and opened at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:20::SCWWriter::formatted JSON is {
+	"platformName":	"mb_hdmi_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"mb_hdmi_top",
+	"platHandOff":	"/home/juniper/tmp_ece/ECE385/lab7_1/mb_hdmi_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/mb_hdmi_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"mb_hdmi_top",
+	"systems":	[{
+			"systemName":	"mb_hdmi_top",
+			"systemDesc":	"mb_hdmi_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"mb_hdmi_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"e0c91fd1ce2f1909123e95184326fede",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2026-10-30.12:48:20::SCWPlatform::updated the xpfm file.
+TRACE::2026-10-30.12:48:20::SCWPlatform::Trying to open the hw design at /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:20::SCWPlatform::DSA given /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:20::SCWPlatform::DSA absoulate path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:20::SCWPlatform::DSA directory /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw
+TRACE::2026-10-30.12:48:20::SCWPlatform:: Platform Path /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/hw/mb_hdmi_top.xsa
+TRACE::2026-10-30.12:48:20::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-10-30.12:48:20::SCWPlatform::Trying to set the existing hwdb with name mb_hdmi_top
+TRACE::2026-10-30.12:48:20::SCWPlatform::Opened existing hwdb mb_hdmi_top
+TRACE::2026-10-30.12:48:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-10-30.12:48:20::SCWMssOS::Checking the sw design at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2026-10-30.12:48:20::SCWMssOS::DEBUG:  swdes dump  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2026-10-30.12:48:20::SCWMssOS::Sw design exists and opened at  /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss

@@ -76,3 +76,4 @@ platform generate -domains
 platform active {mb_hdmi_top}
 platform config -updatehw {/home/juniper/tmp_ece/ECE385/lab7_1/mb_hdmi_top.xsa}
 platform generate -domains standalone_microblaze_0 
+platform generate

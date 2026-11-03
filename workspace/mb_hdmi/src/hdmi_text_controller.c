@@ -7,7 +7,7 @@
 #include "sleep.h"
 
 /************************** Function Definitions ***************************/
-#define WAIT_SECONDS 1
+#define WAIT_SECONDS 5
 void hdmiSetColor(int background, int foreground)
 {
 	hdmi_ctrl->COLOR = foreground << 16 | background;
@@ -60,7 +60,7 @@ void hdmiTestWeek1()
 	sleep_MB (WAIT_SECONDS);
 	hdmiSetColor(DIM_GRN, BRIGHT_GRN);
 	hdmiClr();
-	char greentest[] = "This text should draw in green";
+	char greentest[] = "i like going green by saving energy";
 	{
 		for (int j = 0; j < ROWS; j++)
 		{
@@ -70,7 +70,7 @@ void hdmiTestWeek1()
 	sleep_MB (WAIT_SECONDS);
 	hdmiSetColor(DIM_RED, BRIGHT_RED);
 	hdmiClr();
-	char redtest[] = "This text should draw in red";
+	char redtest[] = "i like red lion";
 	{
 		for (int j = 0; j < ROWS; j++)
 		{
@@ -80,7 +80,7 @@ void hdmiTestWeek1()
 	sleep_MB (WAIT_SECONDS);
 	hdmiSetColor(DIM_BLU, BRIGHT_BLU);
 	hdmiClr();
-	char blutest[] = "This text should draw in blue";
+	char blutest[] = "i like blue guys from kams";
 	{
 		for (int j = 0; j < ROWS; j++)
 		{
@@ -89,7 +89,7 @@ void hdmiTestWeek1()
 	}
 	sleep_MB (WAIT_SECONDS);
 	hdmiClr();
-	char inverted[] = "This text should draw inverted";
+	char inverted[] = "i have a green background because i recycle";
 	for (int i = 0; i < sizeof(inverted); i++)
 		inverted[i] |= 0x80;
 

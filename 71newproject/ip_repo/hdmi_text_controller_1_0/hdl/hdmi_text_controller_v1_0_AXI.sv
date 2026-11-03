@@ -138,11 +138,11 @@ localparam integer OPT_MEM_ADDR_BITS = 9;// change from 1 to 9
 //Note: the provided Verilog template had the registered declared as above, but in order to give 
 //students a hint we have replaced the 4 individual registers with an unpacked array of packed logic. 
 //Note that you as the student will still need to extend this to the full register set needed for the lab.
-logic [C_S_AXI_DATA_WIDTH-1:0] slv_regs[604];
-localparam integer REG_CTRL          = 600;
-localparam integer REG_FRAME_COUNTER = 601;
-localparam integer REG_DRAW_X        = 602;
-localparam integer REG_DRAW_Y        = 603;
+logic [C_S_AXI_DATA_WIDTH-1:0] ctrl_regs[16];
+localparam integer REG_CTRL          = 0;
+localparam integer REG_FRAME_COUNTER = 1;
+localparam integer REG_DRAW_X        = 2;
+localparam integer REG_DRAW_Y        = 3;
 logic	 slv_reg_rden;
 logic	 slv_reg_wren;
 logic [C_S_AXI_DATA_WIDTH-1:0]	 reg_data_out;
@@ -159,6 +159,69 @@ assign S_AXI_ARREADY = axi_arready;
 assign S_AXI_RDATA	= axi_rdata;
 assign S_AXI_RRESP	= axi_rresp;
 assign S_AXI_RVALID	= axi_rvalid;
+
+logic [3:0] strobe;
+logic[31:0] bram_addra, bram_dina, bram_douta; 
+logic[31:0] bram_addrb, bram_doutb; 
+
+// always_comb
+//   begin
+//       if(S_AXI_ARVALID)
+//       begin
+//       addra = axi_araddr[12:2];
+//       end
+//       else
+//       begin
+//       addra = S_AXI_AWADDR[12:2];
+//       end
+//   end
+
+// assign addrb = (drawY >> 4) * 40 + (drawX >>4);
+//compute IO for the BRAM
+always_ff @( posedge S_AXI_ACLK )
+    begin
+    //vram write
+      if(slv_reg_wren == 1 && axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] <= 600)begin //write to vram
+        bram_addra <= S_AXI_AWADDR[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]; 
+        strobe <= S_AXI_WSTRB;
+        bram_dina <= S_AXI_WDATA;
+       end
+      //vram read
+       else if (slv_reg_rden && axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] <=600)begin //read from vram
+            begin 
+               bram_addra <= axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB];
+               strobe <= 4'b0000;
+               axi_rdata <= bram_douta;
+            end
+       end
+       //palette reg B write
+       else if( slv_reg_wren == 1 && axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] <= 600)begin //write to palette reg B
+            ctrl_regs[axi_awaddr[4:2]] <= S_AXI_WDATA;
+       end 
+       //pallete reg B read
+       else if (slv_reg_rden == 1 && axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] <= 600 )begin //read from palette reg B
+            axi_rdata <= ctrl_regs[axi_araddr[4:2]];
+       end
+        else begin
+            bram_addra <= axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB];
+            strobe <= 4'b0000;
+       end
+end    
+
+blk_mem_gen_0 bram_graphics(.addra(bram_addra), //bram_addra
+                            .clka(S_AXI_ACLK), 
+                            .dina(bram_dina), 
+                            .douta(bram_douta), 
+                            .ena(1'b1), 
+                            .wea(strobe), //S_AXI_WDATA//S_AXI_RDATA
+                            
+                            .addrb(addrb), 
+                            .clkb(S_AXI_ACLK), 
+                            .dinb(), 
+                            .doutb(bram_doutb), 
+                            .enb(1'b1), 
+                            .web(4'h0));
+
 // Implement axi_awready generation
 // axi_awready is asserted for one S_AXI_ACLK clock cycle when both
 // S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
@@ -253,12 +316,14 @@ assign slv_reg_wren = axi_wready && S_AXI_WVALID && axi_awready && S_AXI_AWVALID
 
 always_ff @( posedge S_AXI_ACLK )
 begin
-  if ( S_AXI_ARESETN == 1'b0 )
+  if ( S_AXI_ARESETN == 1'b0 ) // reset vram 
     begin
         //for (integer i = 0; i < 2**C_S_AXI_ADDR_WIDTH; i++)
+        bram_addra <= axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB];
+        bram_dina <= 0;
         for (integer i = 0; i <= REG_CTRL; i++)
         begin
-           slv_regs[i] <= 0;
+           ctrl_regs[i] <= 0;
         end
     end
   else begin
@@ -268,7 +333,10 @@ begin
           if ( S_AXI_WSTRB[byte_index] == 1 ) begin
             // Respective byte enables are asserted as per write strobes, note the use of the index part select operator
             // '+:', you will need to understand how this operator works.
-            slv_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+            //slv_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+            strobe <= S_AXI_WSTRB;
+            bram_addra <= axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB];
+            bram_dina <= S_AXI_WDATA;
           end  
       end
   end
@@ -380,7 +448,7 @@ begin
       REG_FRAME_COUNTER: reg_data_out = frame_counter;
       REG_DRAW_X:        reg_data_out = drawX;
       REG_DRAW_Y:        reg_data_out = drawY;
-      default: reg_data_out = slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
+      default: reg_data_out = bram_douta;//slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
     endcase
 end
 
@@ -391,16 +459,18 @@ begin
     begin
       axi_rdata  <= 0;
     end 
-  else
-    begin    
-      // When there is a valid read address (S_AXI_ARVALID) with 
-      // acceptance of read address by the slave (axi_arready), 
-      // output the read dada 
-      if (slv_reg_rden)
-        begin
-          axi_rdata <= reg_data_out;     // register read data
-        end   
-    end
+  // else
+  //   //output to axi rdata handled in write comb block 
+  //   begin    
+  //     // When there is a valid read address (S_AXI_ARVALID) with 
+  //     // acceptance of read address by the slave (axi_arready), 
+  //     // output the read dada 
+  //     if (slv_reg_rden)
+  //       begin
+  //         bram_addra <= axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB];
+  //         axi_rdata <= reg_data_out;     // register read data
+  //       end   
+  //   end
 end    
 
 // Add user logic here
@@ -409,7 +479,7 @@ end
 	logic iv0; // invert character bit 
 	
 	logic [31:0] ctrl_reg; 
-	assign ctrl_reg = slv_regs[REG_CTRL]; 
+	assign ctrl_reg = ctrl_regs[REG_CTRL]; 
 
   assign char_r = ctrl_reg[24:21];
 	assign char_g = ctrl_reg[20:17];
@@ -418,7 +488,6 @@ end
 	assign bkg_g = ctrl_reg[8:5];
 	assign bkg_b = ctrl_reg[4:1];
 	
-	logic [8:0] slv_reg_addr;
 	logic [31:0] slv_reg_data;
 	
 	logic [6:0] glyph_code; //7 bit character 
@@ -427,7 +496,8 @@ end
 	assign char_idx = (drawY/16) * 80 + (drawX/8);
 	assign word_idx = char_idx/4; 
 	assign byte_idx = char_idx[1:0]; 
-	assign slv_reg_data = slv_regs[word_idx];
+  assign bram_addrb = word_idx;
+	assign slv_reg_data = bram_doutb;
 	
 	always_comb begin
 	   //glyph_code = slv_reg_data[6+8*byte_idx:8*byte_idx]
@@ -481,9 +551,6 @@ end
           frame_counter <= frame_counter + 1;
       end
     end
-//   assign slv_regs[REG_FRAME_COUNTER] = frame_counter;
-//   assign slv_regs[REG_DRAW_X] = drawX;
-//   assign slv_regs[REG_DRAW_Y] = drawY;
 // User logic ends
 
 endmodule

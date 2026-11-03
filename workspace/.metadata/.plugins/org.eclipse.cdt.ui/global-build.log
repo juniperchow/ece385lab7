@@ -1,6 +1,6 @@
 Nothing to build in platform 'mb_hdmi_top'
 
-02:52:31 **** Incremental Build of configuration Debug for project mb_hdmi ****
+14:18:08 **** Incremental Build of configuration Debug for project mb_hdmi ****
 make all 
 Building file: ../src/hdmi_text_controller.c
 Invoking: MicroBlaze gcc compiler
@@ -97,9 +97,9 @@ Finished building target: mb_hdmi.elf
 Invoking: MicroBlaze Print Size
 mb-size mb_hdmi.elf  |tee "mb_hdmi.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  86328	   1728	   3168	  91224	  16458	mb_hdmi.elf
+  85532	   1728	   3172	  90432	  16140	mb_hdmi.elf
 Finished building: mb_hdmi.elf.size
  
-02:52:32 **** Incremental Build of configuration Debug for project mb_hdmi_system ****
+14:18:09 **** Incremental Build of configuration Debug for project mb_hdmi_system ****
 make all 
 Skipping SD card image generation. Reason: The system project only has applications for microblaze processors.
