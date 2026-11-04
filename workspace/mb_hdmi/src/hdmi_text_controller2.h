@@ -16,6 +16,8 @@
 
 struct TEXT_HDMI_STRUCT {
 	uint8_t             VRAM [ROWS*COLUMNS*2]; //Week 2 - extended VRAM
+	const uint16_t unused[1696];
+	uint32_t palette[8];
 	//declare palette registers here, make sure you properly pad in order to correctly account for
 	//gap in address map between VRAM and start of palette and control registers
 	uint32_t            FRAME_COUNT; //control registers should appear immediately after palette
@@ -115,7 +117,7 @@ static struct COLOR colors[]={
  * @note    Self test may fail if data memory and device are not on the same bus.
  *
  */
- 
+
 
 void textHDMIColorClr();
 void textHDMIDrawColorText(char* str, int x, int y, uint8_t background, uint8_t foreground);

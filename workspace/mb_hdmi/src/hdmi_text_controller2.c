@@ -1,7 +1,7 @@
 
 
 /***************************** Include Files *******************************/
-#include "hdmi_text_controller.h"
+#include "hdmi_text_controller2.h"
 #include "stdio.h"
 #include "stdlib.h"
 #include "string.h"
@@ -54,7 +54,24 @@ void textHDMIDrawColorText(char* str, int x, int y, uint8_t background, uint8_t 
 
 void setColorPalette (uint8_t color, uint8_t red, uint8_t green, uint8_t blue)
 {
-	//fill in this function to set the color palette entry <color> to <red>, <green>, <blue> 12-bit color
+	if (color >= 16) {
+	        xil_printf("setColorPalette: invalid color index %d\n\r", color);
+	        return;
+	    }
+
+	    // ֻȡ R/G/B �ĵ� 4bit
+	    uint32_t color12 = ((red   & 0xF) <<  8)
+	                     | ((green & 0xF) <<  4)
+	                     | ((blue  & 0xF) <<  0);
+
+	    // ��ɫ���ַ = PALETTE_START + (color * 4)��
+	    // ���� (color<<2) ��ʾ��λ2λ�൱�ڳ���4
+	    // �ٵ��ú�д�� 32 λ��ֻ�õ��� 12 λ
+	    HDMI_TEXT_CONTROLLER_mWriteReg(
+	        (u32)hdmi_ctrl,              // base address
+	        PALETTE_START + (color << 2),// offset in bytes
+	        color12                      // data(ֻ�õ�12λ)
+	    );
 }
 
 void sleepframe(uint32_t frames)
@@ -133,6 +150,36 @@ void textHDMIColorScreenSaver()
 //Call this function for your Week 2 test
 hdmiTestWeek2()
 {
+    //On-chip memory write and readback test
+	uint32_t checksum[ROWS], readsum[ROWS];
+
+	for (int j = 0; j < ROWS; j++)
+	{
+		checksum[j] = 0;
+		for (int i = 0; i < COLUMNS * 2; i++)
+		{
+			hdmi_ctrl->VRAM[j*COLUMNS*2 + i] = i + j;
+			checksum[j] += i + j;
+		}
+	}
+
+	for (int j = 0; j < ROWS; j++)
+	{
+		readsum[j] = 0;
+		for (int i = 0; i < COLUMNS * 2; i++)
+		{
+			readsum[j] += hdmi_ctrl->VRAM[j*COLUMNS*2 + i];
+			//printf ("%x \n\r", hdmi_ctrl->VRAM[j*COLUMNS*2 + i]);
+		}
+		printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
+		if (checksum[j] != readsum[j])
+		{
+			printf ("Checksum mismatch!, check your AXI4 code or your on-chip memory\n\r");
+			//while (1){};
+		}
+	}
+	printf ("Checksum passed, beginning palette test\n\r");
+
 	paletteTest();
 	printf ("Palette test passed, beginning screensaver loop\n\r");
 

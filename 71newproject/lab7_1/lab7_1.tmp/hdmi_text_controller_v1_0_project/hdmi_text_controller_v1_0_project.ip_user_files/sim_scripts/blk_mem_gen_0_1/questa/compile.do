@@ -2,9 +2,11 @@ vlib questa_lib/work
 vlib questa_lib/msim
 
 vlib questa_lib/msim/xpm
+vlib questa_lib/msim/blk_mem_gen_v8_4_5
 vlib questa_lib/msim/xil_defaultlib
 
 vmap xpm questa_lib/msim/xpm
+vmap blk_mem_gen_v8_4_5 questa_lib/msim/blk_mem_gen_v8_4_5
 vmap xil_defaultlib questa_lib/msim/xil_defaultlib
 
 vlog -work xpm -64 -incr -mfcu  -sv \
@@ -14,9 +16,11 @@ vlog -work xpm -64 -incr -mfcu  -sv \
 vcom -work xpm -64 -93  \
 "/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
-vlog -work xil_defaultlib -64 -incr -mfcu  \
+vlog -work blk_mem_gen_v8_4_5 -64 -incr -mfcu  \
 "../../../ipstatic/simulation/blk_mem_gen_v8_4.v" \
-"../../../../../../../ip_repo/hdmi_text_controller_1_0/src/blk_mem_gen_0_1/sim/blk_mem_gen_0.v" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  \
+"../../../../hdmi_text_controller_v1_0_project.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

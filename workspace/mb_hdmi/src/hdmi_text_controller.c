@@ -45,7 +45,7 @@ void hdmiTestWeek1()
 		for (int i = 0; i < COLUMNS; i++)
 		{
 			readsum[j] += hdmi_ctrl->VRAM[j*COLUMNS + i];
-			//printf ("%x \t %x \r", hdmi_ctrl->VRAM[j*COLUMNS + i],i+j);
+			printf ("%x \t %x \r", hdmi_ctrl->VRAM[j*COLUMNS + i],i+j);
 		}
 		printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
 		if (checksum[j] != readsum[j])

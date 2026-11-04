@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/juniper/Documents/lab7-juniper/71newproject/lab7_1/lab7_1.runs/mb_block_hdmi_text_controller_0_4_synth_1'
+HD_PWD='/home/juniper/Documents/lab7-juniper/lab72/lab7_1/lab7_1.runs/mb_block_hdmi_text_controller_0_4_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

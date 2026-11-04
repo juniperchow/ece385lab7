@@ -3521,3 +3521,2259 @@ con
 
 18:41:56 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
 18:54:42 INFO  : Disconnected from the channel tcfchan#1.
+20:37:12 DEBUG : Logs will be stored at '/home/juniper/Documents/lab7-juniper/workspace/IDE.log'.
+20:37:12 INFO  : Launching XSCT server: xsct -n  -interactive /home/juniper/Documents/lab7-juniper/workspace/temp_xsdb_launch_script.tcl
+20:37:14 INFO  : Platform repository initialization has completed.
+20:37:14 INFO  : Registering command handlers for Vitis TCF services
+20:37:14 INFO  : XSCT server has started successfully.
+20:37:15 INFO  : Successfully done setting XSCT server connection channel  
+20:37:15 INFO  : plnx-install-location is set to ''
+20:37:15 INFO  : Successfully done query RDI_DATADIR 
+20:37:15 INFO  : Successfully done setting workspace for the tool. 
+20:37:38 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+20:37:47 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+20:37:47 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+20:37:50 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+20:37:51 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:37:51 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+20:37:51 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+20:37:51 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+20:38:06 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+20:38:08 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+20:38:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:38:12 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+20:38:12 INFO  : 'jtag frequency' command is executed.
+20:38:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:38:14 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+20:38:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:14 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+20:38:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:38:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:14 INFO  : System reset is completed.
+20:38:17 INFO  : 'after 3000' command is executed.
+20:38:17 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:17 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+20:38:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+20:38:17 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:17 INFO  : 'con' command is executed.
+20:38:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:38:17 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+20:38:31 INFO  : Disconnected from the channel tcfchan#2.
+20:38:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:38:31 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+20:38:31 INFO  : 'jtag frequency' command is executed.
+20:38:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:38:33 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+20:38:33 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:33 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+20:38:33 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:38:33 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:33 INFO  : System reset is completed.
+20:38:36 INFO  : 'after 3000' command is executed.
+20:38:36 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:36 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+20:38:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+20:38:36 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:36 INFO  : 'con' command is executed.
+20:38:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:38:36 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+20:38:50 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+20:39:16 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+20:39:20 INFO  : Disconnected from the channel tcfchan#3.
+20:39:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:39:20 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+20:39:20 INFO  : 'jtag frequency' command is executed.
+20:39:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:39:21 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+20:39:21 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:21 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+20:39:21 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:39:21 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:21 INFO  : System reset is completed.
+20:39:24 INFO  : 'after 3000' command is executed.
+20:39:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:24 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+20:39:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+20:39:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:24 INFO  : 'con' command is executed.
+20:39:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:39:24 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+20:39:37 INFO  : Disconnected from the channel tcfchan#4.
+20:39:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:39:38 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+20:39:38 INFO  : 'jtag frequency' command is executed.
+20:39:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:39:39 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+20:39:39 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:39 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+20:39:39 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:39:39 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:39 INFO  : System reset is completed.
+20:39:42 INFO  : 'after 3000' command is executed.
+20:39:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:42 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+20:39:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+20:39:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:42 INFO  : 'con' command is executed.
+20:39:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:39:42 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+20:41:28 INFO  : Disconnected from the channel tcfchan#5.
+20:41:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:41:28 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+20:41:28 INFO  : 'jtag frequency' command is executed.
+20:41:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:41:30 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+20:41:30 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:30 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+20:41:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:41:30 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:30 INFO  : System reset is completed.
+20:41:32 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+20:41:33 INFO  : 'after 3000' command is executed.
+20:41:33 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:33 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+20:41:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+20:41:33 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:33 INFO  : 'con' command is executed.
+20:41:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:41:33 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+20:41:43 INFO  : Disconnected from the channel tcfchan#6.
+20:41:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:41:43 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+20:41:43 INFO  : 'jtag frequency' command is executed.
+20:41:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:41:45 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+20:41:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:45 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+20:41:45 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:41:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:45 INFO  : System reset is completed.
+20:41:48 INFO  : 'after 3000' command is executed.
+20:41:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:48 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+20:41:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+20:41:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:48 INFO  : 'con' command is executed.
+20:41:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:41:48 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+20:41:53 INFO  : Disconnected from the channel tcfchan#7.
+20:41:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:41:53 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+20:41:53 INFO  : 'jtag frequency' command is executed.
+20:41:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:41:54 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+20:41:54 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:54 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+20:41:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:41:54 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:54 INFO  : System reset is completed.
+20:41:57 INFO  : 'after 3000' command is executed.
+20:41:57 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:58 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+20:41:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+20:41:58 INFO  : Context for processor 'microblaze_0' is selected.
+20:41:58 INFO  : 'con' command is executed.
+20:41:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:41:58 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+20:42:50 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+20:42:58 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+20:42:58 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+20:43:01 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+20:43:03 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:43:03 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+20:43:03 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+20:43:03 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+20:43:08 INFO  : Disconnected from the channel tcfchan#8.
+20:43:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:43:08 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+20:43:08 INFO  : 'jtag frequency' command is executed.
+20:43:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:43:09 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top_bram.bit"
+20:43:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:43:09 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top_bram.xsa'.
+20:43:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:43:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:43:09 INFO  : System reset is completed.
+20:43:12 INFO  : 'after 3000' command is executed.
+20:43:12 INFO  : Context for processor 'microblaze_0' is selected.
+20:43:13 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+20:43:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top_bram.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top_bram.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+20:43:13 INFO  : Context for processor 'microblaze_0' is selected.
+20:43:13 INFO  : 'con' command is executed.
+20:43:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:43:13 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+20:43:54 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+20:44:00 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+20:44:00 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+20:44:03 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+20:44:08 ERROR : XSCT server calls should not be made from TCF thread.
+java.lang.RuntimeException: XSCT server calls should not be made from TCF thread.
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueAndWait(XSDBCommandManager.java:392) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:325) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.populateDesignProps(HwPlatform.java:521) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.isZynq(HwPlatform.java:1101) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.getArchFamily(HwPlatform.java:587) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readCrossTriggerModel(BaseLaunchConfigModel.java:174) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readAndSetAttributes(BaseLaunchConfigModel.java:156) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.ui.SdsLaunchConfigModel.newInstance(SdsLaunchConfigModel.java:109) [com.xilinx.sdx.sdsoc.debug.ui_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.createConfigModel(SdsTcfLaunchDelegate.java:85) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.generateReports(SdsTcfLaunchDelegate.java:641) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.onDisconnected(SdsTcfLaunchDelegate.java:615) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.ui.model.TCFModelManager$1.onDisconnected(TCFModelManager.java:79) [org.eclipse.tcf.debug.ui_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.onDisconnected(TCFLaunch.java:532) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch$43.onChannelClosed(TCFLaunch.java:1643) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:858) [org.eclipse.tcf.core_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98) [org.eclipse.tcf_1.7.0.202210132147.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+20:44:08 INFO  : Disconnected from the channel tcfchan#10.
+20:44:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:44:08 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+20:44:08 INFO  : 'jtag frequency' command is executed.
+20:44:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:44:09 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top_bram.bit"
+20:44:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:44:09 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top_bram.xsa'.
+20:44:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:44:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:44:09 INFO  : System reset is completed.
+20:44:12 INFO  : 'after 3000' command is executed.
+20:44:13 INFO  : Context for processor 'microblaze_0' is selected.
+20:44:13 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+20:44:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top_bram.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top_bram.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+20:44:13 INFO  : Context for processor 'microblaze_0' is selected.
+20:44:13 INFO  : 'con' command is executed.
+20:44:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:44:13 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+20:56:28 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+20:56:36 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+20:56:36 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+20:56:39 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+20:56:40 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:56:40 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top_bram.bit' stored in project is removed.
+20:56:40 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top_bram.mmi' stored in project is removed.
+20:56:40 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+20:56:43 INFO  : Disconnected from the channel tcfchan#12.
+20:56:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:56:43 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+20:56:43 INFO  : 'jtag frequency' command is executed.
+20:56:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:56:44 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top_bram.bit"
+20:56:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:56:44 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top_bram.xsa'.
+20:56:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:56:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:56:44 INFO  : System reset is completed.
+20:56:47 INFO  : 'after 3000' command is executed.
+20:56:47 INFO  : Context for processor 'microblaze_0' is selected.
+20:56:48 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+20:56:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top_bram.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top_bram.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+20:56:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:56:48 INFO  : 'con' command is executed.
+20:56:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:56:48 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+21:08:44 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+21:08:50 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+21:08:50 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+21:08:53 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+21:08:54 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:08:54 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top_bram.bit' stored in project is removed.
+21:08:54 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top_bram.mmi' stored in project is removed.
+21:08:54 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+21:08:58 INFO  : Disconnected from the channel tcfchan#14.
+21:08:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:08:58 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+21:08:58 INFO  : 'jtag frequency' command is executed.
+21:08:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:08:59 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+21:08:59 INFO  : Context for processor 'microblaze_0' is selected.
+21:08:59 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+21:08:59 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:08:59 INFO  : Context for processor 'microblaze_0' is selected.
+21:08:59 INFO  : System reset is completed.
+21:09:02 INFO  : 'after 3000' command is executed.
+21:09:02 INFO  : Context for processor 'microblaze_0' is selected.
+21:09:02 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+21:09:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+21:09:02 INFO  : Context for processor 'microblaze_0' is selected.
+21:09:02 INFO  : 'con' command is executed.
+21:09:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:09:02 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+21:10:17 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+21:10:23 INFO  : Disconnected from the channel tcfchan#16.
+21:10:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:10:23 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+21:10:23 INFO  : 'jtag frequency' command is executed.
+21:10:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:10:24 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+21:10:24 INFO  : Context for processor 'microblaze_0' is selected.
+21:10:24 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+21:10:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:10:24 INFO  : Context for processor 'microblaze_0' is selected.
+21:10:24 INFO  : System reset is completed.
+21:10:27 INFO  : 'after 3000' command is executed.
+21:10:27 INFO  : Context for processor 'microblaze_0' is selected.
+21:10:28 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+21:10:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+21:10:28 INFO  : Context for processor 'microblaze_0' is selected.
+21:10:28 INFO  : 'con' command is executed.
+21:10:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:10:28 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+21:17:56 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+21:18:02 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+21:18:02 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+21:18:05 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+21:18:07 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:18:07 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+21:18:07 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+21:18:07 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+21:18:10 INFO  : Disconnected from the channel tcfchan#17.
+21:18:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:18:11 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+21:18:11 INFO  : 'jtag frequency' command is executed.
+21:18:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:18:12 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+21:18:12 INFO  : Context for processor 'microblaze_0' is selected.
+21:18:12 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+21:18:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:18:12 INFO  : Context for processor 'microblaze_0' is selected.
+21:18:12 INFO  : System reset is completed.
+21:18:15 INFO  : 'after 3000' command is executed.
+21:18:15 INFO  : Context for processor 'microblaze_0' is selected.
+21:18:15 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+21:18:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+21:18:15 INFO  : Context for processor 'microblaze_0' is selected.
+21:18:15 INFO  : 'con' command is executed.
+21:18:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:18:15 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+21:18:34 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+21:18:40 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+21:18:40 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+21:18:43 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+21:18:48 ERROR : XSCT server calls should not be made from TCF thread.
+java.lang.RuntimeException: XSCT server calls should not be made from TCF thread.
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueAndWait(XSDBCommandManager.java:392) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:325) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.populateDesignProps(HwPlatform.java:521) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.isZynq(HwPlatform.java:1101) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.getArchFamily(HwPlatform.java:587) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readCrossTriggerModel(BaseLaunchConfigModel.java:174) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readAndSetAttributes(BaseLaunchConfigModel.java:156) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.ui.SdsLaunchConfigModel.newInstance(SdsLaunchConfigModel.java:109) [com.xilinx.sdx.sdsoc.debug.ui_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.createConfigModel(SdsTcfLaunchDelegate.java:85) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.generateReports(SdsTcfLaunchDelegate.java:641) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.onDisconnected(SdsTcfLaunchDelegate.java:615) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.ui.model.TCFModelManager$1.onDisconnected(TCFModelManager.java:79) [org.eclipse.tcf.debug.ui_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.onDisconnected(TCFLaunch.java:532) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch$43.onChannelClosed(TCFLaunch.java:1643) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:858) [org.eclipse.tcf.core_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98) [org.eclipse.tcf_1.7.0.202210132147.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+21:18:48 INFO  : Disconnected from the channel tcfchan#19.
+21:18:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:18:48 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+21:18:48 INFO  : 'jtag frequency' command is executed.
+21:18:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:18:50 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+21:18:50 INFO  : Context for processor 'microblaze_0' is selected.
+21:18:50 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+21:18:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:18:50 INFO  : Context for processor 'microblaze_0' is selected.
+21:18:50 INFO  : System reset is completed.
+21:18:53 INFO  : 'after 3000' command is executed.
+21:18:53 INFO  : Context for processor 'microblaze_0' is selected.
+21:18:53 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+21:18:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+21:18:53 INFO  : Context for processor 'microblaze_0' is selected.
+21:18:53 INFO  : 'con' command is executed.
+21:18:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:18:53 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+21:23:12 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+21:23:16 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+21:23:16 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+21:23:19 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+21:23:21 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:23:21 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+21:23:21 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+21:23:21 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+21:23:24 INFO  : Disconnected from the channel tcfchan#21.
+21:23:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:23:24 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+21:23:24 INFO  : 'jtag frequency' command is executed.
+21:23:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:23:25 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+21:23:25 INFO  : Context for processor 'microblaze_0' is selected.
+21:23:25 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+21:23:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:23:25 INFO  : Context for processor 'microblaze_0' is selected.
+21:23:25 INFO  : System reset is completed.
+21:23:28 INFO  : 'after 3000' command is executed.
+21:23:29 INFO  : Context for processor 'microblaze_0' is selected.
+21:23:29 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+21:23:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+21:23:29 INFO  : Context for processor 'microblaze_0' is selected.
+21:23:29 INFO  : 'con' command is executed.
+21:23:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:23:29 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+21:30:04 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+21:30:13 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+21:30:13 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+21:30:16 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+21:30:18 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:30:18 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+21:30:18 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+21:30:18 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+21:30:22 INFO  : Disconnected from the channel tcfchan#23.
+21:30:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:30:22 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+21:30:22 INFO  : 'jtag frequency' command is executed.
+21:30:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:30:24 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+21:30:24 INFO  : Context for processor 'microblaze_0' is selected.
+21:30:24 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+21:30:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:30:24 INFO  : Context for processor 'microblaze_0' is selected.
+21:30:24 INFO  : System reset is completed.
+21:30:27 INFO  : 'after 3000' command is executed.
+21:30:27 INFO  : Context for processor 'microblaze_0' is selected.
+21:30:27 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+21:30:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+21:30:27 INFO  : Context for processor 'microblaze_0' is selected.
+21:30:27 INFO  : 'con' command is executed.
+21:30:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:30:27 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:09:39 ERROR : (XSDB Server)Hangup                     "$RDI_BINROOT"/unwrapped/"$RDI_PLATFORM$RDI_OPT_EXT"/rlwrap -rc -b "(){}[],+= & ^%$#@"";|\\" -f "$HDI_APPROOT"/scripts/xsct/xsdb/cmdlist -H "$LOG_FILE" "$RDI_BINROOT"/loader -exec rdi_xsct "${RDI_ARGS[@]}"
+
+22:26:00 DEBUG : Logs will be stored at '/home/juniper/Documents/lab7-juniper/workspace/IDE.log'.
+22:26:01 INFO  : Launching XSCT server: xsct -n  -interactive /home/juniper/Documents/lab7-juniper/workspace/temp_xsdb_launch_script.tcl
+22:26:02 INFO  : Platform repository initialization has completed.
+22:26:03 INFO  : Registering command handlers for Vitis TCF services
+22:26:03 INFO  : XSCT server has started successfully.
+22:26:03 INFO  : Successfully done setting XSCT server connection channel  
+22:26:03 INFO  : plnx-install-location is set to ''
+22:26:03 INFO  : Successfully done setting workspace for the tool. 
+22:26:03 INFO  : Successfully done query RDI_DATADIR 
+22:27:13 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+22:27:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:27:24 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:27:24 INFO  : 'jtag frequency' command is executed.
+22:27:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:27:25 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+22:27:25 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:25 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+22:27:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:27:25 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:25 INFO  : System reset is completed.
+22:27:28 INFO  : 'after 3000' command is executed.
+22:27:28 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:29 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:27:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:27:29 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:29 INFO  : 'con' command is executed.
+22:27:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:27:29 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:27:41 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+22:27:41 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+22:27:44 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:27:46 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:27:46 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+22:27:46 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+22:27:46 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+22:27:49 INFO  : Disconnected from the channel tcfchan#1.
+22:27:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:27:49 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:27:49 INFO  : 'jtag frequency' command is executed.
+22:27:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:27:50 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit"
+22:27:50 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:50 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_topjuniper.xsa'.
+22:27:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:27:50 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:50 INFO  : System reset is completed.
+22:27:53 INFO  : 'after 3000' command is executed.
+22:27:53 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:54 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:27:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_topjuniper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:27:54 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:54 INFO  : 'con' command is executed.
+22:27:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:27:54 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:28:10 INFO  : Disconnected from the channel tcfchan#3.
+22:28:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:28:10 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:28:10 INFO  : 'jtag frequency' command is executed.
+22:28:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:28:12 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit"
+22:28:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:12 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_topjuniper.xsa'.
+22:28:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:28:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:12 INFO  : System reset is completed.
+22:28:15 INFO  : 'after 3000' command is executed.
+22:28:15 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:15 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:28:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_topjuniper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:28:15 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:15 INFO  : 'con' command is executed.
+22:28:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:28:15 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:28:50 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:28:54 INFO  : Disconnected from the channel tcfchan#4.
+22:28:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:28:54 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:28:54 INFO  : 'jtag frequency' command is executed.
+22:28:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:28:55 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit"
+22:28:55 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:55 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_topjuniper.xsa'.
+22:28:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:28:55 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:55 INFO  : System reset is completed.
+22:28:58 INFO  : 'after 3000' command is executed.
+22:28:58 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:59 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:28:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_topjuniper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:28:59 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:59 INFO  : 'con' command is executed.
+22:28:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:28:59 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:29:19 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+22:29:24 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+22:29:24 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+22:29:27 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:29:29 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:29:29 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit' stored in project is removed.
+22:29:29 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.mmi' stored in project is removed.
+22:29:29 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+22:29:31 INFO  : Disconnected from the channel tcfchan#5.
+22:29:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:29:31 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:29:31 INFO  : 'jtag frequency' command is executed.
+22:29:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:29:32 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:29:32 INFO  : Context for processor 'microblaze_0' is selected.
+22:29:32 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+22:29:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:29:32 INFO  : Context for processor 'microblaze_0' is selected.
+22:29:32 INFO  : System reset is completed.
+22:29:35 INFO  : 'after 3000' command is executed.
+22:29:35 INFO  : Context for processor 'microblaze_0' is selected.
+22:29:36 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:29:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:29:36 INFO  : Context for processor 'microblaze_0' is selected.
+22:29:36 INFO  : 'con' command is executed.
+22:29:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:29:36 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:29:45 INFO  : Disconnected from the channel tcfchan#7.
+22:29:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:29:45 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:29:45 INFO  : 'jtag frequency' command is executed.
+22:29:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:29:46 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:29:46 INFO  : Context for processor 'microblaze_0' is selected.
+22:29:46 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+22:29:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:29:46 INFO  : Context for processor 'microblaze_0' is selected.
+22:29:46 INFO  : System reset is completed.
+22:29:49 INFO  : 'after 3000' command is executed.
+22:29:49 INFO  : Context for processor 'microblaze_0' is selected.
+22:29:50 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:29:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:29:50 INFO  : Context for processor 'microblaze_0' is selected.
+22:29:50 INFO  : 'con' command is executed.
+22:29:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:29:50 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:29:57 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:30:04 INFO  : Disconnected from the channel tcfchan#8.
+22:30:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:30:04 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:30:04 INFO  : 'jtag frequency' command is executed.
+22:30:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:30:05 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:30:05 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:05 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+22:30:05 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:30:05 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:05 INFO  : System reset is completed.
+22:30:08 INFO  : 'after 3000' command is executed.
+22:30:08 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:09 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:30:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:30:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:09 INFO  : 'con' command is executed.
+22:30:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:30:09 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:31:55 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+22:31:55 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+22:31:58 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:32:02 ERROR : XSCT server calls should not be made from TCF thread.
+java.lang.RuntimeException: XSCT server calls should not be made from TCF thread.
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueAndWait(XSDBCommandManager.java:392) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:325) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.populateDesignProps(HwPlatform.java:521) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.isZynq(HwPlatform.java:1101) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.getArchFamily(HwPlatform.java:587) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readCrossTriggerModel(BaseLaunchConfigModel.java:174) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readAndSetAttributes(BaseLaunchConfigModel.java:156) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.ui.SdsLaunchConfigModel.newInstance(SdsLaunchConfigModel.java:109) [com.xilinx.sdx.sdsoc.debug.ui_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.createConfigModel(SdsTcfLaunchDelegate.java:85) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.generateReports(SdsTcfLaunchDelegate.java:641) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.onDisconnected(SdsTcfLaunchDelegate.java:615) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.ui.model.TCFModelManager$1.onDisconnected(TCFModelManager.java:79) [org.eclipse.tcf.debug.ui_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.onDisconnected(TCFLaunch.java:532) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch$43.onChannelClosed(TCFLaunch.java:1643) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:858) [org.eclipse.tcf.core_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98) [org.eclipse.tcf_1.7.0.202210132147.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+22:32:02 INFO  : Disconnected from the channel tcfchan#9.
+22:32:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:32:02 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:32:02 INFO  : 'jtag frequency' command is executed.
+22:32:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:32:03 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:32:03 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:03 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+22:32:03 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:32:03 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:03 INFO  : System reset is completed.
+22:32:06 INFO  : 'after 3000' command is executed.
+22:32:06 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:07 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:32:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:32:07 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:07 INFO  : 'con' command is executed.
+22:32:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:32:07 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:32:16 INFO  : Disconnected from the channel tcfchan#11.
+22:32:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:32:16 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:32:16 INFO  : 'jtag frequency' command is executed.
+22:32:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:32:18 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:32:18 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:18 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+22:32:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:32:18 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:18 INFO  : System reset is completed.
+22:32:21 INFO  : 'after 3000' command is executed.
+22:32:21 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:21 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:32:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:32:21 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:21 INFO  : 'con' command is executed.
+22:32:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:32:21 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:42:17 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+22:42:27 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+22:42:27 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+22:42:30 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:42:32 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:42:32 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit' stored in project is removed.
+22:42:32 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.mmi' stored in project is removed.
+22:42:32 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+22:42:34 INFO  : Disconnected from the channel tcfchan#12.
+22:42:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:42:34 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:42:34 INFO  : 'jtag frequency' command is executed.
+22:42:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:42:35 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit"
+22:42:35 INFO  : Context for processor 'microblaze_0' is selected.
+22:42:35 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa'.
+22:42:35 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:42:35 INFO  : Context for processor 'microblaze_0' is selected.
+22:42:35 INFO  : System reset is completed.
+22:42:38 INFO  : 'after 3000' command is executed.
+22:42:38 INFO  : Context for processor 'microblaze_0' is selected.
+22:42:38 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:42:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:42:38 INFO  : Context for processor 'microblaze_0' is selected.
+22:42:38 INFO  : 'con' command is executed.
+22:42:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:42:38 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:42:45 INFO  : Disconnected from the channel tcfchan#14.
+22:42:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:42:45 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:42:45 INFO  : 'jtag frequency' command is executed.
+22:42:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:42:46 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit"
+22:42:46 INFO  : Context for processor 'microblaze_0' is selected.
+22:42:46 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa'.
+22:42:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:42:46 INFO  : Context for processor 'microblaze_0' is selected.
+22:42:46 INFO  : System reset is completed.
+22:42:49 INFO  : 'after 3000' command is executed.
+22:42:49 INFO  : Context for processor 'microblaze_0' is selected.
+22:42:49 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:42:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:42:49 INFO  : Context for processor 'microblaze_0' is selected.
+22:42:49 INFO  : 'con' command is executed.
+22:42:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:42:49 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:43:30 INFO  : Disconnected from the channel tcfchan#15.
+22:45:09 DEBUG : Logs will be stored at '/home/juniper/Documents/lab7-juniper/workspace/IDE.log'.
+22:45:09 INFO  : Launching XSCT server: xsct -n  -interactive /home/juniper/Documents/lab7-juniper/workspace/temp_xsdb_launch_script.tcl
+22:45:10 INFO  : XSCT server has started successfully.
+22:45:10 INFO  : plnx-install-location is set to ''
+22:45:10 INFO  : Successfully done setting XSCT server connection channel  
+22:45:10 INFO  : Successfully done setting workspace for the tool. 
+22:45:11 INFO  : Platform repository initialization has completed.
+22:45:11 INFO  : Successfully done query RDI_DATADIR 
+22:45:11 INFO  : Registering command handlers for Vitis TCF services
+22:45:47 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:45:58 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+22:46:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:46:08 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:46:08 INFO  : 'jtag frequency' command is executed.
+22:46:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:46:09 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit"
+22:46:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:46:09 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa'.
+22:46:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:46:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:46:09 INFO  : System reset is completed.
+22:46:12 INFO  : 'after 3000' command is executed.
+22:46:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:46:12 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:46:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:46:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:46:12 INFO  : 'con' command is executed.
+22:46:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:46:12 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:46:47 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+22:46:47 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+22:46:50 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:47:05 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:47:10 ERROR : XSCT server calls should not be made from TCF thread.
+java.lang.RuntimeException: XSCT server calls should not be made from TCF thread.
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueAndWait(XSDBCommandManager.java:392) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:325) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.populateDesignProps(HwPlatform.java:521) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.isZynq(HwPlatform.java:1101) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.getArchFamily(HwPlatform.java:587) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readCrossTriggerModel(BaseLaunchConfigModel.java:174) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readAndSetAttributes(BaseLaunchConfigModel.java:156) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.ui.SdsLaunchConfigModel.newInstance(SdsLaunchConfigModel.java:109) [com.xilinx.sdx.sdsoc.debug.ui_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.createConfigModel(SdsTcfLaunchDelegate.java:85) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.generateReports(SdsTcfLaunchDelegate.java:641) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.onDisconnected(SdsTcfLaunchDelegate.java:615) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.ui.model.TCFModelManager$1.onDisconnected(TCFModelManager.java:79) [org.eclipse.tcf.debug.ui_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.onDisconnected(TCFLaunch.java:532) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch$43.onChannelClosed(TCFLaunch.java:1643) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:858) [org.eclipse.tcf.core_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98) [org.eclipse.tcf_1.7.0.202210132147.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+22:47:10 INFO  : Disconnected from the channel tcfchan#1.
+22:47:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:47:10 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:47:10 INFO  : 'jtag frequency' command is executed.
+22:47:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:47:11 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit"
+22:47:11 INFO  : Context for processor 'microblaze_0' is selected.
+22:47:11 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa'.
+22:47:11 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:47:11 INFO  : Context for processor 'microblaze_0' is selected.
+22:47:11 INFO  : System reset is completed.
+22:47:14 INFO  : 'after 3000' command is executed.
+22:47:14 INFO  : Context for processor 'microblaze_0' is selected.
+22:47:15 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:47:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:47:15 INFO  : Context for processor 'microblaze_0' is selected.
+22:47:15 INFO  : 'con' command is executed.
+22:47:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:47:15 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:52:11 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:52:16 INFO  : Disconnected from the channel tcfchan#3.
+22:52:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:52:16 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:52:16 INFO  : 'jtag frequency' command is executed.
+22:52:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:52:17 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit"
+22:52:17 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:17 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa'.
+22:52:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:52:17 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:17 INFO  : System reset is completed.
+22:52:20 INFO  : 'after 3000' command is executed.
+22:52:20 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:21 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:52:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:52:21 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:21 INFO  : 'con' command is executed.
+22:52:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:52:21 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:52:45 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+22:52:52 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+22:52:52 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+22:52:55 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:52:57 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:52:57 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit' stored in project is removed.
+22:52:57 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.mmi' stored in project is removed.
+22:52:57 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+22:52:58 INFO  : Disconnected from the channel tcfchan#4.
+22:52:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:52:58 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:52:58 INFO  : 'jtag frequency' command is executed.
+22:52:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:53:00 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit"
+22:53:00 INFO  : Context for processor 'microblaze_0' is selected.
+22:53:00 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_topjuniper.xsa'.
+22:53:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:53:00 INFO  : Context for processor 'microblaze_0' is selected.
+22:53:00 INFO  : System reset is completed.
+22:53:03 INFO  : 'after 3000' command is executed.
+22:53:03 INFO  : Context for processor 'microblaze_0' is selected.
+22:53:03 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:53:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_topjuniper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:53:03 INFO  : Context for processor 'microblaze_0' is selected.
+22:53:03 INFO  : 'con' command is executed.
+22:53:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:53:03 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:53:25 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+22:53:30 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+22:53:30 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+22:53:33 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+22:53:35 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:53:35 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit' stored in project is removed.
+22:53:35 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.mmi' stored in project is removed.
+22:53:35 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+22:53:35 INFO  : Disconnected from the channel tcfchan#6.
+22:53:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:53:36 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+22:53:36 INFO  : 'jtag frequency' command is executed.
+22:53:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:53:37 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:53:37 INFO  : Context for processor 'microblaze_0' is selected.
+22:53:37 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+22:53:37 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:53:37 INFO  : Context for processor 'microblaze_0' is selected.
+22:53:37 INFO  : System reset is completed.
+22:53:40 INFO  : 'after 3000' command is executed.
+22:53:40 INFO  : Context for processor 'microblaze_0' is selected.
+22:53:40 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+22:53:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+22:53:40 INFO  : Context for processor 'microblaze_0' is selected.
+22:53:40 INFO  : 'con' command is executed.
+22:53:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:53:40 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+22:59:36 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+22:59:36 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+22:59:39 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:00:58 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:01:02 ERROR : XSCT server calls should not be made from TCF thread.
+java.lang.RuntimeException: XSCT server calls should not be made from TCF thread.
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueAndWait(XSDBCommandManager.java:392) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:325) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.populateDesignProps(HwPlatform.java:521) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.isZynq(HwPlatform.java:1101) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.getArchFamily(HwPlatform.java:587) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readCrossTriggerModel(BaseLaunchConfigModel.java:174) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readAndSetAttributes(BaseLaunchConfigModel.java:156) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.ui.SdsLaunchConfigModel.newInstance(SdsLaunchConfigModel.java:109) [com.xilinx.sdx.sdsoc.debug.ui_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.createConfigModel(SdsTcfLaunchDelegate.java:85) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.generateReports(SdsTcfLaunchDelegate.java:641) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.onDisconnected(SdsTcfLaunchDelegate.java:615) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.ui.model.TCFModelManager$1.onDisconnected(TCFModelManager.java:79) [org.eclipse.tcf.debug.ui_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.onDisconnected(TCFLaunch.java:532) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch$43.onChannelClosed(TCFLaunch.java:1643) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:858) [org.eclipse.tcf.core_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98) [org.eclipse.tcf_1.7.0.202210132147.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+23:01:02 INFO  : Disconnected from the channel tcfchan#8.
+23:01:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:01:02 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:01:02 INFO  : 'jtag frequency' command is executed.
+23:01:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:01:03 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:01:03 INFO  : Context for processor 'microblaze_0' is selected.
+23:01:03 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+23:01:03 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:01:03 INFO  : Context for processor 'microblaze_0' is selected.
+23:01:03 INFO  : System reset is completed.
+23:01:06 INFO  : 'after 3000' command is executed.
+23:01:06 INFO  : Context for processor 'microblaze_0' is selected.
+23:01:07 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:01:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:01:07 INFO  : Context for processor 'microblaze_0' is selected.
+23:01:07 INFO  : 'con' command is executed.
+23:01:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:01:07 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:01:35 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:01:39 INFO  : Disconnected from the channel tcfchan#10.
+23:01:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:01:39 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:01:39 INFO  : 'jtag frequency' command is executed.
+23:01:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:01:41 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:01:41 INFO  : Context for processor 'microblaze_0' is selected.
+23:01:41 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+23:01:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:01:41 INFO  : Context for processor 'microblaze_0' is selected.
+23:01:41 INFO  : System reset is completed.
+23:01:44 INFO  : 'after 3000' command is executed.
+23:01:44 INFO  : Context for processor 'microblaze_0' is selected.
+23:01:44 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:01:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:01:44 INFO  : Context for processor 'microblaze_0' is selected.
+23:01:44 INFO  : 'con' command is executed.
+23:01:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:01:44 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:02:17 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:02:22 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+23:02:22 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+23:02:25 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:03:19 ERROR : XSCT server calls should not be made from TCF thread.
+java.lang.RuntimeException: XSCT server calls should not be made from TCF thread.
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueAndWait(XSDBCommandManager.java:392) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:325) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.populateDesignProps(HwPlatform.java:521) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.isZynq(HwPlatform.java:1101) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.getArchFamily(HwPlatform.java:587) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readCrossTriggerModel(BaseLaunchConfigModel.java:174) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readAndSetAttributes(BaseLaunchConfigModel.java:156) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.ui.SdsLaunchConfigModel.newInstance(SdsLaunchConfigModel.java:109) [com.xilinx.sdx.sdsoc.debug.ui_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.createConfigModel(SdsTcfLaunchDelegate.java:85) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.generateReports(SdsTcfLaunchDelegate.java:641) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.onDisconnected(SdsTcfLaunchDelegate.java:615) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.ui.model.TCFModelManager$1.onDisconnected(TCFModelManager.java:79) [org.eclipse.tcf.debug.ui_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.onDisconnected(TCFLaunch.java:532) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch$43.onChannelClosed(TCFLaunch.java:1643) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:858) [org.eclipse.tcf.core_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98) [org.eclipse.tcf_1.7.0.202210132147.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+23:03:19 INFO  : Disconnected from the channel tcfchan#11.
+23:03:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:03:19 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:03:19 INFO  : 'jtag frequency' command is executed.
+23:03:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:03:20 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:03:20 INFO  : Context for processor 'microblaze_0' is selected.
+23:03:20 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+23:03:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:03:20 INFO  : Context for processor 'microblaze_0' is selected.
+23:03:20 INFO  : System reset is completed.
+23:03:23 INFO  : 'after 3000' command is executed.
+23:03:23 INFO  : Context for processor 'microblaze_0' is selected.
+23:03:23 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:03:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:03:23 INFO  : Context for processor 'microblaze_0' is selected.
+23:03:23 INFO  : 'con' command is executed.
+23:03:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:03:23 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:04:36 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:04:41 INFO  : Disconnected from the channel tcfchan#13.
+23:04:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:04:41 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:04:41 INFO  : 'jtag frequency' command is executed.
+23:04:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:04:42 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:04:42 INFO  : Context for processor 'microblaze_0' is selected.
+23:04:42 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+23:04:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:04:42 INFO  : Context for processor 'microblaze_0' is selected.
+23:04:42 INFO  : System reset is completed.
+23:04:45 INFO  : 'after 3000' command is executed.
+23:04:45 INFO  : Context for processor 'microblaze_0' is selected.
+23:04:45 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:04:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:04:45 INFO  : Context for processor 'microblaze_0' is selected.
+23:04:45 INFO  : 'con' command is executed.
+23:04:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:04:45 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:05:29 INFO  : Disconnected from the channel tcfchan#14.
+23:05:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:05:29 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:05:29 INFO  : 'jtag frequency' command is executed.
+23:05:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:05:30 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:05:30 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:30 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+23:05:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:05:30 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:30 INFO  : System reset is completed.
+23:05:31 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:05:33 INFO  : 'after 3000' command is executed.
+23:05:33 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:34 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:05:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:05:34 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:34 INFO  : 'con' command is executed.
+23:05:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:05:34 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:05:36 INFO  : Disconnected from the channel tcfchan#15.
+23:05:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:05:36 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:05:36 INFO  : 'jtag frequency' command is executed.
+23:05:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:05:37 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:05:38 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:38 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+23:05:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:05:38 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:38 INFO  : System reset is completed.
+23:05:41 INFO  : 'after 3000' command is executed.
+23:05:41 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:41 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:05:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:05:41 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:41 INFO  : 'con' command is executed.
+23:05:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:05:41 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:06:00 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:06:07 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+23:06:07 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+23:06:10 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:06:12 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:06:12 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.bit' stored in project is removed.
+23:06:12 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_top.mmi' stored in project is removed.
+23:06:12 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+23:06:16 INFO  : Disconnected from the channel tcfchan#16.
+23:06:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:06:16 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:06:16 INFO  : 'jtag frequency' command is executed.
+23:06:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:06:17 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit"
+23:06:17 INFO  : Context for processor 'microblaze_0' is selected.
+23:06:17 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_topjuniper.xsa'.
+23:06:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:06:17 INFO  : Context for processor 'microblaze_0' is selected.
+23:06:17 INFO  : System reset is completed.
+23:06:20 INFO  : 'after 3000' command is executed.
+23:06:20 INFO  : Context for processor 'microblaze_0' is selected.
+23:06:21 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:06:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_usb_hdmi_topjuniper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:06:21 INFO  : Context for processor 'microblaze_0' is selected.
+23:06:21 INFO  : 'con' command is executed.
+23:06:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:06:21 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:06:44 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:06:50 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+23:06:50 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+23:06:53 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:06:55 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:06:55 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.bit' stored in project is removed.
+23:06:55 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_usb_hdmi_topjuniper.mmi' stored in project is removed.
+23:06:55 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+23:06:56 INFO  : Disconnected from the channel tcfchan#18.
+23:06:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:06:57 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:06:57 INFO  : 'jtag frequency' command is executed.
+23:06:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:06:58 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit"
+23:06:58 INFO  : Context for processor 'microblaze_0' is selected.
+23:06:58 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa'.
+23:06:58 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:06:58 INFO  : Context for processor 'microblaze_0' is selected.
+23:06:58 INFO  : System reset is completed.
+23:07:01 INFO  : 'after 3000' command is executed.
+23:07:01 INFO  : Context for processor 'microblaze_0' is selected.
+23:07:01 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:07:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:07:01 INFO  : Context for processor 'microblaze_0' is selected.
+23:07:01 INFO  : 'con' command is executed.
+23:07:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:07:01 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:07:14 INFO  : Disconnected from the channel tcfchan#20.
+23:07:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:07:14 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:07:14 INFO  : 'jtag frequency' command is executed.
+23:07:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:07:15 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit"
+23:07:15 INFO  : Context for processor 'microblaze_0' is selected.
+23:07:15 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa'.
+23:07:15 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:07:15 INFO  : Context for processor 'microblaze_0' is selected.
+23:07:15 INFO  : System reset is completed.
+23:07:18 INFO  : 'after 3000' command is executed.
+23:07:18 INFO  : Context for processor 'microblaze_0' is selected.
+23:07:19 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:07:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:07:19 INFO  : Context for processor 'microblaze_0' is selected.
+23:07:19 INFO  : 'con' command is executed.
+23:07:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:07:19 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:08:14 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:08:45 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:08:49 INFO  : Disconnected from the channel tcfchan#21.
+23:08:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:08:49 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:08:49 INFO  : 'jtag frequency' command is executed.
+23:08:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:08:50 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit"
+23:08:50 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:50 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa'.
+23:08:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:08:50 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:50 INFO  : System reset is completed.
+23:08:53 INFO  : 'after 3000' command is executed.
+23:08:53 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:53 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:08:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:08:53 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:53 INFO  : 'con' command is executed.
+23:08:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:08:53 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:09:09 INFO  : Disconnected from the channel tcfchan#22.
+23:09:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:09:09 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:09:09 INFO  : 'jtag frequency' command is executed.
+23:09:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:09:10 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit"
+23:09:10 INFO  : Context for processor 'microblaze_0' is selected.
+23:09:10 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa'.
+23:09:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:09:10 INFO  : Context for processor 'microblaze_0' is selected.
+23:09:10 INFO  : System reset is completed.
+23:09:13 INFO  : 'after 3000' command is executed.
+23:09:13 INFO  : Context for processor 'microblaze_0' is selected.
+23:09:14 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:09:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:09:14 INFO  : Context for processor 'microblaze_0' is selected.
+23:09:14 INFO  : 'con' command is executed.
+23:09:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:09:14 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:09:19 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:09:30 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:09:42 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:09:48 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+23:09:48 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+23:09:51 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:09:53 ERROR : XSCT server calls should not be made from TCF thread.
+java.lang.RuntimeException: XSCT server calls should not be made from TCF thread.
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueAndWait(XSDBCommandManager.java:392) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:325) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.populateDesignProps(HwPlatform.java:521) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.isZynq(HwPlatform.java:1101) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.getArchFamily(HwPlatform.java:587) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readCrossTriggerModel(BaseLaunchConfigModel.java:174) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readAndSetAttributes(BaseLaunchConfigModel.java:156) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.ui.SdsLaunchConfigModel.newInstance(SdsLaunchConfigModel.java:109) [com.xilinx.sdx.sdsoc.debug.ui_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.createConfigModel(SdsTcfLaunchDelegate.java:85) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.generateReports(SdsTcfLaunchDelegate.java:641) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.onDisconnected(SdsTcfLaunchDelegate.java:615) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.ui.model.TCFModelManager$1.onDisconnected(TCFModelManager.java:79) [org.eclipse.tcf.debug.ui_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.onDisconnected(TCFLaunch.java:532) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch$43.onChannelClosed(TCFLaunch.java:1643) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:858) [org.eclipse.tcf.core_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98) [org.eclipse.tcf_1.7.0.202210132147.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+23:09:53 INFO  : Disconnected from the channel tcfchan#23.
+23:09:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:09:53 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:09:53 INFO  : 'jtag frequency' command is executed.
+23:09:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:09:55 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit"
+23:09:55 INFO  : Context for processor 'microblaze_0' is selected.
+23:09:55 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa'.
+23:09:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:09:55 INFO  : Context for processor 'microblaze_0' is selected.
+23:09:55 INFO  : System reset is completed.
+23:09:58 INFO  : 'after 3000' command is executed.
+23:09:58 INFO  : Context for processor 'microblaze_0' is selected.
+23:09:58 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:09:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_lab7_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:09:58 INFO  : Context for processor 'microblaze_0' is selected.
+23:09:58 INFO  : 'con' command is executed.
+23:09:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:09:58 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:11:10 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:11:16 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+23:11:16 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+23:11:19 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:11:21 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:11:21 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.bit' stored in project is removed.
+23:11:21 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_lab7_1_wrapper.mmi' stored in project is removed.
+23:11:21 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+23:11:21 INFO  : Disconnected from the channel tcfchan#25.
+23:11:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:11:21 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:11:21 INFO  : 'jtag frequency' command is executed.
+23:11:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:11:22 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+23:11:23 INFO  : Context for processor 'microblaze_0' is selected.
+23:11:23 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+23:11:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:11:23 INFO  : Context for processor 'microblaze_0' is selected.
+23:11:23 INFO  : System reset is completed.
+23:11:26 INFO  : 'after 3000' command is executed.
+23:11:26 INFO  : Context for processor 'microblaze_0' is selected.
+23:11:26 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:11:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:11:26 INFO  : Context for processor 'microblaze_0' is selected.
+23:11:26 INFO  : 'con' command is executed.
+23:11:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:11:26 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:11:49 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:11:55 INFO  : Disconnected from the channel tcfchan#27.
+23:11:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:11:55 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:11:55 INFO  : 'jtag frequency' command is executed.
+23:11:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:11:56 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+23:11:56 INFO  : Context for processor 'microblaze_0' is selected.
+23:11:56 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+23:11:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:11:56 INFO  : Context for processor 'microblaze_0' is selected.
+23:11:56 INFO  : System reset is completed.
+23:11:59 INFO  : 'after 3000' command is executed.
+23:11:59 INFO  : Context for processor 'microblaze_0' is selected.
+23:11:59 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:11:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:11:59 INFO  : Context for processor 'microblaze_0' is selected.
+23:11:59 INFO  : 'con' command is executed.
+23:11:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:11:59 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:12:32 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:12:38 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+23:12:38 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+23:12:41 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:12:42 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:12:42 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+23:12:42 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+23:12:42 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+23:12:46 INFO  : Disconnected from the channel tcfchan#28.
+23:12:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:12:46 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:12:46 INFO  : 'jtag frequency' command is executed.
+23:12:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:12:47 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+23:12:47 INFO  : Context for processor 'microblaze_0' is selected.
+23:12:47 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+23:12:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:12:47 INFO  : Context for processor 'microblaze_0' is selected.
+23:12:47 INFO  : System reset is completed.
+23:12:50 INFO  : 'after 3000' command is executed.
+23:12:50 INFO  : Context for processor 'microblaze_0' is selected.
+23:12:51 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:12:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:12:51 INFO  : Context for processor 'microblaze_0' is selected.
+23:12:51 INFO  : 'con' command is executed.
+23:12:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:12:51 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:26:49 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:26:58 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+23:26:58 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+23:27:01 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:27:02 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:27:02 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+23:27:02 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+23:27:02 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+23:27:09 INFO  : Disconnected from the channel tcfchan#30.
+23:27:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:27:09 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:27:09 INFO  : 'jtag frequency' command is executed.
+23:27:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:27:10 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+23:27:10 INFO  : Context for processor 'microblaze_0' is selected.
+23:27:10 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+23:27:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:27:10 INFO  : Context for processor 'microblaze_0' is selected.
+23:27:10 INFO  : System reset is completed.
+23:27:13 INFO  : 'after 3000' command is executed.
+23:27:13 INFO  : Context for processor 'microblaze_0' is selected.
+23:27:13 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:27:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:27:13 INFO  : Context for processor 'microblaze_0' is selected.
+23:27:13 INFO  : 'con' command is executed.
+23:27:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:27:13 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:34:06 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:34:11 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+23:34:11 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+23:34:14 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:34:16 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:34:16 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+23:34:16 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+23:34:16 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+23:34:17 INFO  : Disconnected from the channel tcfchan#32.
+23:34:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:34:17 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:34:17 INFO  : 'jtag frequency' command is executed.
+23:34:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:34:18 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+23:34:18 INFO  : Context for processor 'microblaze_0' is selected.
+23:34:18 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+23:34:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:34:18 INFO  : Context for processor 'microblaze_0' is selected.
+23:34:18 INFO  : System reset is completed.
+23:34:21 INFO  : 'after 3000' command is executed.
+23:34:21 INFO  : Context for processor 'microblaze_0' is selected.
+23:34:22 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:34:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:34:22 INFO  : Context for processor 'microblaze_0' is selected.
+23:34:22 INFO  : 'con' command is executed.
+23:34:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:34:22 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:39:10 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:39:24 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+23:39:24 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+23:39:27 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:39:29 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:39:29 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+23:39:29 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+23:39:29 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+23:39:32 INFO  : Disconnected from the channel tcfchan#34.
+23:39:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:39:32 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:39:32 INFO  : 'jtag frequency' command is executed.
+23:39:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:39:33 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+23:39:33 INFO  : Context for processor 'microblaze_0' is selected.
+23:39:33 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+23:39:33 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:39:33 INFO  : Context for processor 'microblaze_0' is selected.
+23:39:33 INFO  : System reset is completed.
+23:39:36 INFO  : 'after 3000' command is executed.
+23:39:36 INFO  : Context for processor 'microblaze_0' is selected.
+23:39:37 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:39:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:39:37 INFO  : Context for processor 'microblaze_0' is selected.
+23:39:37 INFO  : 'con' command is executed.
+23:39:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:39:37 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+23:48:39 INFO  : Disconnected from the channel tcfchan#36.
+23:52:32 DEBUG : Logs will be stored at '/home/juniper/Documents/lab7-juniper/workspace/IDE.log'.
+23:52:32 INFO  : Launching XSCT server: xsct -n  -interactive /home/juniper/Documents/lab7-juniper/workspace/temp_xsdb_launch_script.tcl
+23:52:34 INFO  : Platform repository initialization has completed.
+23:52:34 INFO  : XSCT server has started successfully.
+23:52:34 INFO  : Successfully done setting XSCT server connection channel  
+23:52:34 INFO  : Registering command handlers for Vitis TCF services
+23:52:35 INFO  : plnx-install-location is set to ''
+23:52:35 INFO  : Successfully done setting workspace for the tool. 
+23:52:35 INFO  : Successfully done query RDI_DATADIR 
+23:52:41 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+23:52:47 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+23:52:47 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+23:52:50 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+23:52:52 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:52:52 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+23:52:52 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+23:52:52 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+23:52:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:52:56 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+23:52:56 INFO  : 'jtag frequency' command is executed.
+23:52:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:52:57 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+23:52:57 INFO  : Context for processor 'microblaze_0' is selected.
+23:52:57 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+23:52:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:52:57 INFO  : Context for processor 'microblaze_0' is selected.
+23:52:57 INFO  : System reset is completed.
+23:53:00 INFO  : 'after 3000' command is executed.
+23:53:00 INFO  : Context for processor 'microblaze_0' is selected.
+23:53:00 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+23:53:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+23:53:00 INFO  : Context for processor 'microblaze_0' is selected.
+23:53:00 INFO  : 'con' command is executed.
+23:53:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:53:00 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+00:04:40 INFO  : Hardware specification for platform project 'mb_hdmi_top' is updated.
+00:04:49 INFO  : Result from executing command 'getProjects': mb_hdmi_top
+00:04:49 INFO  : Result from executing command 'getPlatforms': mb_hdmi_top|/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/mb_hdmi_top.xpfm
+00:04:52 INFO  : Checking for BSP changes to sync application flags for project 'mb_hdmi'...
+00:04:54 INFO  : The hardware specification used by project 'mb_hdmi' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+00:04:54 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit' stored in project is removed.
+00:04:54 INFO  : The file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.mmi' stored in project is removed.
+00:04:54 INFO  : The updated bitstream files are copied from platform to folder '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream' in project 'mb_hdmi'.
+00:04:55 INFO  : Disconnected from the channel tcfchan#2.
+00:04:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:04:55 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+00:04:55 INFO  : 'jtag frequency' command is executed.
+00:04:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:04:57 INFO  : Device configured successfully with "/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit"
+00:04:57 INFO  : Context for processor 'microblaze_0' is selected.
+00:04:57 INFO  : Hardware design and registers information is loaded from '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa'.
+00:04:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:04:57 INFO  : Context for processor 'microblaze_0' is selected.
+00:04:57 INFO  : System reset is completed.
+00:05:00 INFO  : 'after 3000' command is executed.
+00:05:00 INFO  : Context for processor 'microblaze_0' is selected.
+00:05:00 INFO  : The application '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf' is downloaded to processor 'microblaze_0'.
+00:05:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf
+----------------End of Script----------------
+
+00:05:00 INFO  : Context for processor 'microblaze_0' is selected.
+00:05:00 INFO  : 'con' command is executed.
+00:05:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:05:00 INFO  : Launch script is exported to file '/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_system/_ide/scripts/systemdebugger_mb_hdmi_system_standalone.tcl'
+00:18:46 INFO  : Disconnected from the channel tcfchan#4.

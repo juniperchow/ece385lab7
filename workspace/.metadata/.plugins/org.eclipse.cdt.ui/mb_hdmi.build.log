@@ -1,4 +1,4 @@
-14:18:08 **** Incremental Build of configuration Debug for project mb_hdmi ****
+00:04:52 **** Incremental Build of configuration Debug for project mb_hdmi ****
 make all 
 Building file: ../src/hdmi_text_controller.c
 Invoking: MicroBlaze gcc compiler
@@ -87,17 +87,104 @@ In file included from ../src/hdmi_text_controller.c:5:
       |                                                                                                    %ld
 Finished building: ../src/hdmi_text_controller.c
  
+Building file: ../src/hdmi_text_controller2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hdmi_text_controller2.o" -I/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/hdmi_text_controller2.d" -MT"src/hdmi_text_controller2.o" -o "src/hdmi_text_controller2.o" "../src/hdmi_text_controller2.c"
+In file included from ../src/hdmi_text_controller2.h:8,
+                 from ../src/hdmi_text_controller2.c:4:
+/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include/xparameters.h:574:50: warning: initialization of 'volatile struct TEXT_HDMI_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  574 | #define XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR 0x44A00000
+      |                                                  ^~~~~~~~~~
+../src/hdmi_text_controller2.h:37:54: note: in expansion of macro 'XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR'
+   37 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/hdmi_text_controller2.c: In function 'textHDMIColorScreenSaver':
+../src/hdmi_text_controller2.c:116:32: warning: passing argument 1 of 'memcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |                         memcpy(&(hdmi_ctrl->VRAM[(dvd_y*COLUMNS + dvd_x) * 2]), old_string, strlen(dvd_string)*2);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/hdmi_text_controller2.c:7:
+/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/microblazeeb-xilinx-elf/usr/include/string.h:31:18: note: expected 'void * restrict' but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+   31 | void *   memcpy (void *__restrict, const void *__restrict, size_t);
+      |                  ^
+../src/hdmi_text_controller2.c:126:44: warning: passing argument 2 of 'memcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  126 |                         memcpy(old_string, &(hdmi_ctrl->VRAM[(dvd_y*COLUMNS + dvd_x) * 2]), strlen(dvd_string)*2);
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/hdmi_text_controller2.c:7:
+/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/microblazeeb-xilinx-elf/usr/include/string.h:31:36: note: expected 'const void * restrict' but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+   31 | void *   memcpy (void *__restrict, const void *__restrict, size_t);
+      |                                    ^
+../src/hdmi_text_controller2.c:98:16: warning: unused variable 'dvd_d_colors' [-Wunused-variable]
+   98 |         int8_t dvd_d_colors[3] = {-1, +1, -1};
+      |                ^~~~~~~~~~~~
+../src/hdmi_text_controller2.c:97:16: warning: unused variable 'dvd_colors' [-Wunused-variable]
+   97 |         int8_t dvd_colors[3] = {0x07, 0x07, 0x07};
+      |                ^~~~~~~~~~
+../src/hdmi_text_controller2.c: At top level:
+../src/hdmi_text_controller2.c:151:1: warning: return type defaults to 'int' [-Wimplicit-int]
+  151 | hdmiTestWeek2()
+      | ^~~~~~~~~~~~~
+../src/hdmi_text_controller2.c:151:1: warning: conflicting types for 'hdmiTestWeek2'
+In file included from ../src/hdmi_text_controller2.c:4:
+../src/hdmi_text_controller2.h:128:6: note: previous declaration of 'hdmiTestWeek2' with type 'void()'
+  128 | void hdmiTestWeek2(); //call this for your Week 2 demo
+      |      ^~~~~~~~~~~~~
+../src/hdmi_text_controller2.c: In function 'hdmiTestWeek2':
+../src/hdmi_text_controller2.c:174:46: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  174 |                 printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
+      |                                             ~^                                  ~~~~~~~~~~~
+      |                                              |                                          |
+      |                                              unsigned int                               uint32_t {aka long unsigned int}
+      |                                             %lx
+../src/hdmi_text_controller2.c:174:70: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  174 |                 printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
+      |                                                                     ~^                       ~~~~~~~~~~
+      |                                                                      |                              |
+      |                                                                      unsigned int                   uint32_t {aka long unsigned int}
+      |                                                                     %lx
+Finished building: ../src/hdmi_text_controller2.c
+ 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:16,
+                 from ../src/helloworld.c:50:
+/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include/xparameters.h:574:50: warning: initialization of 'volatile struct TEXT_HDMI_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  574 | #define XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR 0x44A00000
+      |                                                  ^~~~~~~~~~
+../src/hdmi_text_controller2.h:37:54: note: in expansion of macro 'XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR'
+   37 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:9: warning: implicit declaration of function 'hdmiTestWeek1'; did you mean 'hdmiTestWeek2'? [-Wimplicit-function-declaration]
+   61 |         hdmiTestWeek1();
+      |         ^~~~~~~~~~~~~
+      |         hdmiTestWeek2
+In file included from ../src/helloworld.c:52:
+At top level:
+../src/hdmi_text_controller2.h:40:21: warning: 'colors' defined but not used [-Wunused-variable]
+   40 | static struct COLOR colors[]={
+      |                     ^~~~~~
+../src/hdmi_text_controller2.h:37:42: warning: 'hdmi_ctrl' defined but not used [-Wunused-variable]
+   37 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
+      |                                          ^~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
 Building target: mb_hdmi.elf
 Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mb_hdmi.elf" ./src/hdmi_text_controller.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mb_hdmi.elf" ./src/hdmi_text_controller.o ./src/hdmi_text_controller2.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: mb_hdmi.elf
  
 Invoking: MicroBlaze Print Size
 mb-size mb_hdmi.elf  |tee "mb_hdmi.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  85532	   1728	   3172	  90432	  16140	mb_hdmi.elf
+  85652	   1728	   3172	  90552	  161b8	mb_hdmi.elf
 Finished building: mb_hdmi.elf.size
  
 
-14:18:09 Build Finished (took 478ms)
+00:04:53 Build Finished (took 931ms)
 

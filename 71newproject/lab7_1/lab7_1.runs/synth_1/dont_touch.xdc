@@ -48,4 +48,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_ax
 # IP: bd/mb_block/ip/mb_block_hdmi_text_controller_0_4/mb_block_hdmi_text_controller_0_4.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_hdmi_text_controller_0_4 || ORIG_REF_NAME==mb_block_hdmi_text_controller_0_4} -quiet] -quiet
 
-# XDC: /home/juniper/Documents/lab7-juniper/71newproject/lab7_1/lab7_1.gen/sources_1/bd/mb_block/mb_block_ooc.xdc
+# XDC: /home/juniper/Documents/lab7-juniper/lab72/lab7_1/lab7_1.gen/sources_1/bd/mb_block/mb_block_ooc.xdc

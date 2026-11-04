@@ -335,7 +335,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c4750ef1</spirit:value>
+            <spirit:value>f46cc15e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -360,7 +360,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c4750ef1</spirit:value>
+            <spirit:value>f46cc15e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -850,10 +850,6 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/blk_mem_gen_0_1/blk_mem_gen_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>../edit_hdmi_text_controller_v1_0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_clk_wiz</spirit:userFileType>
@@ -862,6 +858,11 @@
         <spirit:name>../edit_hdmi_text_controller_v1_0.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_vga_to_hdmi</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/blk_mem_gen_0_1/blk_mem_gen_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_hdmi_text_controller_v1_0_AXI_inst/bram_graphics</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/VGA_controller.sv</spirit:name>
@@ -914,10 +915,6 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/blk_mem_gen_0_1/blk_mem_gen_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>../edit_hdmi_text_controller_v1_0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_clk_wiz</spirit:userFileType>
@@ -926,6 +923,11 @@
         <spirit:name>../edit_hdmi_text_controller_v1_0.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_vga_to_hdmi</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/blk_mem_gen_0_1/blk_mem_gen_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_hdmi_text_controller_v1_0_AXI_inst/bram_graphics</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/VGA_controller.sv</spirit:name>
@@ -1085,14 +1087,14 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>65</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-11-03T19:33:06Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>75</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-11-04T06:00:59Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5a33d987"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="60746b78"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="da281fb4"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5083a0ad"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="96f54b8d"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="29949cf9"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="657363b5"/>
