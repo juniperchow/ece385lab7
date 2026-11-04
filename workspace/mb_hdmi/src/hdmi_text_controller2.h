@@ -1,8 +1,11 @@
-#ifndef HDMI_TEXT_CONTROLLER_H
-#define HDMI_TEXT_CONTROLLER_H
+#ifndef HDMI_TEXT_CONTROLLER2_H
+#define HDMI_TEXT_CONTROLLER2_H
 
 
 /****************** Include Files ********************/
+#include <stdint.h>
+#include <stddef.h>
+#include "xil_io.h"
 #include "xil_types.h"
 #include "xstatus.h"
 #include "xparameters.h"
@@ -16,14 +19,19 @@
 
 struct TEXT_HDMI_STRUCT {
 	uint8_t             VRAM [ROWS*COLUMNS*2]; //Week 2 - extended VRAM
-	const uint16_t unused[1696];
+	uint8_t unused[PALETTE_START - ROWS*COLUMNS*2];
 	uint32_t palette[8];
-	//declare palette registers here, make sure you properly pad in order to correctly account for
-	//gap in address map between VRAM and start of palette and control registers
+	//Palette starts at byte offset 0x2000, status starts at 0x2020.
 	uint32_t            FRAME_COUNT; //control registers should appear immediately after palette
 	uint32_t            DRAWX;
 	uint32_t            DRAWY;
 };
+
+//Compile-time checks of the byte offsets from lecture slides 206 and 208.
+typedef char palette_offset_check[(offsetof(struct TEXT_HDMI_STRUCT, palette) == 0x2000) ? 1 : -1];
+typedef char frame_offset_check[(offsetof(struct TEXT_HDMI_STRUCT, FRAME_COUNT) == 0x2020) ? 1 : -1];
+typedef char drawx_offset_check[(offsetof(struct TEXT_HDMI_STRUCT, DRAWX) == 0x2024) ? 1 : -1];
+typedef char drawy_offset_check[(offsetof(struct TEXT_HDMI_STRUCT, DRAWY) == 0x2028) ? 1 : -1];
 
 struct COLOR{
 	char name [20];
@@ -34,7 +42,7 @@ struct COLOR{
 
 
 //you may have to change this line depending on your platform designer
-static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
+static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = (volatile struct TEXT_HDMI_STRUCT *)(uintptr_t)XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
 
 //CGA colors with names
 static struct COLOR colors[]={
@@ -119,12 +127,12 @@ static struct COLOR colors[]={
  */
 
 
-void textHDMIColorClr();
-void textHDMIDrawColorText(char* str, int x, int y, uint8_t background, uint8_t foreground);
-void setColorPalette (uint8_t color, uint8_t red, uint8_t green, uint8_t blue); //Fill in this code
+void textHDMIColorClr(void);
+void textHDMIDrawColorText(const char* str, int x, int y, uint8_t background, uint8_t foreground);
+void setColorPalette (uint8_t color, uint8_t red, uint8_t green, uint8_t blue); 
 void sleepframe(uint32_t frames);
-void paletteTest();
-void textHDMIColorScreenSaver();
-void hdmiTestWeek2(); //call this for your Week 2 demo 
+void paletteTest(void);
+void textHDMIColorScreenSaver(void);
+void hdmiTestWeek2(void); //call this for your Week 2 demo 
 
-#endif // HDMI_TEXT_CONTROLLER_H
+#endif // HDMI_TEXT_CONTROLLER2_H
