@@ -140,10 +140,10 @@ localparam integer OPT_MEM_ADDR_BITS = 9;// change from 1 to 9
 //Note that you as the student will still need to extend this to the full register set needed for the lab.
 logic [C_S_AXI_DATA_WIDTH-1:0] ctrl_regs[8];
 //localparam integer VRAM_WORDS        = 600;
-localparam integer REG_CTRL          = 3'h800;
-localparam integer REG_FRAME_COUNTER = 3'h807;
-localparam integer REG_DRAW_X        = 3'h808;
-localparam integer REG_DRAW_Y        = 3'h809;
+localparam integer REG_CTRL          = 12'h800;
+localparam integer REG_FRAME_COUNTER = 12'h807;
+localparam integer REG_DRAW_X        = 12'h808;
+localparam integer REG_DRAW_Y        = 12'h809;
 logic	 slv_reg_rden;
 logic	 slv_reg_wren;
 integer	 byte_index;
@@ -302,7 +302,8 @@ begin
       begin
         for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
           if ( S_AXI_WSTRB[byte_index] == 1 ) begin
-            ctrl_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB][2:0]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+            //ctrl_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB][2:0]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+            ctrl_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]-REG_CTRL][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
           end  
       end
   end
@@ -377,7 +378,7 @@ begin
     begin
       axi_rvalid <= 0;
       axi_rresp  <= 0;
-      axi_rdata  <= 0;
+      axi_rdata  <= bram_douta;
       bram_read_pending <= 1'b0;
     end 
   else
@@ -417,7 +418,8 @@ begin
               if(S_AXI_ARADDR[13] == 1'b0) //read from bram 
                 bram_read_pending <= 1'b1;
               else begin
-                axi_rdata <= ctrl_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB][2:0]];//control reg 0 thru 8
+                //axi_rdata <= ctrl_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB][2:0]];//control reg 0 thru 8
+                axi_rdata <= ctrl_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]-REG_CTRL];//control reg 0 thru 8
                 axi_rvalid <= 1'b1;
               end
             end
@@ -448,11 +450,6 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 
   logic [11:0] fg_rgb, bkg_rgb;
 			
-	logic [8:0] char_idx, word_idx, byte_idx; 
-	assign char_idx = (drawY/16) * 80 + (drawX/8);
-	assign word_idx = char_idx/4; 
-	assign byte_idx = char_idx[1:0]; 
-  assign bram_addrb = word_idx;
 	//assign slv_reg_data = bram_doutb;
 	
 	always_comb begin

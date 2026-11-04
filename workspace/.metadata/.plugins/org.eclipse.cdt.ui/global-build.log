@@ -1,283 +1,36 @@
-00:04:46 **** Incremental Build of project mb_hdmi_top ****
-buildplatform.sh 45219 mb_hdmi_top no_domain_build 
-XSDB Server Channel: tcfchan#3
-/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin
-Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
-make --no-print-directory seq_libs
+Nothing to build in platform 'mb_hdmi_top'
 
-Finished building libraries sequentially.
-
-make -j 14 --no-print-directory par_libs
-
-Running Make include in microblaze_0/libsrc/bram_v4_8/src
-
-make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
-PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTR
-A_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-Running Make include in microblaze_0/libsrc/cpu_v2_16/src
-
-make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
-PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTR
-A_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-Running Make include in microblaze_0/libsrc/intc_v3_15/src
-
-make -C microblaze_0/libsrc/intc_v3_15/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
-MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXT
-RA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-Running Make include in microblaze_0/libsrc/standalone_v8_0/src
-
-make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar
-" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare"
- "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-Running Make include in microblaze_0/libsrc/uartlite_v3_7/src
-
-make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" 
-"COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "
-EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-Running Make libs in microblaze_0/libsrc/bram_v4_8/src
-
-Running Make libs in microblaze_0/libsrc/cpu_v2_16/src
-
-make -C microblaze_0/libsrc/bram_v4_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
-ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
-OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-Running Make libs in microblaze_0/libsrc/intc_v3_15/src
-
-make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
-ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
-OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
-LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_
-COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-Running Make libs in microblaze_0/libsrc/standalone_v8_0/src
-
-Running Make libs in microblaze_0/libsrc/uartlite_v3_7/src
-
-make -C microblaze_0/libsrc/standalone_v8_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "
-COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "E
-XTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-make -C microblaze_0/libsrc/uartlite_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
-MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXT
-RA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-microblaze_sleep.c:81:9: note: '#pragma message: For the sleep routines, assembly instructions are used'
-   81 | #pragma message ("For the sleep routines, assembly instructions are used")
-      |         ^~~~~~~
-DEBUG NON_LTO_OBJECTS is ../../../lib/microblaze_interrupt_handler.o
-
-Finished building libraries parallelly.
-
-make --no-print-directory archive
-
-mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/_exit.o microblaze_0/lib/errno.o microblaze_0/lib/fcntl.o microblaze_0/lib
-/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
-ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
-/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
-aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
-e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
-aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
-laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
-he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
-lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
-_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
-microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
-/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xbram.o microblaze_0/lib/xbram_g.o microblaze_0/lib/xbram_intr.o microblaz
-e_0/lib/xbram_selftest.o microblaze_0/lib/xbram_sinit.o microblaze_0/lib/xil_assert.o microblaze_0/lib/xil_cache.o microblaze_0
-/lib/xil_clocking.o microblaze_0/lib/xil_exception.o microblaze_0/lib/xil_mem.o microblaze_0/lib/xil_misc_psreset_api.o microbl
-aze_0/lib/xil_printf.o microblaze_0/lib/xil_sleepcommon.o microblaze_0/lib/xil_testcache.o microblaze_0/lib/xil_testio.o microb
-laze_0/lib/xil_testmem.o microblaze_0/lib/xil_util.o microblaze_0/lib/xintc.o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc
-_intr.o microblaze_0/lib/xintc_l.o microblaze_0/lib/xintc_options.o microblaze_0/lib/xintc_selftest.o microblaze_0/lib/xinterru
-pt_wrap.o microblaze_0/lib/xio.o microblaze_0/lib/xplatform_info.o microblaze_0/lib/xuartlite.o microblaze_0/lib/xuartlite_g.o 
-microblaze_0/lib/xuartlite_intr.o microblaze_0/lib/xuartlite_l.o microblaze_0/lib/xuartlite_selftest.o microblaze_0/lib/xuartli
-te_sinit.o microblaze_0/lib/xuartlite_stats.o
-
-/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-ar.real: creating microblaze_0/lib/libxil.a
-Finished building libraries
-
-00:04:52 **** Incremental Build of configuration Debug for project mb_hdmi ****
+16:08:51 **** Incremental Build of configuration Debug for project mb_hdmi ****
 make all 
-Building file: ../src/hdmi_text_controller.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hdmi_text_controller.o" -I/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/hdmi_text_controller.d" -MT"src/hdmi_text_controller.o" -o "src/hdmi_text_controller.o" "../src/hdmi_text_controller.c"
-In file included from ../src/hdmi_text_controller.h:8,
-                 from ../src/hdmi_text_controller.c:4:
-/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include/xparameters.h:574:50: warning: initialization of 'volatile struct HDMI_TEXT_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  574 | #define XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR 0x44A00000
-      |                                                  ^~~~~~~~~~
-../src/hdmi_text_controller.h:95:54: note: in expansion of macro 'XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR'
-   95 | static volatile struct HDMI_TEXT_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
-      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/hdmi_text_controller.c: In function 'hdmiTestWeek1':
-../src/hdmi_text_controller.c:50:46: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   50 |                 printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
-      |                                             ~^                                  ~~~~~~~~~~~
-      |                                              |                                          |
-      |                                              unsigned int                               uint32_t {aka long unsigned int}
-      |                                             %lx
-../src/hdmi_text_controller.c:50:70: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   50 |                 printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
-      |                                                                     ~^                       ~~~~~~~~~~
-      |                                                                      |                              |
-      |                                                                      unsigned int                   uint32_t {aka long unsigned int}
-      |                                                                     %lx
-../src/hdmi_text_controller.c:58:30: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   58 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
-      |                             ~^                              ~~~~~~~~~~~~~~~~~~~~~~
-      |                              |                                       |
-      |                              unsigned int                            uint32_t {aka long unsigned int}
-      |                             %lx
-../src/hdmi_text_controller.c:58:42: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   58 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
-      |                                         ~^                                          ~~~~~~~~~~~~~~~~
-      |                                          |                                                   |
-      |                                          unsigned int                                        uint32_t {aka long unsigned int}
-      |                                         %lx
-../src/hdmi_text_controller.c:58:54: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   58 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
-      |                                                     ~^                                                ~~~~~~~~~~~~~~~~
-      |                                                      |                                                         |
-      |                                                      unsigned int                                              uint32_t {aka long unsigned int}
-      |                                                     %lx
-../src/hdmi_text_controller.c:106:30: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  106 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
-      |                             ~^                              ~~~~~~~~~~~~~~~~~~~~~~
-      |                              |                                       |
-      |                              unsigned int                            uint32_t {aka long unsigned int}
-      |                             %lx
-../src/hdmi_text_controller.c:106:42: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  106 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
-      |                                         ~^                                          ~~~~~~~~~~~~~~~~
-      |                                          |                                                   |
-      |                                          unsigned int                                        uint32_t {aka long unsigned int}
-      |                                         %lx
-../src/hdmi_text_controller.c:106:54: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  106 |         printf ("framecount %x \t drawx %x \t drawy %x \r", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
-      |                                                     ~^                                                ~~~~~~~~~~~~~~~~
-      |                                                      |                                                         |
-      |                                                      unsigned int                                              uint32_t {aka long unsigned int}
-      |                                                     %lx
-../src/hdmi_text_controller.c:121:28: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-  121 |                 sprintf ( (&hdmi_ctrl->VRAM[0]), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
-      |                           ~^~~~~~~~~~~~~~~~~~~~
-In file included from ../src/hdmi_text_controller.c:5:
-/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/microblazeeb-xilinx-elf/usr/include/stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
-  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-../src/hdmi_text_controller.c:121:67: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  121 |                 sprintf ( (&hdmi_ctrl->VRAM[0]), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
-      |                                                                  ~^                                     ~~~~~~~~~~~~~~~~~~~~~~
-      |                                                                   |                                              |
-      |                                                                   int                                            uint32_t {aka long unsigned int}
-      |                                                                  %ld
-../src/hdmi_text_controller.c:121:84: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  121 |                 sprintf ( (&hdmi_ctrl->VRAM[0]), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
-      |                                                                                   ~^                                            ~~~~~~~~~~~~~~~~
-      |                                                                                    |                                                     |
-      |                                                                                    int                                                   uint32_t {aka long unsigned int}
-      |                                                                                   %ld
-../src/hdmi_text_controller.c:121:101: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  121 |                 sprintf ( (&hdmi_ctrl->VRAM[0]), "Frame Counter: %d; Vsync DrawX: %d; Vsync DrawY: %d", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
-      |                                                                                                    ~^                                             ~~~~~~~~~~~~~~~~
-      |                                                                                                     |                                                      |
-      |                                                                                                     int                                                    uint32_t {aka long unsigned int}
-      |                                                                                                    %ld
-Finished building: ../src/hdmi_text_controller.c
- 
 Building file: ../src/hdmi_text_controller2.c
 Invoking: MicroBlaze gcc compiler
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hdmi_text_controller2.o" -I/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/hdmi_text_controller2.d" -MT"src/hdmi_text_controller2.o" -o "src/hdmi_text_controller2.o" "../src/hdmi_text_controller2.c"
-In file included from ../src/hdmi_text_controller2.h:8,
-                 from ../src/hdmi_text_controller2.c:4:
-/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include/xparameters.h:574:50: warning: initialization of 'volatile struct TEXT_HDMI_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  574 | #define XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR 0x44A00000
-      |                                                  ^~~~~~~~~~
-../src/hdmi_text_controller2.h:37:54: note: in expansion of macro 'XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR'
-   37 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
-      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/hdmi_text_controller2.c: In function 'textHDMIColorScreenSaver':
-../src/hdmi_text_controller2.c:116:32: warning: passing argument 1 of 'memcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-  116 |                         memcpy(&(hdmi_ctrl->VRAM[(dvd_y*COLUMNS + dvd_x) * 2]), old_string, strlen(dvd_string)*2);
-      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/hdmi_text_controller2.c:7:
-/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/microblazeeb-xilinx-elf/usr/include/string.h:31:18: note: expected 'void * restrict' but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
-   31 | void *   memcpy (void *__restrict, const void *__restrict, size_t);
-      |                  ^
-../src/hdmi_text_controller2.c:126:44: warning: passing argument 2 of 'memcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-  126 |                         memcpy(old_string, &(hdmi_ctrl->VRAM[(dvd_y*COLUMNS + dvd_x) * 2]), strlen(dvd_string)*2);
-      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/hdmi_text_controller2.c:7:
-/run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/microblazeeb-xilinx-elf/usr/include/string.h:31:36: note: expected 'const void * restrict' but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
-   31 | void *   memcpy (void *__restrict, const void *__restrict, size_t);
-      |                                    ^
-../src/hdmi_text_controller2.c:98:16: warning: unused variable 'dvd_d_colors' [-Wunused-variable]
-   98 |         int8_t dvd_d_colors[3] = {-1, +1, -1};
-      |                ^~~~~~~~~~~~
-../src/hdmi_text_controller2.c:97:16: warning: unused variable 'dvd_colors' [-Wunused-variable]
-   97 |         int8_t dvd_colors[3] = {0x07, 0x07, 0x07};
-      |                ^~~~~~~~~~
-../src/hdmi_text_controller2.c: At top level:
-../src/hdmi_text_controller2.c:151:1: warning: return type defaults to 'int' [-Wimplicit-int]
-  151 | hdmiTestWeek2()
-      | ^~~~~~~~~~~~~
-../src/hdmi_text_controller2.c:151:1: warning: conflicting types for 'hdmiTestWeek2'
-In file included from ../src/hdmi_text_controller2.c:4:
-../src/hdmi_text_controller2.h:128:6: note: previous declaration of 'hdmiTestWeek2' with type 'void()'
-  128 | void hdmiTestWeek2(); //call this for your Week 2 demo
-      |      ^~~~~~~~~~~~~
 ../src/hdmi_text_controller2.c: In function 'hdmiTestWeek2':
-../src/hdmi_text_controller2.c:174:46: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  174 |                 printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
-      |                                             ~^                                  ~~~~~~~~~~~
-      |                                              |                                          |
-      |                                              unsigned int                               uint32_t {aka long unsigned int}
-      |                                             %lx
-../src/hdmi_text_controller2.c:174:70: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  174 |                 printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
-      |                                                                     ~^                       ~~~~~~~~~~
-      |                                                                      |                              |
-      |                                                                      unsigned int                   uint32_t {aka long unsigned int}
-      |                                                                     %lx
+../src/hdmi_text_controller2.c:162:39: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  162 |                 printf("palette[i] = %x \t %x\n", hdmi_ctrl->palette[i],0x1234+i);
+      |                                      ~^           ~~~~~~~~~~~~~~~~~~~~~
+      |                                       |                             |
+      |                                       unsigned int                  uint32_t {aka long unsigned int}
+      |                                      %lx
+../src/hdmi_text_controller2.c:165:30: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  165 |         printf ("framecount %x \t drawx %x \t drawy %x \r\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                             ~^                                ~~~~~~~~~~~~~~~~~~~~~~
+      |                              |                                         |
+      |                              unsigned int                              uint32_t {aka long unsigned int}
+      |                             %lx
+../src/hdmi_text_controller2.c:165:42: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  165 |         printf ("framecount %x \t drawx %x \t drawy %x \r\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                                         ~^                                            ~~~~~~~~~~~~~~~~
+      |                                          |                                                     |
+      |                                          unsigned int                                          uint32_t {aka long unsigned int}
+      |                                         %lx
+../src/hdmi_text_controller2.c:165:54: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  165 |         printf ("framecount %x \t drawx %x \t drawy %x \r\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+      |                                                     ~^                                                  ~~~~~~~~~~~~~~~~
+      |                                                      |                                                           |
+      |                                                      unsigned int                                                uint32_t {aka long unsigned int}
+      |                                                     %lx
 Finished building: ../src/hdmi_text_controller2.c
- 
-Building file: ../src/helloworld.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-In file included from /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:16,
-                 from ../src/helloworld.c:50:
-/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include/xparameters.h:574:50: warning: initialization of 'volatile struct TEXT_HDMI_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  574 | #define XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR 0x44A00000
-      |                                                  ^~~~~~~~~~
-../src/hdmi_text_controller2.h:37:54: note: in expansion of macro 'XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR'
-   37 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
-      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:61:9: warning: implicit declaration of function 'hdmiTestWeek1'; did you mean 'hdmiTestWeek2'? [-Wimplicit-function-declaration]
-   61 |         hdmiTestWeek1();
-      |         ^~~~~~~~~~~~~
-      |         hdmiTestWeek2
-In file included from ../src/helloworld.c:52:
-At top level:
-../src/hdmi_text_controller2.h:40:21: warning: 'colors' defined but not used [-Wunused-variable]
-   40 | static struct COLOR colors[]={
-      |                     ^~~~~~
-../src/hdmi_text_controller2.h:37:42: warning: 'hdmi_ctrl' defined but not used [-Wunused-variable]
-   37 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
-      |                                          ^~~~~~~~~
-Finished building: ../src/helloworld.c
- 
-Building file: ../src/platform.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-Finished building: ../src/platform.c
  
 Building target: mb_hdmi.elf
 Invoking: MicroBlaze gcc linker
@@ -287,9 +40,9 @@ Finished building target: mb_hdmi.elf
 Invoking: MicroBlaze Print Size
 mb-size mb_hdmi.elf  |tee "mb_hdmi.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  85652	   1728	   3172	  90552	  161b8	mb_hdmi.elf
+  89176	   2096	   3168	  94440	  170e8	mb_hdmi.elf
 Finished building: mb_hdmi.elf.size
  
-00:04:54 **** Incremental Build of configuration Debug for project mb_hdmi_system ****
+16:08:53 **** Incremental Build of configuration Debug for project mb_hdmi_system ****
 make all 
 Skipping SD card image generation. Reason: The system project only has applications for microblaze processors.
