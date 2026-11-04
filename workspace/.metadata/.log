@@ -4022,3 +4022,942 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-14: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2026-10-30 14:46:29.115
 !MESSAGE XSCT command with result: [disconnect tcfchan#6], Result: [null, ]. Thread: Thread-311
+!SESSION 2026-11-03 18:40:51.681 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.osgi 4 0 2026-11-03 18:40:52.179
+!MESSAGE Bundle reference:file:org.apache.log4j_1.2.15.v201012070815.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2026-11-03 18:40:52.216
+!MESSAGE Bundle reference:file:org.slf4j.impl.log4j12_1.7.2.v20131105-2200.jar not found.
+
+!ENTRY org.eclipse.ui 4 4 2026-11-03 18:40:57.602
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-11-03 18:41:01.363
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-11-03 18:41:01.363
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-11-03 18:41:01.363
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:01.828
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:01.828
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:01.830
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:01.833
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:01.834
+!MESSAGE XSCT Command: [setws /home/juniper/Documents/lab7-juniper/workspace], Thread: Thread-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:01.836
+!MESSAGE XSCT command with result: [setws /home/juniper/Documents/lab7-juniper/workspace], Result: [null, ]. Thread: Thread-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:01.991
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:02.958
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:02.959
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:02.960
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, /run/media/juniper/4aa61f5c-6186-4592-8ac6-f0b4ecfcc986/tools/Xilinx/Vitis/2022.2/data]. Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:12.860
+!MESSAGE XSCT Command: [platform read {/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/platform.spr}], Thread: Worker-3: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:12.986
+!MESSAGE XSCT command with result: [platform read {/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/platform.spr}], Result: [null, ]. Thread: Worker-3: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:13.018
+!MESSAGE XSCT Command: [platform active {mb_hdmi_top}], Thread: Worker-3: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:13.019
+!MESSAGE XSCT command with result: [platform active {mb_hdmi_top}], Result: [null, ]. Thread: Worker-3: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-11-03 18:41:15.640
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: scw_hwspec_file_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-11-03 18:41:15.640
+!MESSAGE Preference loaded using local preference: /home/juniper/tmp_ece/ECE385/lab7_1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:33.340
+!MESSAGE XSCT Command: [platform config -updatehw {/home/juniper/Documents/lab7-juniper/71newproject/lab7_1_bram/mb_hdmi_top.xsa}], Thread: Worker-2: Updating hardware platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:33.572
+!MESSAGE XSCT command with result: [platform config -updatehw {/home/juniper/Documents/lab7-juniper/71newproject/lab7_1_bram/mb_hdmi_top.xsa}], Result: [null, ]. Thread: Worker-2: Updating hardware platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.211
+!MESSAGE XSCT Command: [::hsi::utils::openhw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.320
+!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.324
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.328
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa], Result: [null, {"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"hdmi_text_controller_0": {"hier_name": "hdmi_text_controller_0",
+"type": "hdmi_text_controller",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_intc": {"hier_name": "microblaze_0_axi_intc",
+"type": "axi_intc",
+"version": "4.1",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"rst_clk_wiz_1_100M": {"hier_name": "rst_clk_wiz_1_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.330
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.331
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa], Result: [null, {"device": "7s50",
+"family": "spartan7",
+"timestamp": "Thu Oct 29 02:06:32 2026",
+"vivado_version": "2022.2",
+"part": "xc7s50csga324-1",
+}]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.333
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0 C_DEBUG_ENABLED], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.334
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0 C_DEBUG_ENABLED], Result: [null, 1]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.335
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0 C_DEBUG_PROFILE_SIZE], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.335
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0 C_DEBUG_PROFILE_SIZE], Result: [null, 0]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.336
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0 C_FREQ], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.336
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0 C_FREQ], Result: [null, 100000000]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.447
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.451
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa], Result: [null, {}]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.451
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.461
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0], Result: [null, {"axi_uartlite_0": {"RX_FIFO": {"description": "Receive data FIFO",
+"address_offset": "0x0",
+"access": "read-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RX_DATA": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Receive Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033280,
+},
+"TX_FIFO": {"description": "Transmit data FIFO",
+"address_offset": "0x4",
+"access": "write-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"TX_DATA": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Transmit Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033284,
+},
+"CTRL_REG": {"description": "UART Lite control register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RST_TXFIFO": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the transmit FIFO
+Writing a 1 to this bit position clears the transmit FIFO
+  0 - Do nothing
+  1 - Clear the transmit FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RST_RXFIFO": {"access": "write-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the receive FIFO
+Writing a 1 to this bit position clears the receive FIFO
+  0 - Do nothing
+  1 - Clear the receive FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Enable_Intr": {"access": "write-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable interrupt for the AXI UART Lite
+  0 - Disable interrupt signal
+  1 - Enable interrupt signal
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033292,
+},
+"STAT_REG": {"description": "UART Lite status register",
+"address_offset": "0x8",
+"access": "read-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RX_FIFO_Valid_Data": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO has data.
+  0 - Receive FIFO is empty
+  1 - Receive FIFO has data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RX_FIFO_Full": {"access": "read-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO is full.
+  0 - Receive FIFO is not full
+  1 - Receive FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Empty": {"access": "read-only",
+"bit_offset": "2",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is empty.
+  0 - Transmit FIFO is not empty
+  1 - Transmit FIFO is empty
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Full": {"access": "read-only",
+"bit_offset": "3",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is full.
+  0 - Transmit FIFO is not full
+  1 - Transmit FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Intr_Enabled": {"access": "read-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that interrupts is enabled.
+  0 - Interrupt is disabled
+  1 - Interrupt is enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Overrun_Error": {"access": "read-only",
+"bit_offset": "5",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a overrun error has occurred after the last time the status register was read. Overrun is when a new character has been received but the receive FIFO is full. The received character is ignored and not written into the receive FIFO. This bit is cleared when the status register is read.      0 - No overrun error has occurred      1 - Overrun error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Frame_Error": {"access": "read-only",
+"bit_offset": "6",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a frame error has occurred after the last time the status register was read. Frame error is defined as detection of a stop bit with the value 0. The receive character is ignored and not written to the receive FIFO. This bit is cleared when the status register is read.      0 - No frame error has occurred   1 - Frame error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Parity_Error": {"access": "read-only",
+"bit_offset": "7",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a parity error has occurred after the last time the status register was read. If the UART is configured without any parity handling, this bit is always 0. The received character is written into the receive FIFO. This bit is cleared when the status register is read.      0 - No parity error has occurred      1 - Parity error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033288,
+},
+},
+"hdmi_text_controller_0": {},
+"microblaze_0_axi_intc": {"ISR": {"description": "Interrupt Status Register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Status Register.
+For each bit up to number of periperhal interrupts:
+  R - Reads active interrupt signal.
+  W - No effect after MER HIE bit has been set, otherwise writes active interrupt signal.
+For remaining bits defined by number of software interrupts:
+  R - Reads software interrupt value.
+  W - Writes software interrupt value.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616192,
+},
+"IPR": {"description": "Interrupt Pending Register",
+"address_offset": "0x4",
+"access": "read-only",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Pending Register.
+For each bit:
+  R - Reads logical AND of bits in ISR and IER.
+  W - No effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616196,
+},
+"IER": {"description": "Interrupt Enable Register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Enable Register.
+For each bit:
+  R - Reads interrupt enable value.
+  W - Writes interrupt enable value.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616200,
+},
+"IAR": {"description": "Interrupt Acknowledge Register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Acknowledge Register.
+For each bit:
+  W - Acknowledge interrupt.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616204,
+},
+"SIE": {"description": "Set Interrupt Enables",
+"address_offset": "0x10",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Set Interrupt Enables
+For each bit:
+  R - Reads active interrupt.
+  W - Writing 1 enables the interrupt, writing 0 has no effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616208,
+},
+"CIE": {"description": "Clear Interrupt Enables",
+"address_offset": "0x14",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Clear Interrupt Enables
+For each bit:
+  R - Reads active interrupt.
+  W - Writing 1 disables the interrupt, writing 0 has no effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616212,
+},
+"IVR": {"description": "Interrupt Vector Register",
+"address_offset": "0x18",
+"access": "read-only",
+"size": "5",
+"interface": "S_AXI",
+"fields": {"IVN": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "5",
+"desc": "Interrupt Vector Number.
+  R - Reads ordinal of highest priority, enabled, active interrupt.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616216,
+},
+"MER": {"description": "Master Enable Register",
+"address_offset": "0x1C",
+"access": "read-write",
+"size": "2",
+"interface": "S_AXI",
+"fields": {"ME": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master IRQ Enable.
+  0 - All interrupts disabled.
+  1 - All interrupts can be enabled.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"HIE": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Hardware Interrupt Enable.
+  0 - HW interrupts disabled.
+  1 - HW interrupts enabled.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616220,
+},
+"IMR": {"description": "Interrupt Mode Register",
+"address_offset": "0x20",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Mode Register.
+For each bit:
+  R - Reads interrupt mode.
+  W - Sets interrupt mode, where 0 is normal mode and 1 is fast mode.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616224,
+},
+"IVAR[0]": {"description": "Interrupt Vector Address Register 0",
+"address_offset": "0x100",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"IVA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "Interrupt vector address of active interrupt 0 with highest priority.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616448,
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {},
+}]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.463
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.467
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0], Result: [null, {"axi_uartlite_0_S_AXI": {"name": "axi_uartlite_0",
+"base": "0x40600000",
+"high": "0x4060FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_axi_intc_s_axi": {"name": "microblaze_0_axi_intc",
+"base": "0x41200000",
+"high": "0x4120FFFF",
+"size": "65536",
+"slaveintf": "s_axi",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"hdmi_text_controller_0_AXI": {"name": "hdmi_text_controller_0",
+"base": "0x44A00000",
+"high": "0x44A0FFFF",
+"size": "65536",
+"slaveintf": "AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr_SLMB_Mem": {"name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"base": "0x00000000",
+"high": "0x0001FFFF",
+"size": "131072",
+"slaveintf": "SLMB",
+"type": "MEMORY",
+"flags": "7",
+"segment": "Mem",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.468
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.471
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa], Result: [null, {"microblaze_0": {"bscan": "2",
+"index": "0",
+},
+}]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.473
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa mdm_1], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.475
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa mdm_1], Result: [null, {}]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.476
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa mdm_1], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.477
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa mdm_1], Result: [null, {"microblaze_0": {},
+}]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.477
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa mdm_1], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.478
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa mdm_1], Result: [null, microblaze_0]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.479
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.480
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0 C_DEBUG_EVENT_COUNTERS], Result: [null, 5]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.480
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.480
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0 C_DEBUG_COUNTER_WIDTH], Result: [null, 32]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.483
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.995
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:50.997
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.096
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000001A]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.098
+!MESSAGE XSCT Command: [version -server], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.099
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2.0]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.100
+!MESSAGE XSCT Command: [version], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.100
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:36
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.105
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.108
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000001A]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.109
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.115
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.122
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.126
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000001A]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.126
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.132
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.133
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.135
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000001A]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.135
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.142
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.142
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.145
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000001A]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.145
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.152
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.153
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.156
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000001A]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.156
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.163
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.163
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "RealDigital Boo 887100000001A" && level == 0}], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.173
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "RealDigital Boo 887100000001A" && level == 0}], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.173
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.175
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.175
+!MESSAGE XSCT Command: [::hsi::utils::get_clock_info -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.177
+!MESSAGE XSCT command with result: [::hsi::utils::get_clock_info -json /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa microblaze_0], Result: [null, {"Clk": "100000000",
+"Dbg_Clk": "",
+}]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.199
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.204
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887100000001A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.205
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.213
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.221
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.252
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:51.252
+!MESSAGE XSCT Command: [fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.521
+!MESSAGE XSCT command with result: [fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.534
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.562
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.563
+!MESSAGE XSCT Command: [loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.575
+!MESSAGE XSCT command with result: [loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs], Result: [null, mb_hdmi_top_2]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.575
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.576
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.577
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.584
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.585
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.594
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:52.594
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:55.599
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:55.600
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:55.609
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:55.609
+!MESSAGE XSCT Command: [dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:55.986
+!MESSAGE XSCT command with result: [dow /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/Debug/mb_hdmi.elf], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:56.013
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:56.049
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:56.050
+!MESSAGE XSCT Command: [con], Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:41:56.057
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_mb_hdmi_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-11-03 18:41:56.062
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-11-03 18:41:56.062
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:54:42.927
+!MESSAGE XSCT Command: [disconnect tcfchan#1], Thread: Thread-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-11-03 18:54:42.932
+!MESSAGE XSCT command with result: [disconnect tcfchan#1], Result: [null, ]. Thread: Thread-118

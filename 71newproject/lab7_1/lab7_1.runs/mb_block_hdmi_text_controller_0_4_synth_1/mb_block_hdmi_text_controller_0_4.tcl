@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "mb_block_hdmi_text_controller_0_4_synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {DRC IOSTDTYPE-1}  -string {{ERROR: [DRC IOSTDTYPE-1] IOStandard Type: I/O port hdmi_tmds_clk_n is Single-Ended but has an IOStandard of TMDS_33 which can only support Differential}}  -suppress 
 set_param project.vivado.isBlockSynthRun true
@@ -96,6 +95,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_ip -quiet /home/juniper/Documents/lab7-juniper/71newproject/lab7_1/lab7_1.srcs/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_4/mb_block_hdmi_text_controller_0_4.xci
+set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/71newproject/lab7_1/lab7_1.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_4/src/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/71newproject/lab7_1/lab7_1.gen/sources_1/bd/mb_block/ip/edit_hdmi_text_controller_v1_0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all /home/juniper/Documents/lab7-juniper/71newproject/lab7_1/lab7_1.gen/sources_1/bd/mb_block/ip/edit_hdmi_text_controller_v1_0.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 

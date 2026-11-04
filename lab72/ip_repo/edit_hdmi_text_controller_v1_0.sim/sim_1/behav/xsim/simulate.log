@@ -1,0 +1,180 @@
+Time resolution is 1 ps
+Block Memory Generator module hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_5 collision detected at time: 240000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 250000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 260000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 270000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 280000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 290000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 300000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 310000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 320000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 330000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 340000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 350000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 360000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 370000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 380000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 390000, Instance: hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.ram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+Error: AXI readback mismatch at address 00000200. Expected: 00000200. Actual:00000250.
+Time: 178280 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000201. Expected: 00000201. Actual:00000251.
+Time: 178440 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000202. Expected: 00000202. Actual:00000252.
+Time: 178600 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000203. Expected: 00000203. Actual:00000253.
+Time: 178760 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000204. Expected: 00000204. Actual:00000254.
+Time: 178920 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000205. Expected: 00000205. Actual:00000255.
+Time: 179080 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000206. Expected: 00000206. Actual:00000256.
+Time: 179240 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000207. Expected: 00000207. Actual:00000257.
+Time: 179400 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000208. Expected: 00000208. Actual:00000250.
+Time: 179560 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000209. Expected: 00000209. Actual:00000251.
+Time: 179720 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000020a. Expected: 0000020a. Actual:00000252.
+Time: 179880 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000020b. Expected: 0000020b. Actual:00000253.
+Time: 180040 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000020c. Expected: 0000020c. Actual:00000254.
+Time: 180200 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000020d. Expected: 0000020d. Actual:00000255.
+Time: 180360 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000020e. Expected: 0000020e. Actual:00000256.
+Time: 180520 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000020f. Expected: 0000020f. Actual:00000257.
+Time: 180680 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000210. Expected: 00000210. Actual:00000250.
+Time: 180840 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000211. Expected: 00000211. Actual:00000251.
+Time: 181 us  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000212. Expected: 00000212. Actual:00000252.
+Time: 181160 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000213. Expected: 00000213. Actual:00000253.
+Time: 181320 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000214. Expected: 00000214. Actual:00000254.
+Time: 181480 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000215. Expected: 00000215. Actual:00000255.
+Time: 181640 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000216. Expected: 00000216. Actual:00000256.
+Time: 181800 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000217. Expected: 00000217. Actual:00000257.
+Time: 181960 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000218. Expected: 00000218. Actual:00000250.
+Time: 182120 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000219. Expected: 00000219. Actual:00000251.
+Time: 182280 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000021a. Expected: 0000021a. Actual:00000252.
+Time: 182440 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000021b. Expected: 0000021b. Actual:00000253.
+Time: 182600 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000021c. Expected: 0000021c. Actual:00000254.
+Time: 182760 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000021d. Expected: 0000021d. Actual:00000255.
+Time: 182920 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000021e. Expected: 0000021e. Actual:00000256.
+Time: 183080 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000021f. Expected: 0000021f. Actual:00000257.
+Time: 183240 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000220. Expected: 00000220. Actual:00000250.
+Time: 183400 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000221. Expected: 00000221. Actual:00000251.
+Time: 183560 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000222. Expected: 00000222. Actual:00000252.
+Time: 183720 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000223. Expected: 00000223. Actual:00000253.
+Time: 183880 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000224. Expected: 00000224. Actual:00000254.
+Time: 184040 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000225. Expected: 00000225. Actual:00000255.
+Time: 184200 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000226. Expected: 00000226. Actual:00000256.
+Time: 184360 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000227. Expected: 00000227. Actual:00000257.
+Time: 184520 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000228. Expected: 00000228. Actual:00000250.
+Time: 184680 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000229. Expected: 00000229. Actual:00000251.
+Time: 184840 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000022a. Expected: 0000022a. Actual:00000252.
+Time: 185 us  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000022b. Expected: 0000022b. Actual:00000253.
+Time: 185160 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000022c. Expected: 0000022c. Actual:00000254.
+Time: 185320 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000022d. Expected: 0000022d. Actual:00000255.
+Time: 185480 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000022e. Expected: 0000022e. Actual:00000256.
+Time: 185640 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000022f. Expected: 0000022f. Actual:00000257.
+Time: 185800 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000230. Expected: 00000230. Actual:00000250.
+Time: 185960 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000231. Expected: 00000231. Actual:00000251.
+Time: 186120 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000232. Expected: 00000232. Actual:00000252.
+Time: 186280 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000233. Expected: 00000233. Actual:00000253.
+Time: 186440 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000234. Expected: 00000234. Actual:00000254.
+Time: 186600 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000235. Expected: 00000235. Actual:00000255.
+Time: 186760 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000236. Expected: 00000236. Actual:00000256.
+Time: 186920 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000237. Expected: 00000237. Actual:00000257.
+Time: 187080 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000238. Expected: 00000238. Actual:00000250.
+Time: 187240 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000239. Expected: 00000239. Actual:00000251.
+Time: 187400 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000023a. Expected: 0000023a. Actual:00000252.
+Time: 187560 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000023b. Expected: 0000023b. Actual:00000253.
+Time: 187720 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000023c. Expected: 0000023c. Actual:00000254.
+Time: 187880 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000023d. Expected: 0000023d. Actual:00000255.
+Time: 188040 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000023e. Expected: 0000023e. Actual:00000256.
+Time: 188200 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000023f. Expected: 0000023f. Actual:00000257.
+Time: 188360 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000240. Expected: 00000240. Actual:00000250.
+Time: 188520 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000241. Expected: 00000241. Actual:00000251.
+Time: 188680 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000242. Expected: 00000242. Actual:00000252.
+Time: 188840 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000243. Expected: 00000243. Actual:00000253.
+Time: 189 us  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000244. Expected: 00000244. Actual:00000254.
+Time: 189160 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000245. Expected: 00000245. Actual:00000255.
+Time: 189320 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000246. Expected: 00000246. Actual:00000256.
+Time: 189480 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000247. Expected: 00000247. Actual:00000257.
+Time: 189640 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000248. Expected: 00000248. Actual:00000250.
+Time: 189800 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 00000249. Expected: 00000249. Actual:00000251.
+Time: 189960 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000024a. Expected: 0000024a. Actual:00000252.
+Time: 190120 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000024b. Expected: 0000024b. Actual:00000253.
+Time: 190280 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000024c. Expected: 0000024c. Actual:00000254.
+Time: 190440 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000024d. Expected: 0000024d. Actual:00000255.
+Time: 190600 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000024e. Expected: 0000024e. Actual:00000256.
+Time: 190760 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Error: AXI readback mismatch at address 0000024f. Expected: 0000024f. Actual:00000257.
+Time: 190920 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS.axi_read_assert  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 278
+Info: Read back of control register: 00000250
+Time: 192360 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial256_921  Scope: hdmi_text_controller_tb.TEST_VECTORS  File: C:/Users/realk/Desktop/ece385/ECE385/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 281

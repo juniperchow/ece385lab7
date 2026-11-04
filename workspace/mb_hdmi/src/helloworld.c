@@ -49,6 +49,7 @@
 #include "platform.h"
 #include "xil_printf.h"
 #include "hdmi_text_controller.h"
+#include "hdmi_text_controller2.h"
 
 int main()
 {
@@ -57,7 +58,7 @@ int main()
     print("Hello World\n\r");
     print("Successfully ran Hello World application");
     while(1){
-    	hdmiTestWeek1();
+    	hdmiTestWeek2();
     }
     cleanup_platform();
     return 0;
