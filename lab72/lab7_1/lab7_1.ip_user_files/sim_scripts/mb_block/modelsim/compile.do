@@ -154,10 +154,10 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../lab7_1.gen/sourc
 "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_4/src/blk_mem_gen_0_1/sim/blk_mem_gen_0.v" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  -sv "+incdir+../../../../lab7_1.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../lab7_1.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../lab7_1.gen/sources_1/bd/mb_block/ip/edit_hdmi_text_controller_v1_0.srcs/sources_1/ip/clk_wiz_0" \
-"../../../bd/mb_block/ipshared/abe3/src/VGA_controller.sv" \
-"../../../bd/mb_block/ipshared/abe3/src/font_rom.sv" \
-"../../../bd/mb_block/ipshared/abe3/hdl/hdmi_text_controller_v1_0_AXI.sv" \
-"../../../bd/mb_block/ipshared/abe3/src/hdmi_text_controller_v1_0.sv" \
+"../../../bd/mb_block/ipshared/5743/src/VGA_controller.sv" \
+"../../../bd/mb_block/ipshared/5743/src/font_rom.sv" \
+"../../../bd/mb_block/ipshared/5743/hdl/hdmi_text_controller_v1_0_AXI.sv" \
+"../../../bd/mb_block/ipshared/5743/src/hdmi_text_controller_v1_0.sv" \
 "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_4/sim/mb_block_hdmi_text_controller_0_4.sv" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../lab7_1.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../lab7_1.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../lab7_1.gen/sources_1/bd/mb_block/ip/edit_hdmi_text_controller_v1_0.srcs/sources_1/ip/clk_wiz_0" \

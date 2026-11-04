@@ -153,3 +153,9 @@ platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_
 platform generate -domains 
 platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
 platform generate -domains 
+platform config -updatehw {/home/juniper/FPGA-Hardware-Projects/ECE385/lab72/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/FPGA-Hardware-Projects/ECE385/lab72/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 

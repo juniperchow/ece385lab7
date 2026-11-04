@@ -492,13 +492,13 @@ always_comb begin
     font_pixel = font_data[7-pixel_x];
 
     if(font_pixel) begin
-        red = fgd_color[11:8];
-        green = fgd_color[7:4];
-        blue = fgd_color[3:0];
+        red = 4'b1111;;
+        green = 4'b0001;
+        blue = 4'b0000;
     end else begin
-        red = bkg_color[11:8];
-        green = bkg_color[7:4];
-        blue = bkg_color[3:0];
+        red = 4'b0000;
+        green = 4'b0000;
+        blue = 4'b0000;
     end
 end
 

@@ -1,4 +1,4 @@
-17:11:12 **** Incremental Build of configuration Debug for project mb_hdmi ****
+17:35:40 **** Incremental Build of configuration Debug for project mb_hdmi ****
 make all 
 Building file: ../src/hdmi_text_controller.c
 Invoking: MicroBlaze gcc compiler
@@ -147,5 +147,5 @@ mb-size mb_hdmi.elf  |tee "mb_hdmi.elf.size"
 Finished building: mb_hdmi.elf.size
  
 
-17:11:13 Build Finished (took 880ms)
+17:35:41 Build Finished (took 885ms)
 

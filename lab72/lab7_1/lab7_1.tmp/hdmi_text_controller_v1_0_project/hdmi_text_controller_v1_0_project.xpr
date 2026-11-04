@@ -6,7 +6,7 @@
 <Project Version="7" Minor="61" Path="/home/juniper/Documents/lab7-juniper/lab72/lab7_1/lab7_1.tmp/hdmi_text_controller_v1_0_project/hdmi_text_controller_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="7fc553828de244f6a816409ce06769ef"/>
+    <Option Name="Id" Val="a92f09c6bdde414f97a6418f1be38651"/>
     <Option Name="Part" Val="xc7s50csga324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
