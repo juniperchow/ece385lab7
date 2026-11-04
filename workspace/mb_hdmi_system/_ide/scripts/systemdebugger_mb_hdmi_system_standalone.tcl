@@ -11,9 +11,9 @@
 # 
 connect -url tcp:127.0.0.1:3121
 targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
-fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top2.bit
+fpga -file /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi/_ide/bitstream/mb_hdmi_top.bit
 targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top2.xsa -regs
+loadhw -hw /home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/hw/mb_hdmi_top.xsa -regs
 configparams mdm-detect-bscan-mask 2
 targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
 rst -system

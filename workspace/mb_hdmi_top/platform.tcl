@@ -142,3 +142,14 @@ platform active {mb_hdmi_top}
 platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top2.xsa}
 platform generate -domains 
 platform generate
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/UIUC_ECE385_SP25/lab7_2/mb_lab7_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 

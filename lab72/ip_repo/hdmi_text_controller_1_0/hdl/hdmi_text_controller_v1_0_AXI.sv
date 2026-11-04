@@ -123,7 +123,7 @@ logic  	axi_rvalid;
 // ADDR_LSB = 2 for 32 bits (n downto 2)
 // ADDR_LSB = 3 for 64 bits (n downto 3)
 localparam integer ADDR_LSB = (C_S_AXI_DATA_WIDTH/32) + 1;
-localparam integer OPT_MEM_ADDR_BITS = 9;// change from 1 to 9
+localparam integer OPT_MEM_ADDR_BITS = 10;// change from 1 to 10
 //9	[11:2]	10bit 604 registers
 //11 [13:2] 
 //----------------------------------------------
@@ -141,9 +141,9 @@ localparam integer OPT_MEM_ADDR_BITS = 9;// change from 1 to 9
 logic [C_S_AXI_DATA_WIDTH-1:0] ctrl_regs[8];
 //localparam integer VRAM_WORDS        = 600;
 localparam integer REG_CTRL          = 12'h800;
-localparam integer REG_FRAME_COUNTER = 12'h807;
-localparam integer REG_DRAW_X        = 12'h808;
-localparam integer REG_DRAW_Y        = 12'h809;
+localparam integer REG_FRAME_COUNTER = 12'h808;
+localparam integer REG_DRAW_X        = 12'h809;
+localparam integer REG_DRAW_Y        = 12'h80A;
 logic	 slv_reg_rden;
 logic	 slv_reg_wren;
 integer	 byte_index;
@@ -192,7 +192,7 @@ blk_mem_gen_0 bram_graphics(.addra(bram_addra), //bram_addra
                             
                             .addrb(bram_addrb),
                             .clkb(S_AXI_ACLK), 
-                            .dinb(), 
+                            .dinb(32'h00000000), 
                             .doutb(bram_doutb), 
                             .enb(bram_enb),
                             .web(4'h0));
@@ -298,7 +298,7 @@ begin
   else begin
     if (slv_reg_wren &&
         axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] >= REG_CTRL &&
-        axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] < REG_CTRL + 9 ) //write to control registers 0-8
+        axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] < REG_CTRL + 8 ) //write to palette registers 0-7
       begin
         for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
           if ( S_AXI_WSTRB[byte_index] == 1 ) begin
@@ -418,8 +418,8 @@ begin
               if(S_AXI_ARADDR[13] == 1'b0) //read from bram 
                 bram_read_pending <= 1'b1;
               else begin
-                //axi_rdata <= ctrl_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB][2:0]];//control reg 0 thru 8
-                axi_rdata <= ctrl_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]-REG_CTRL];//control reg 0 thru 8
+                //axi_rdata <= ctrl_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB][2:0]];//palette registers 0 through 7
+                axi_rdata <= ctrl_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]-REG_CTRL];//palette registers 0 through 7
                 axi_rvalid <= 1'b1;
               end
             end
@@ -438,77 +438,6 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 // 0x80B - 0xFFF       0x0000 202C - 0x0000 3FFF   unused
 
 // Add user logic here
-  logic [9:0] col, row;
-  assign col = drawX >> 3;
-  assign row = drawY >> 4;
-  assign bram_addrb = row * 40 + (col >> 1);
-
-  logic[7:0] glyph_code; //8 bit character
-  logic iv0; // invert character bit glyph_code[7] 
-  logic [3:0] fg_idx;
-	logic [3:0] bg_idx; 
-
-  logic [11:0] fg_rgb, bkg_rgb;
-			
-	//assign slv_reg_data = bram_doutb;
-	
-	always_comb begin
-	   if(col[0] == 1'b1) begin
-         glyph_code = bram_doutb[31:24];
-         fg_idx = bram_doutb[23:20];
-         bg_idx = bram_doutb[19:16];
-     end
-     else begin
-         glyph_code = bram_doutb[15:8];
-         fg_idx = bram_doutb[11:8];
-         bg_idx = bram_doutb[15:12];
-     end
-     iv0 = glyph_code[7];
-     font_addr = (glyph_code[6:0]*16) + (drawY[3:0]);
-     if(fg_idx[0] ==1'b1) begin
-        fg_rgb = ctrl_regs[fg_idx >> 1][24:13];
-     end
-     else begin
-        fg_rgb =  ctrl_regs[fg_idx >> 1][12:1];
-     end
-     if(bg_idx[0] ==1'b1) begin
-        bkg_rgb = ctrl_regs[bg_idx >> 1][24:13];
-     end
-     else begin
-        bkg_rgb = ctrl_regs[bg_idx >> 1][12:1];
-     end
-	end
-	
-	logic[10:0] font_addr;
-	logic[7:0] font_data;
-//	assign font_addr = (glyph_code * 16) + (drawY[3:0]);
-	font_rom characterrom(
-        .addr(font_addr),
-        .data(font_data)
-	);
-	//compute rgb value for current pixel 
-	always_comb begin
-        // if((font_data[7 - (drawX[2:0])] == 1 && iv0 == 1) || (font_data[7 - (drawX[2:0])] == 0 && iv0 == 0)) begin
-        //     red = bkg_r; 
-        //     green = bkg_g;
-        //     blue = bkg_b;
-        // end
-        // else begin
-        //     red = char_r; 
-        //     green = char_g;
-        //     blue = char_b;
-        // end
-        if((font_data[7 - (drawX[2:0])] == 1 && iv0 == 1) || (font_data[7 - (drawX[2:0])] == 0 && iv0 == 0)) begin
-            red = bkg_rgb[11:8]; 
-            green = bkg_rgb[7:4];
-            blue = bkg_rgb[3:0];
-        end
-        else begin
-            red = fg_rgb[11:8]; 
-            green = fg_rgb[7:4];
-            blue = fg_rgb[3:0];
-        end
-	end
 //32bit width framecounter
   logic [C_S_AXI_DATA_WIDTH-1:0] frame_counter;  
   always_ff @(posedge vsync) begin
@@ -518,7 +447,124 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
       else begin
           frame_counter <= frame_counter + 1;
       end
+  end
+  
+	logic[10:0] font_addr;
+	logic[7:0] font_data;
+//	assign font_addr = (glyph_code * 16) + (drawY[3:0]);
+	font_rom characterrom(
+        .addr(font_addr),
+        .data(font_data)
+	);
+//color data
+logic [3:0] fgd_idx, bkg_idx;
+logic [11:0] fgd_color, bkg_color;
+
+assign fgd_color = ctrl_regs[fgd_idx];
+assign bkg_color = ctrl_regs[bkg_idx];
+
+assign bram_addrb = (drawY >> 4) * 40 + (drawX >>4);
+
+//output logic
+logic [2:0] pixel_x;
+logic char;
+logic font_pixel;
+//logic invert;
+logic[6:0] glyph_code; //8 bit character
+
+always_comb begin
+  font_addr = {glyph_code,drawY[3:0]};
+        char = drawX[3];
+        pixel_x  = drawX[2:0];
+        
+    if(char)
+        begin
+        glyph_code = bram_doutb[30:24];
+        fgd_idx = bram_doutb[23:20];
+        bkg_idx = bram_doutb[19:16];
+        end
+    else
+        begin
+        glyph_code = bram_doutb[14:8];
+        fgd_idx = bram_doutb[7:4];
+        bkg_idx = bram_doutb[3:0];
+        end
+    font_pixel = font_data[7-pixel_x];
+
+    if(font_pixel) begin
+        red = fgd_color[11:8];
+        green = fgd_color[7:4];
+        blue = fgd_color[3:0];
+    end else begin
+        red = bkg_color[11:8];
+        green = bkg_color[7:4];
+        blue = bkg_color[3:0];
     end
-// User logic ends
+end
+
+//   logic [9:0] col, row;
+//   assign col = drawX >> 3;
+//   assign row = drawY >> 4;
+//   assign bram_addrb = row * 40 + (col >> 1);
+
+//   logic[7:0] glyph_code; //8 bit character
+//   logic iv0; // invert character bit glyph_code[7] 
+//   logic [3:0] fg_idx;
+// 	logic [3:0] bg_idx; 
+
+//   logic [11:0] fg_rgb, bkg_rgb;
+			
+// 	//assign slv_reg_data = bram_doutb;
+	
+// 	always_comb begin
+// 	   if(col[0] == 1'b1) begin
+//          glyph_code = bram_doutb[31:24];
+//          fg_idx = bram_doutb[23:20];
+//          bg_idx = bram_doutb[19:16];
+//      end
+//      else begin
+//          glyph_code = bram_doutb[15:8];
+//          fg_idx = bram_doutb[7:4];
+//          bg_idx = bram_doutb[3:0];
+//      end
+//      iv0 = glyph_code[7];
+//      font_addr = (glyph_code[6:0]*16) + (drawY[3:0]);
+//      if(fg_idx[0] == 1'b1) begin
+//         fg_rgb = ctrl_regs[fg_idx[3:1]][27:16];
+//      end
+//      else begin
+//         fg_rgb = ctrl_regs[fg_idx[3:1]][11:0];
+//      end
+//      if(bg_idx[0] == 1'b1) begin
+//         bkg_rgb = ctrl_regs[bg_idx[3:1]][27:16];
+//      end
+//      else begin
+//         bkg_rgb = ctrl_regs[bg_idx[3:1]][11:0];
+//      end
+// 	end
+// 	//compute rgb value for current pixel 
+// 	always_comb begin
+//         // if((font_data[7 - (drawX[2:0])] == 1 && iv0 == 1) || (font_data[7 - (drawX[2:0])] == 0 && iv0 == 0)) begin
+//         //     red = bkg_r; 
+//         //     green = bkg_g;
+//         //     blue = bkg_b;
+//         // end
+//         // else begin
+//         //     red = char_r; 
+//         //     green = char_g;
+//         //     blue = char_b;
+//         // end
+//         if((font_data[7 - (drawX[2:0])] == 1 && iv0 == 1) || (font_data[7 - (drawX[2:0])] == 0 && iv0 == 0)) begin
+//             red = bkg_rgb[11:8]; 
+//             green = bkg_rgb[7:4];
+//             blue = bkg_rgb[3:0];
+//         end
+//         else begin
+//             red = fg_rgb[11:8]; 
+//             green = fg_rgb[7:4];
+//             blue = fg_rgb[3:0];
+//         end
+// 	end
+// // User logic ends
 
 endmodule

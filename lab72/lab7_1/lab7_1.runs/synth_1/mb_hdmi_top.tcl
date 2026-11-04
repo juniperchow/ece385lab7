@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {DRC IOSTDTYPE-1}  -string {{ERROR: [DRC IOSTDTYPE-1] IOStandard Type: I/O port hdmi_tmds_clk_n is Single-Ended but has an IOStandard of TMDS_33 which can only support Differential}}  -suppress 
 OPTRACE "Creating in-memory project" START { }

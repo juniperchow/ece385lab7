@@ -4875,3 +4875,5 @@ VRAM test failed; check AXI reads, BRAM latency and byte write strobes.
 VRAM test passed, checking palette readback.
 
 Palette readback failed; check all eight AXI palette registers.
+
+Palette readback passed; check color cycling on the display.

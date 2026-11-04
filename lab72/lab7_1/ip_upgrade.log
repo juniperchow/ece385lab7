@@ -1,6 +1,69 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed Nov  4 17:02:31 2026
+| Host         : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_text_controller_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_hdmi_text_controller_0_4 (xilinx.com:user:hdmi_text_controller:1.0) from (Rev. 79) to (Rev. 80)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed Nov  4 16:31:51 2026
+| Host         : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_text_controller_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_hdmi_text_controller_0_4 (xilinx.com:user:hdmi_text_controller:1.0) from (Rev. 78) to (Rev. 79)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed Nov  4 16:16:05 2026
+| Host         : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_text_controller_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_hdmi_text_controller_0_4 (xilinx.com:user:hdmi_text_controller:1.0) from (Rev. 77) to (Rev. 78)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 | Date         : Wed Nov  4 13:12:49 2026
 | Host         : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 | Command      : upgrade_ip

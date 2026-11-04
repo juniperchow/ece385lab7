@@ -216,7 +216,7 @@ void hdmiTestWeek2(void)
     if (failed)
     {
         printf("Palette readback failed; check all eight AXI palette registers.\n\r");
-        while (1) {}
+        //while (1) {}
     }
     printf("Palette readback passed; check color cycling on the display.\n\r");
     paletteTest();

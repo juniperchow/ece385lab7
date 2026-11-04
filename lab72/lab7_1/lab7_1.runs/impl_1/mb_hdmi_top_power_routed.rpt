@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Wed Nov  4 13:15:36 2026
+| Date             : Wed Nov  4 17:10:31 2026
 | Host             : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 | Command          : report_power -file mb_hdmi_top_power_routed.rpt -pb mb_hdmi_top_power_summary_routed.pb -rpx mb_hdmi_top_power_routed.rpx
 | Design           : mb_hdmi_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.445        |
+| Total On-Chip Power (W)  | 0.444        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.371        |
+| Dynamic (W)              | 0.370        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 4.9          |
 | Max Ambient (C)          | 82.8         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.009 |       11 |       --- |             --- |
-| Slice Logic              |     0.003 |     4410 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     1422 |     32600 |            4.36 |
+| Slice Logic              |     0.003 |     4411 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1421 |     32600 |            4.36 |
 |   LUT as Distributed RAM |    <0.001 |      160 |      9600 |            1.67 |
 |   Register               |    <0.001 |     1495 |     65200 |            2.29 |
 |   CARRY4                 |    <0.001 |       41 |      8150 |            0.50 |
 |   F7/F8 Muxes            |    <0.001 |       35 |     32600 |            0.11 |
 |   LUT as Shift Register  |    <0.001 |      100 |      9600 |            1.04 |
 |   Others                 |     0.000 |      714 |       --- |             --- |
-| Signals                  |     0.009 |     3073 |       --- |             --- |
+| Signals                  |     0.008 |     3071 |       --- |             --- |
 | Block RAM                |     0.004 |       34 |        75 |           45.33 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
 | DSPs                     |     0.002 |        3 |       120 |            2.50 |
 | I/O                      |     0.132 |       11 |       210 |            5.24 |
 | Static Power             |     0.074 |          |           |                 |
-| Total                    |     0.445 |          |           |                 |
+| Total                    |     0.444 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -152,14 +152,14 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| mb_hdmi_top                |     0.371 |
+| mb_hdmi_top                |     0.370 |
 |   mb_block_i               |     0.370 |
 |     clk_wiz_1              |     0.106 |
 |       inst                 |     0.106 |
 |     hdmi_text_controller_0 |     0.243 |
 |       inst                 |     0.243 |
-|     microblaze_0           |     0.018 |
-|       U0                   |     0.018 |
+|     microblaze_0           |     0.017 |
+|       U0                   |     0.017 |
 |     microblaze_0_axi_intc  |     0.001 |
 |       U0                   |     0.001 |
 +----------------------------+-----------+
