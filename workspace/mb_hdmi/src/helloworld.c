@@ -56,7 +56,7 @@ int main()
     init_platform();
 
     print("Hello World main\n\r");
-    statusregcheck();
+    //statusregcheck();
     //print("Successfully ran Hello World application");
     while(1){
     	hdmiTestWeek2();

@@ -299,8 +299,7 @@ begin
     end
   else begin
     if (slv_reg_wren &&
-        axi_awaddr[13:2] >= REG_CTRL &&
-        axi_awaddr[13:2] < REG_CTRL + 8 ) //write to palette registers 0-7
+        axi_awaddr[13] == 1'b1 ) //write to palette registers 0-7
       begin
         for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
           if ( S_AXI_WSTRB[byte_index] == 1 ) begin
@@ -379,44 +378,46 @@ begin
   if (S_AXI_ARESETN == 1'b0) begin
     axi_rvalid <= 1'b0;
     axi_rresp <= 2'b0;
-    axi_rdata <= bram_douta;
+    axi_rdata <= {16'h9999,axi_araddr};
     bram_read_pending <= 1'b0;
   end else begin
     if (axi_rvalid && S_AXI_RREADY)
       axi_rvalid <= 1'b0;
     if (bram_read_pending) begin
-      axi_rdata <= {16'h1234,axi_araddr};//bram_douta;
+      axi_rdata <= bram_douta;
       axi_rvalid <= 1'b1;
-      axi_rresp <= 2'b0;
+      axi_rresp <= 2'b0; 
       bram_read_pending <= 1'b0;
     end else if (slv_reg_rden) begin
       axi_rresp <= 2'b0;
-      if (axi_araddr[13] == 1'b1) begin
-        bram_read_pending <= 1'b0; 
-        case (axi_araddr[13:2])//axi_awaddr[ADDR_LSB + OPT_MEM_ADDR_BITS : ADDR_LSB]
-          REG_FRAME_COUNTER: begin
-            axi_rdata <= frame_counter;
-            axi_rvalid <= 1'b1;
-          end
-          REG_DRAW_X: begin
-            axi_rdata <= drawX;
-            axi_rvalid <= 1'b1;
-          end
-          REG_DRAW_Y: begin
-            axi_rdata <= drawY;
-            axi_rvalid <= 1'b1;
-          end
-          default: begin
-            //13:2    2+10:2
-            axi_rdata <= ctrl_regs[axi_araddr[4:2]];
-            //axi_rdata <= 32'h69696767;//status or pallette reg return dummy
-            axi_rvalid <= 1'b1;
-          end
-        endcase
-      end
-      else begin
-        bram_read_pending <= 1'b1;
-      end
+       if (axi_araddr[13] == 1'b1) begin
+         bram_read_pending <= 1'b0; 
+         case (axi_araddr[13:2])//axi_awaddr[ADDR_LSB + OPT_MEM_ADDR_BITS : ADDR_LSB]
+           REG_FRAME_COUNTER: begin
+             axi_rdata <= frame_counter;
+             axi_rvalid <= 1'b1;
+           end
+           REG_DRAW_X: begin
+             axi_rdata <= drawX;
+             axi_rvalid <= 1'b1;
+           end
+           REG_DRAW_Y: begin
+             axi_rdata <= drawY;
+             axi_rvalid <= 1'b1;
+           end
+           default: begin
+             //13:2    2+10:2
+             axi_rdata <= ctrl_regs[axi_araddr[4:2]];
+             //axi_rdata <= 32'h69696767;//status or pallette reg return dummy
+             axi_rvalid <= 1'b1;
+           end
+         endcase
+       end
+       else begin
+         bram_read_pending <= 1'b1;
+       end
+//      axi_rdata <= {16'h1234,axi_araddr};//status or pallette reg return dummy
+//      axi_rvalid <= 1'b1;
     end
   end
 end
@@ -430,7 +431,9 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 // 0x80B - 0xFFF       0x0000 202C - 0x0000 3FFF   unused
 
 // Add user logic here
+// Add user logic here
 //32bit width framecounter
+  logic [C_S_AXI_DATA_WIDTH-1:0] frame_counter;  
   always_ff @(posedge vsync) begin
       if (S_AXI_ARESETN == 1'b0) begin
           frame_counter <= 32'b0;
@@ -451,10 +454,8 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 logic [3:0] fgd_idx, bkg_idx;
 logic [11:0] fgd_color, bkg_color;
 
-assign fgd_color = fgd_idx[0] ? ctrl_regs[fgd_idx[3:1]][27:16]
-                              : ctrl_regs[fgd_idx[3:1]][11:0];
-assign bkg_color = bkg_idx[0] ? ctrl_regs[bkg_idx[3:1]][27:16]
-                              : ctrl_regs[bkg_idx[3:1]][11:0];
+assign fgd_color = ctrl_regs[fgd_idx];
+assign bkg_color = ctrl_regs[bkg_idx];
 
 assign bram_addrb = (drawY >> 4) * 40 + (drawX >>4);
 
@@ -485,13 +486,13 @@ always_comb begin
     font_pixel = font_data[7-pixel_x];
 
     if(font_pixel) begin
-        red = fgd_color[11:8];
-        green = 4'b1110; //fgd_color[7:4];
-        blue = fgd_color[3:0];
+        red = 4'b1111;;
+        green = 4'b0001;
+        blue = 4'b0000;
     end else begin
-        red = bkg_color[11:8];
-        green = bkg_color[7:4];
-        blue = bkg_color[3:0];
+        red = 4'b0000;
+        green = 4'b0000;
+        blue = 4'b0000;
     end
 end
 

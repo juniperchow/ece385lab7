@@ -86,7 +86,8 @@ hdmi_text_controller_v1_0_AXI_inst (
     .drawY(drawY),
     .red(red),
     .green(green),
-    .blue(blue)
+    .blue(blue),
+    .vsync(vsync)
 );
 
 

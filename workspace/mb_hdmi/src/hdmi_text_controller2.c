@@ -162,19 +162,14 @@ void statusregcheck(void){
 	//On-chip memory write and readback test
 	    uint32_t checksum[ROWS], readsum[ROWS];
 	    int failed = 0;
-	    for (int j = 0; j < ROWS; j++)
-	    {
-	        checksum[j] = 0;
-	        for (int i = 0; i < COLUMNS*2; i++)
-	        {
-	            uint8_t value = (uint8_t)(i+j);
-	            hdmi_ctrl->VRAM[j*COLUMNS*2+i] = value;
-	            checksum[j] += value;
-	        }
-	    }
 	    for (int j = 0; j < 1200; j++)
 	    {
-	            printf ("%x \t %x \r", hdmi_ctrl->VRAM[j*4],j);
+	            hdmi_ctrl->VRAM[j] = (uint32_t)j;
+
+	     }
+	    for (int j = 0; j < 1200; j++)
+	    {
+	            printf ("%x \t %x \r", (uint32_t)hdmi_ctrl->VRAM[j],j*4);
 
 	     }
 

@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Thu Nov  5 01:05:01 2026
+// Date        : Thu Nov  5 03:12:42 2026
 // Host        : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 // Command     : write_verilog -force -mode synth_stub
 //               /home/juniper/Documents/lab7-juniper/lab72/lab7_1/lab7_1.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_4/mb_block_hdmi_text_controller_0_4_stub.v
@@ -19,14 +19,14 @@ module mb_block_hdmi_text_controller_0_4(hdmi_tmds_clk_p, hdmi_tmds_clk_n,
   axi_awvalid, axi_awready, axi_wdata, axi_wstrb, axi_wvalid, axi_wready, axi_bresp, axi_bvalid, 
   axi_bready, axi_araddr, axi_arprot, axi_arvalid, axi_arready, axi_rdata, axi_rresp, axi_rvalid, 
   axi_rready)
-/* synthesis syn_black_box black_box_pad_pin="hdmi_tmds_clk_p,hdmi_tmds_clk_n,hdmi_tmds_data_p[2:0],hdmi_tmds_data_n[2:0],axi_aclk,axi_aresetn,axi_awaddr[11:0],axi_awprot[2:0],axi_awvalid,axi_awready,axi_wdata[31:0],axi_wstrb[3:0],axi_wvalid,axi_wready,axi_bresp[1:0],axi_bvalid,axi_bready,axi_araddr[11:0],axi_arprot[2:0],axi_arvalid,axi_arready,axi_rdata[31:0],axi_rresp[1:0],axi_rvalid,axi_rready" */;
+/* synthesis syn_black_box black_box_pad_pin="hdmi_tmds_clk_p,hdmi_tmds_clk_n,hdmi_tmds_data_p[2:0],hdmi_tmds_data_n[2:0],axi_aclk,axi_aresetn,axi_awaddr[15:0],axi_awprot[2:0],axi_awvalid,axi_awready,axi_wdata[31:0],axi_wstrb[3:0],axi_wvalid,axi_wready,axi_bresp[1:0],axi_bvalid,axi_bready,axi_araddr[15:0],axi_arprot[2:0],axi_arvalid,axi_arready,axi_rdata[31:0],axi_rresp[1:0],axi_rvalid,axi_rready" */;
   output hdmi_tmds_clk_p;
   output hdmi_tmds_clk_n;
   output [2:0]hdmi_tmds_data_p;
   output [2:0]hdmi_tmds_data_n;
   input axi_aclk;
   input axi_aresetn;
-  input [11:0]axi_awaddr;
+  input [15:0]axi_awaddr;
   input [2:0]axi_awprot;
   input axi_awvalid;
   output axi_awready;
@@ -37,7 +37,7 @@ module mb_block_hdmi_text_controller_0_4(hdmi_tmds_clk_p, hdmi_tmds_clk_n,
   output [1:0]axi_bresp;
   output axi_bvalid;
   input axi_bready;
-  input [11:0]axi_araddr;
+  input [15:0]axi_araddr;
   input [2:0]axi_arprot;
   input axi_arvalid;
   output axi_arready;

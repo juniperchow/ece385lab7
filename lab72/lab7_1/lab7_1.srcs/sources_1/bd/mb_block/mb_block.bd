@@ -853,7 +853,7 @@
         "inst_hier_path": "hdmi_text_controller_0",
         "parameters": {
           "C_AXI_ADDR_WIDTH": {
-            "value": "12"
+            "value": "16"
           }
         }
       }

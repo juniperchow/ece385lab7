@@ -240,3 +240,30 @@ platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_
 platform generate -domains 
 platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
 platform generate -domains 
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform generate
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform active {mb_hdmi_top}
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/juniper/Documents/lab7-juniper/lab72/lab7_1/mb_hdmi_top.xsa}
+platform generate -domains 

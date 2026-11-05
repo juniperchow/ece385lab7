@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="setColorPalette"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="pallette"/>
+			<item value="PALETTE_START"/>
+			<item value="sleep"/>
 			<item value="setColorPalette"/>
 			<item value="check"/>
 			<item value="checksum"/>

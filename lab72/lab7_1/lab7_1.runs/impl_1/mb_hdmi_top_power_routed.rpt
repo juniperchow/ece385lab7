@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Thu Nov  5 00:26:53 2026
+| Date             : Thu Nov  5 03:14:23 2026
 | Host             : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 | Command          : report_power -file mb_hdmi_top_power_routed.rpt -pb mb_hdmi_top_power_summary_routed.pb -rpx mb_hdmi_top_power_routed.rpx
 | Design           : mb_hdmi_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.450        |
+| Total On-Chip Power (W)  | 0.451        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.376        |
+| Dynamic (W)              | 0.377        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 4.9          |
 | Max Ambient (C)          | 82.8         |
@@ -53,21 +53,22 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.009 |       11 |       --- |             --- |
-| Slice Logic              |     0.004 |     4897 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     1836 |     32600 |            5.63 |
+| Slice Logic              |     0.004 |     5475 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     2031 |     32600 |            6.23 |
 |   LUT as Distributed RAM |    <0.001 |      160 |      9600 |            1.67 |
-|   Register               |    <0.001 |     1516 |     65200 |            2.33 |
-|   CARRY4                 |    <0.001 |       41 |      8150 |            0.50 |
-|   F7/F8 Muxes            |    <0.001 |       60 |     32600 |            0.18 |
-|   LUT as Shift Register  |    <0.001 |      103 |      9600 |            1.07 |
+|   Register               |    <0.001 |     1829 |     65200 |            2.81 |
+|   CARRY4                 |    <0.001 |       49 |      8150 |            0.60 |
+|   F7/F8 Muxes            |    <0.001 |       65 |     32600 |            0.20 |
+|   LUT as Shift Register  |    <0.001 |      105 |      9600 |            1.09 |
+|   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   Others                 |     0.000 |      713 |       --- |             --- |
-| Signals                  |     0.009 |     3510 |       --- |             --- |
+| Signals                  |     0.009 |     4043 |       --- |             --- |
 | Block RAM                |     0.007 |       34 |        75 |           45.33 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
 | DSPs                     |     0.002 |        3 |       120 |            2.50 |
 | I/O                      |     0.132 |       11 |       210 |            5.24 |
 | Static Power             |     0.074 |          |           |                 |
-| Total                    |     0.450 |          |           |                 |
+| Total                    |     0.451 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -152,14 +153,14 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| mb_hdmi_top                 |     0.376 |
+| mb_hdmi_top                 |     0.377 |
 |   mb_block_i                |     0.376 |
 |     clk_wiz_1               |     0.106 |
 |       inst                  |     0.106 |
-|     hdmi_text_controller_0  |     0.248 |
-|       inst                  |     0.248 |
-|     microblaze_0            |     0.017 |
-|       U0                    |     0.017 |
+|     hdmi_text_controller_0  |     0.250 |
+|       inst                  |     0.250 |
+|     microblaze_0            |     0.016 |
+|       U0                    |     0.016 |
 |     microblaze_0_axi_intc   |     0.001 |
 |       U0                    |     0.001 |
 |     microblaze_0_axi_periph |     0.001 |
