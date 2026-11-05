@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Wed Nov  4 17:33:04 2026
+| Date             : Thu Nov  5 00:26:53 2026
 | Host             : juniper-ThinkPad-T14-Gen-5 running 64-bit Ubuntu 26.10
 | Command          : report_power -file mb_hdmi_top_power_routed.rpt -pb mb_hdmi_top_power_summary_routed.pb -rpx mb_hdmi_top_power_routed.rpx
 | Design           : mb_hdmi_top
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.009 |       11 |       --- |             --- |
-| Slice Logic              |     0.004 |     4903 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     1842 |     32600 |            5.65 |
+| Slice Logic              |     0.004 |     4897 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     1836 |     32600 |            5.63 |
 |   LUT as Distributed RAM |    <0.001 |      160 |      9600 |            1.67 |
-|   Register               |    <0.001 |     1521 |     65200 |            2.33 |
+|   Register               |    <0.001 |     1516 |     65200 |            2.33 |
 |   CARRY4                 |    <0.001 |       41 |      8150 |            0.50 |
 |   F7/F8 Muxes            |    <0.001 |       60 |     32600 |            0.18 |
-|   LUT as Shift Register  |    <0.001 |      105 |      9600 |            1.09 |
-|   Others                 |     0.000 |      709 |       --- |             --- |
-| Signals                  |     0.009 |     3522 |       --- |             --- |
+|   LUT as Shift Register  |    <0.001 |      103 |      9600 |            1.07 |
+|   Others                 |     0.000 |      713 |       --- |             --- |
+| Signals                  |     0.009 |     3510 |       --- |             --- |
 | Block RAM                |     0.007 |       34 |        75 |           45.33 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
 | DSPs                     |     0.002 |        3 |       120 |            2.50 |
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.043 |       0.032 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.044 |       0.033 |      0.011 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.130 |       0.117 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -149,19 +149,21 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------------------+-----------+
-| Name                       | Power (W) |
-+----------------------------+-----------+
-| mb_hdmi_top                |     0.376 |
-|   mb_block_i               |     0.375 |
-|     clk_wiz_1              |     0.106 |
-|       inst                 |     0.106 |
-|     hdmi_text_controller_0 |     0.249 |
-|       inst                 |     0.249 |
-|     microblaze_0           |     0.017 |
-|       U0                   |     0.017 |
-|     microblaze_0_axi_intc  |     0.001 |
-|       U0                   |     0.001 |
-+----------------------------+-----------+
++-----------------------------+-----------+
+| Name                        | Power (W) |
++-----------------------------+-----------+
+| mb_hdmi_top                 |     0.376 |
+|   mb_block_i                |     0.376 |
+|     clk_wiz_1               |     0.106 |
+|       inst                  |     0.106 |
+|     hdmi_text_controller_0  |     0.248 |
+|       inst                  |     0.248 |
+|     microblaze_0            |     0.017 |
+|       U0                    |     0.017 |
+|     microblaze_0_axi_intc   |     0.001 |
+|       U0                    |     0.001 |
+|     microblaze_0_axi_periph |     0.001 |
+|       xbar                  |     0.001 |
++-----------------------------+-----------+
 
 

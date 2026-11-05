@@ -140,10 +140,12 @@ localparam integer OPT_MEM_ADDR_BITS = 10;// change from 1 to 10
 //Note that you as the student will still need to extend this to the full register set needed for the lab.
 logic [C_S_AXI_DATA_WIDTH-1:0] ctrl_regs[8];
 //localparam integer VRAM_WORDS        = 600;
-localparam integer REG_CTRL          = 12'h800;
-localparam integer REG_FRAME_COUNTER = 12'h808;
-localparam integer REG_DRAW_X        = 12'h809;
-localparam integer REG_DRAW_Y        = 12'h80A;
+//change these to decimal?
+localparam integer REG_CTRL          = 2048; //12'h800;
+localparam integer REG_FRAME_COUNTER = 2056; //12'h808;
+localparam integer REG_DRAW_X        = 2057; //12'h809;
+localparam integer REG_DRAW_Y        = 2058; //12'h80A;
+logic [C_S_AXI_DATA_WIDTH-1:0] frame_counter;
 logic	 slv_reg_rden;
 logic	 slv_reg_wren;
 integer	 byte_index;
@@ -172,13 +174,13 @@ always_comb begin
     bram_addra = 11'b0;
     bram_wea = 4'b0000;
     if (slv_reg_wren &&
-        S_AXI_AWADDR[13] == 1'b0) begin // only write to BRAM if the address is in the VRAM range
+        axi_awaddr[13] == 1'b0) begin // only write to BRAM if the address is in the VRAM range
         //axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] < VRAM_WORDS) begin
         bram_addra = {1'b0, axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]};
         bram_wea = S_AXI_WSTRB;
     end else if (slv_reg_rden &&
                 //axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] < VRAM_WORDS) begin
-                 S_AXI_ARADDR[13] == 1'b0) begin // only read from BRAM if the address is in the VRAM range
+                 axi_araddr[13] == 1'b0) begin // only read from BRAM if the address is in the VRAM range
         bram_addra = {1'b0, axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]};
     end
 end
@@ -293,17 +295,17 @@ always_ff @( posedge S_AXI_ACLK )
 begin
   if ( S_AXI_ARESETN == 1'b0 )
     begin
-        ctrl_regs[0] <= 0;
+        ctrl_regs[0] <= 32'h00000000;
     end
   else begin
     if (slv_reg_wren &&
-        axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] >= REG_CTRL &&
-        axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] < REG_CTRL + 8 ) //write to palette registers 0-7
+        axi_awaddr[13:2] >= REG_CTRL &&
+        axi_awaddr[13:2] < REG_CTRL + 8 ) //write to palette registers 0-7
       begin
         for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
           if ( S_AXI_WSTRB[byte_index] == 1 ) begin
             //ctrl_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB][2:0]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
-            ctrl_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]-REG_CTRL][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+            ctrl_regs[axi_awaddr[13:2]-REG_CTRL][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
           end  
       end
   end
@@ -374,60 +376,50 @@ end
 
 always_ff @( posedge S_AXI_ACLK )
 begin
-  if ( S_AXI_ARESETN == 1'b0 )
-    begin
-      axi_rvalid <= 0;
-      axi_rresp  <= 0;
-      axi_rdata  <= bram_douta;
+  if (S_AXI_ARESETN == 1'b0) begin
+    axi_rvalid <= 1'b0;
+    axi_rresp <= 2'b0;
+    axi_rdata <= bram_douta;
+    bram_read_pending <= 1'b0;
+  end else begin
+    if (axi_rvalid && S_AXI_RREADY)
+      axi_rvalid <= 1'b0;
+    if (bram_read_pending) begin
+      axi_rdata <= {16'h1234,axi_araddr};//bram_douta;
+      axi_rvalid <= 1'b1;
+      axi_rresp <= 2'b0;
       bram_read_pending <= 1'b0;
-    end 
-  else
-    begin    
-      if (axi_rvalid && S_AXI_RREADY)
-        axi_rvalid <= 1'b0;
-
-      if (bram_read_pending)
-        begin
-          axi_rdata <= bram_douta;
-          axi_rvalid <= 1'b1;
-          axi_rresp  <= 2'b0;
-          bram_read_pending <= 1'b0;
-        end   
-      else if (slv_reg_rden)
-        begin
-          axi_rresp <= 2'b0;
-          case (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB])
-            // REG_CTRL: begin
-            //   axi_rdata <= ctrl_regs[0];
-            //   axi_rvalid <= 1'b1;
-            // end
-            REG_FRAME_COUNTER: begin
-              axi_rdata <= frame_counter;
-              axi_rvalid <= 1'b1;
-            end
-            REG_DRAW_X: begin
-              axi_rdata <= drawX;
-              axi_rvalid <= 1'b1;
-            end
-            REG_DRAW_Y: begin
-              axi_rdata <= drawY;
-              axi_rvalid <= 1'b1;
-            end
-            default: begin
-              //if (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] < VRAM_WORDS)
-              if(S_AXI_ARADDR[13] == 1'b0) //read from bram 
-                bram_read_pending <= 1'b1;
-              else begin
-                //axi_rdata <= ctrl_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB][2:0]];//palette registers 0 through 7
-                axi_rdata <= ctrl_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]-REG_CTRL];//palette registers 0 through 7
-                axi_rvalid <= 1'b1;
-              end
-            end
-          endcase
-        end                
+    end else if (slv_reg_rden) begin
+      axi_rresp <= 2'b0;
+      if (axi_araddr[13] == 1'b1) begin
+        bram_read_pending <= 1'b0; 
+        case (axi_araddr[13:2])//axi_awaddr[ADDR_LSB + OPT_MEM_ADDR_BITS : ADDR_LSB]
+          REG_FRAME_COUNTER: begin
+            axi_rdata <= frame_counter;
+            axi_rvalid <= 1'b1;
+          end
+          REG_DRAW_X: begin
+            axi_rdata <= drawX;
+            axi_rvalid <= 1'b1;
+          end
+          REG_DRAW_Y: begin
+            axi_rdata <= drawY;
+            axi_rvalid <= 1'b1;
+          end
+          default: begin
+            //13:2    2+10:2
+            axi_rdata <= ctrl_regs[axi_araddr[4:2]];
+            //axi_rdata <= 32'h69696767;//status or pallette reg return dummy
+            axi_rvalid <= 1'b1;
+          end
+        endcase
+      end
+      else begin
+        bram_read_pending <= 1'b1;
+      end
     end
-end    
-
+  end
+end
 assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 // Word Address        Byte Address                description
 // 0x000 - 0x4AF       0x0000 0000 - 0x0000 12BF   VRAM
@@ -439,7 +431,6 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 
 // Add user logic here
 //32bit width framecounter
-  logic [C_S_AXI_DATA_WIDTH-1:0] frame_counter;  
   always_ff @(posedge vsync) begin
       if (S_AXI_ARESETN == 1'b0) begin
           frame_counter <= 32'b0;
@@ -460,8 +451,10 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 logic [3:0] fgd_idx, bkg_idx;
 logic [11:0] fgd_color, bkg_color;
 
-assign fgd_color = ctrl_regs[fgd_idx];
-assign bkg_color = ctrl_regs[bkg_idx];
+assign fgd_color = fgd_idx[0] ? ctrl_regs[fgd_idx[3:1]][27:16]
+                              : ctrl_regs[fgd_idx[3:1]][11:0];
+assign bkg_color = bkg_idx[0] ? ctrl_regs[bkg_idx[3:1]][27:16]
+                              : ctrl_regs[bkg_idx[3:1]][11:0];
 
 assign bram_addrb = (drawY >> 4) * 40 + (drawX >>4);
 
@@ -492,13 +485,13 @@ always_comb begin
     font_pixel = font_data[7-pixel_x];
 
     if(font_pixel) begin
-        red = 4'b1111;;
-        green = 4'b0001;
-        blue = 4'b0000;
+        red = fgd_color[11:8];
+        green = 4'b1110; //fgd_color[7:4];
+        blue = fgd_color[3:0];
     end else begin
-        red = 4'b0000;
-        green = 4'b0000;
-        blue = 4'b0000;
+        red = bkg_color[11:8];
+        green = bkg_color[7:4];
+        blue = bkg_color[3:0];
     end
 end
 

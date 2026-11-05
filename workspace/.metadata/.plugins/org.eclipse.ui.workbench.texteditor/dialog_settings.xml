@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Check"/>
+		<item key="selection" value="setColorPalette"/>
 		<list key="findhistory">
+			<item value="setColorPalette"/>
 			<item value="check"/>
 			<item value="checksum"/>
 			<item value="STUDENT1NETID"/>

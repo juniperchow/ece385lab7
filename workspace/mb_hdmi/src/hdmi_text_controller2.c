@@ -150,7 +150,39 @@ void textHDMIColorScreenSaver(void)
         textHDMIDrawColorText(dvd_string, dvd_x, dvd_y, 0, dvd_fg);
     }
 }
+void statusregcheck(void){
+	printf ("framecount %x \t drawx %x \t drawy %x \r\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+	for (int i=0;i<8;i++){
+		hdmi_ctrl->palette[i] = 0x1234+i;
+	}
+	for (int i=0;i<8;i++){
+		printf("palette[i] = %x \t %x\n", hdmi_ctrl->palette[i],0x1234+i);
+	}
+	printf ("framecount %x \t drawx %x \t drawy %x \r\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+	//On-chip memory write and readback test
+	    uint32_t checksum[ROWS], readsum[ROWS];
+	    int failed = 0;
+	    for (int j = 0; j < ROWS; j++)
+	    {
+	        checksum[j] = 0;
+	        for (int i = 0; i < COLUMNS*2; i++)
+	        {
+	            uint8_t value = (uint8_t)(i+j);
+	            hdmi_ctrl->VRAM[j*COLUMNS*2+i] = value;
+	            checksum[j] += value;
+	        }
+	    }
+	    for (int j = 0; j < 1200; j++)
+	    {
+	            printf ("%x \t %x \r", hdmi_ctrl->VRAM[j*4],j);
 
+	     }
+
+		printf ("framecount %x \t drawx %x \t drawy %x \r\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+		printf ("vram %x \t drawx %x \t drawy %x \r\n", hdmi_ctrl->VRAM[200], hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+		//sleep_MB(1);
+		while(1);
+}
 //Call this function for your Week 2 test. These tests overwrite VRAM/palette.
 void hdmiTestWeek2(void)
 {
@@ -183,7 +215,7 @@ void hdmiTestWeek2(void)
         for (int i = 0; i < COLUMNS*2; i++)
         {
             uint8_t actual = hdmi_ctrl->VRAM[j*COLUMNS*2+i];
-            printf ("%x \t %x \r", hdmi_ctrl->VRAM[j*COLUMNS*2 + i],i+j);
+            //printf ("%x \t %x \r", hdmi_ctrl->VRAM[j*COLUMNS*2 + i],i+j);
             readsum[j] += actual;
             if (actual != (uint8_t)(i+j))
                 failed = 1;
@@ -205,12 +237,16 @@ void hdmiTestWeek2(void)
         setColorPalette(2*i, 3, 6, 11);
         setColorPalette(2*i+1, 14, 9, 4);
         uint32_t actual = hdmi_ctrl->palette[i];
-        if (actual != 0x0E94036Bu)
+        uint32_t expected = 0x0E94036B;
+        printf("actual %x\t expected %x\n",actual,expected);
+        if (actual != expected)
             failed = 1;
         //Update even after odd, checking that both update orders preserve the neighbor.
         setColorPalette(2*i, 1, 2, 3);
         actual = hdmi_ctrl->palette[i];
-        if (actual != 0x0E940123u)
+        expected = 0x0E940123;
+        printf("actual %x\t expected %x\n",actual,expected);
+        if (actual != expected)
             failed = 1;
     }
     if (failed)
@@ -220,6 +256,8 @@ void hdmiTestWeek2(void)
     }
     printf("Palette readback passed; check color cycling on the display.\n\r");
     paletteTest();
+	printf ("framecount %x \t drawx %x \t drawy %x \r\n", hdmi_ctrl->FRAME_COUNT, hdmi_ctrl->DRAWX, hdmi_ctrl->DRAWY);
+
     printf("Beginning screensaver; requires FRAME_COUNT at offset 0x2020.\n\r");
     textHDMIColorScreenSaver();
 }
