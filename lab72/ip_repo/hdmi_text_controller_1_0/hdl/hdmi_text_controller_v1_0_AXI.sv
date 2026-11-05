@@ -166,9 +166,9 @@ logic [10:0] bram_addra, bram_addrb;
 logic [31:0] bram_douta, bram_doutb;
 logic [3:0] bram_wea;
 logic bram_read_pending;
-logic bram_enb;
+//logic bram_enb;
 
-assign bram_enb = !((|bram_wea) && (bram_addra == bram_addrb));
+//assign bram_enb = !((|bram_wea) && (bram_addra == bram_addrb));
 
 always_comb begin
     bram_addra = 11'b0;
@@ -196,7 +196,7 @@ blk_mem_gen_0 bram_graphics(.addra(bram_addra), //bram_addra
                             .clkb(S_AXI_ACLK), 
                             .dinb(32'h00000000), 
                             .doutb(bram_doutb), 
-                            .enb(bram_enb),
+                            .enb(1'b1), //always enable output port for rendering pixels
                             .web(4'h0));
 
 // Implement axi_awready generation
@@ -454,8 +454,10 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 logic [3:0] fgd_idx, bkg_idx;
 logic [11:0] fgd_color, bkg_color;
 
-assign fgd_color = ctrl_regs[fgd_idx];
-assign bkg_color = ctrl_regs[bkg_idx];
+assign fgd_color = fgd_idx[0] ? ctrl_regs[fgd_idx[3:1]][27:16]
+                              : ctrl_regs[fgd_idx[3:1]][11:0];
+assign bkg_color = bkg_idx[0] ? ctrl_regs[bkg_idx[3:1]][27:16]
+                              : ctrl_regs[bkg_idx[3:1]][11:0];
 
 assign bram_addrb = (drawY >> 4) * 40 + (drawX >>4);
 
@@ -486,79 +488,16 @@ always_comb begin
     font_pixel = font_data[7-pixel_x];
 
     if(font_pixel) begin
-        red = 4'b1111;;
-        green = 4'b0001;
-        blue = 4'b0000;
+        red = fgd_color[11:8];
+        green = 4'h1111; //fgd_color[7:4];
+        blue = fgd_color[3:0];
     end else begin
-        red = 4'b0000;
-        green = 4'b0000;
-        blue = 4'b0000;
+        red = bkg_color[11:8];
+        green = bkg_color[7:4];
+        blue = bkg_color[3:0];
     end
 end
 
-//   logic [9:0] col, row;
-//   assign col = drawX >> 3;
-//   assign row = drawY >> 4;
-//   assign bram_addrb = row * 40 + (col >> 1);
-
-//   logic[7:0] glyph_code; //8 bit character
-//   logic iv0; // invert character bit glyph_code[7] 
-//   logic [3:0] fg_idx;
-// 	logic [3:0] bg_idx; 
-
-//   logic [11:0] fg_rgb, bkg_rgb;
-			
-// 	//assign slv_reg_data = bram_doutb;
-	
-// 	always_comb begin
-// 	   if(col[0] == 1'b1) begin
-//          glyph_code = bram_doutb[31:24];
-//          fg_idx = bram_doutb[23:20];
-//          bg_idx = bram_doutb[19:16];
-//      end
-//      else begin
-//          glyph_code = bram_doutb[15:8];
-//          fg_idx = bram_doutb[7:4];
-//          bg_idx = bram_doutb[3:0];
-//      end
-//      iv0 = glyph_code[7];
-//      font_addr = (glyph_code[6:0]*16) + (drawY[3:0]);
-//      if(fg_idx[0] == 1'b1) begin
-//         fg_rgb = ctrl_regs[fg_idx[3:1]][27:16];
-//      end
-//      else begin
-//         fg_rgb = ctrl_regs[fg_idx[3:1]][11:0];
-//      end
-//      if(bg_idx[0] == 1'b1) begin
-//         bkg_rgb = ctrl_regs[bg_idx[3:1]][27:16];
-//      end
-//      else begin
-//         bkg_rgb = ctrl_regs[bg_idx[3:1]][11:0];
-//      end
-// 	end
-// 	//compute rgb value for current pixel 
-// 	always_comb begin
-//         // if((font_data[7 - (drawX[2:0])] == 1 && iv0 == 1) || (font_data[7 - (drawX[2:0])] == 0 && iv0 == 0)) begin
-//         //     red = bkg_r; 
-//         //     green = bkg_g;
-//         //     blue = bkg_b;
-//         // end
-//         // else begin
-//         //     red = char_r; 
-//         //     green = char_g;
-//         //     blue = char_b;
-//         // end
-//         if((font_data[7 - (drawX[2:0])] == 1 && iv0 == 1) || (font_data[7 - (drawX[2:0])] == 0 && iv0 == 0)) begin
-//             red = bkg_rgb[11:8]; 
-//             green = bkg_rgb[7:4];
-//             blue = bkg_rgb[3:0];
-//         end
-//         else begin
-//             red = fg_rgb[11:8]; 
-//             green = fg_rgb[7:4];
-//             blue = fg_rgb[3:0];
-//         end
-// 	end
 // // User logic ends
 
 endmodule

@@ -18,8 +18,7 @@
 #define STUDENT2NETID "junchow2"
 
 struct TEXT_HDMI_STRUCT {
-	//uint8_t             VRAM [ROWS*COLUMNS*2]; //Week 2 - extended VRAM
-	uint32_t             VRAM [ROWS*COLUMNS/2];
+	uint8_t             VRAM [ROWS*COLUMNS*2]; //Week 2 - extended VRAM
 	uint8_t unused[PALETTE_START - ROWS*COLUMNS*2];
 	uint32_t palette[8];
 	//Palette starts at byte offset 0x2000, status starts at 0x2020.
