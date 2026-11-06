@@ -1,0 +1,21 @@
+14:05:19 **** Incremental Build of configuration Debug for project mb_hdmi ****
+make all 
+Building file: ../src/hdmi_text_controller2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hdmi_text_controller2.o" -I/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/hdmi_text_controller2.d" -MT"src/hdmi_text_controller2.o" -o "src/hdmi_text_controller2.o" "../src/hdmi_text_controller2.c"
+Finished building: ../src/hdmi_text_controller2.c
+ 
+Building target: mb_hdmi.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/juniper/Documents/lab7-juniper/workspace/mb_hdmi_top/export/mb_hdmi_top/sw/mb_hdmi_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mb_hdmi.elf" ./src/hdmi_text_controller.o ./src/hdmi_text_controller2.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mb_hdmi.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mb_hdmi.elf  |tee "mb_hdmi.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  88524	   2096	   3172	  93792	  16e60	mb_hdmi.elf
+Finished building: mb_hdmi.elf.size
+ 
+
+14:05:20 Build Finished (took 539ms)
+

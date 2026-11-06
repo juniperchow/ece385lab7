@@ -803,11 +803,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Nov 05 09:28:41 UTC 2026</spirit:value>
+            <spirit:value>Thu Nov 05 20:11:33 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:228a966a</spirit:value>
+            <spirit:value>9:7859153e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -818,7 +818,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:228a966a</spirit:value>
+            <spirit:value>9:7859153e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -834,11 +834,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Nov 05 09:28:41 UTC 2026</spirit:value>
+            <spirit:value>Thu Nov 05 20:11:33 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:228a966a</spirit:value>
+            <spirit:value>9:7859153e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -854,11 +854,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Nov 05 09:28:41 UTC 2026</spirit:value>
+            <spirit:value>Thu Nov 05 20:11:33 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:67e82f23</spirit:value>
+            <spirit:value>9:3d3bac77</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -874,11 +874,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Nov 05 09:28:41 UTC 2026</spirit:value>
+            <spirit:value>Thu Nov 05 20:11:33 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:67e82f23</spirit:value>
+            <spirit:value>9:3d3bac77</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -892,11 +892,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Nov 05 09:28:41 UTC 2026</spirit:value>
+            <spirit:value>Thu Nov 05 20:11:33 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:228a966a</spirit:value>
+            <spirit:value>9:7859153e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -910,11 +910,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Nov 05 09:29:26 UTC 2026</spirit:value>
+            <spirit:value>Thu Nov 05 20:12:20 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:228a966a</spirit:value>
+            <spirit:value>9:7859153e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1362,19 +1362,19 @@
         <spirit:userFileType>CELL_NAME_hdmi_text_controller_v1_0_AXI_inst/bram_graphics</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/4038/src/VGA_controller.sv</spirit:name>
+        <spirit:name>../../ipshared/2be7/src/VGA_controller.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/4038/src/font_rom.sv</spirit:name>
+        <spirit:name>../../ipshared/2be7/src/font_rom.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/4038/hdl/hdmi_text_controller_v1_0_AXI.sv</spirit:name>
+        <spirit:name>../../ipshared/2be7/hdl/hdmi_text_controller_v1_0_AXI.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/4038/src/hdmi_text_controller_v1_0.sv</spirit:name>
+        <spirit:name>../../ipshared/2be7/src/hdmi_text_controller_v1_0.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1404,19 +1404,19 @@
         <spirit:userFileType>CELL_NAME_hdmi_text_controller_v1_0_AXI_inst/bram_graphics</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/4038/src/VGA_controller.sv</spirit:name>
+        <spirit:name>../../ipshared/2be7/src/VGA_controller.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/4038/src/font_rom.sv</spirit:name>
+        <spirit:name>../../ipshared/2be7/src/font_rom.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/4038/hdl/hdmi_text_controller_v1_0_AXI.sv</spirit:name>
+        <spirit:name>../../ipshared/2be7/hdl/hdmi_text_controller_v1_0_AXI.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/4038/src/hdmi_text_controller_v1_0.sv</spirit:name>
+        <spirit:name>../../ipshared/2be7/src/hdmi_text_controller_v1_0.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1536,7 +1536,7 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>118</xilinx:coreRevision>
+      <xilinx:coreRevision>121</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI.ADDR_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI.ARUSER_WIDTH" xilinx:valuePermission="bd"/>

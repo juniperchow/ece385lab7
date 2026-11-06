@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:hdmi_text_controller:1.0
-// IP Revision: 118
+// IP Revision: 121
 
 (* X_CORE_INFO = "hdmi_text_controller_v1_0,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "mb_block_hdmi_text_controller_0_4,hdmi_text_controller_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "mb_block_hdmi_text_controller_0_4,hdmi_text_controller_v1_0,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=hdmi_text_controller,x_ipVersion=1.0,x_ipCoreRevision=118,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_AXI_DATA_WIDTH=32,C_AXI_ADDR_WIDTH=16}" *)
+(* CORE_GENERATION_INFO = "mb_block_hdmi_text_controller_0_4,hdmi_text_controller_v1_0,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=hdmi_text_controller,x_ipVersion=1.0,x_ipCoreRevision=121,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_AXI_DATA_WIDTH=32,C_AXI_ADDR_WIDTH=16}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module mb_block_hdmi_text_controller_0_4 (
   hdmi_tmds_clk_p,

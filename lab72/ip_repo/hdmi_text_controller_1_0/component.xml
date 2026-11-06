@@ -1101,8 +1101,8 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>118</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-11-05T09:28:29Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>121</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-11-05T20:11:19Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>

@@ -109,10 +109,10 @@
   "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_4/src/blk_mem_gen_0_1/sim/blk_mem_gen_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/mb_block/ipshared/4038/src/VGA_controller.sv" \
-  "../../../bd/mb_block/ipshared/4038/src/font_rom.sv" \
-  "../../../bd/mb_block/ipshared/4038/hdl/hdmi_text_controller_v1_0_AXI.sv" \
-  "../../../bd/mb_block/ipshared/4038/src/hdmi_text_controller_v1_0.sv" \
+  "../../../bd/mb_block/ipshared/2be7/src/VGA_controller.sv" \
+  "../../../bd/mb_block/ipshared/2be7/src/font_rom.sv" \
+  "../../../bd/mb_block/ipshared/2be7/hdl/hdmi_text_controller_v1_0_AXI.sv" \
+  "../../../bd/mb_block/ipshared/2be7/src/hdmi_text_controller_v1_0.sv" \
   "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_4/sim/mb_block_hdmi_text_controller_0_4.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

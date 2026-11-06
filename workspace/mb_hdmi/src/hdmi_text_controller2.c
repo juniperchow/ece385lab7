@@ -181,7 +181,7 @@ void hdmiTestWeek2(void)
         if (checksum[j] != readsum[j])
             failed = 1;
     }
-
+    printf("%x",failed);
     printf("VRAM test passed, checking palette readback.\n\r");
     for (int i = 0; i < 8; i++)
     {
@@ -197,6 +197,7 @@ void hdmiTestWeek2(void)
         if (actual != 0x0E940123u)
             failed = 1;
     }
+    printf("%x",failed);
 
     printf("Palette readback passed; check color cycling on the display.\n\r");
     paletteTest();

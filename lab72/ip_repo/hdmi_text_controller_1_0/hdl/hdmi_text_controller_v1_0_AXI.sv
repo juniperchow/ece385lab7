@@ -489,7 +489,7 @@ always_comb begin
 
     if(font_pixel) begin
         red = fgd_color[11:8];
-        green = 4'h1111; //fgd_color[7:4];
+        green = fgd_color[7:4];
         blue = fgd_color[3:0];
     end else begin
         red = bkg_color[11:8];
