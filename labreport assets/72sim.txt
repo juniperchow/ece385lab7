@@ -1,0 +1,15 @@
+# run all
+Block Memory Generator module hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.bram_graphics.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Info: Read back of control register0: 036b0e94
+Time: 432520 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial251_922  Scope: hdmi_text_controller_tb.TEST_VECTORS  File: /home/juniper/ece385lab7/lab72/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 279
+Info: Read back of control register1: 99990e94
+Time: 432680 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial251_922  Scope: hdmi_text_controller_tb.TEST_VECTORS  File: /home/juniper/ece385lab7/lab72/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 282
+Info: Read back of drawx register: 0000019c
+Time: 432840 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial251_922  Scope: hdmi_text_controller_tb.TEST_VECTORS  File: /home/juniper/ece385lab7/lab72/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 285
+$finish called at time : 432840 ns : File "/home/juniper/ece385lab7/lab72/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv" Line 294
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 8306.996 ; gain = 14.391 ; free physical = 8819 ; free virtual = 23268
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 8306.996 ; gain = 45.527 ; free physical = 8819 ; free virtual = 23268
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'hdmi_text_controller_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 8306.996 ; gain = 45.527 ; free physical = 8819 ; free virtual = 23268
+
